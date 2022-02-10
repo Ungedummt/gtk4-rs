@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;auto&#x2F;scrolled_window.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>scrolled_window.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/scrolled_window.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>scrolled_window.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gtk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
 <span id="2">   2</span>
 <span id="3">   3</span>
 <span id="4">   4</span>
@@ -1887,63 +1892,6 @@
 <span id="1814">1814</span>
 <span id="1815">1815</span>
 <span id="1816">1816</span>
-<span id="1817">1817</span>
-<span id="1818">1818</span>
-<span id="1819">1819</span>
-<span id="1820">1820</span>
-<span id="1821">1821</span>
-<span id="1822">1822</span>
-<span id="1823">1823</span>
-<span id="1824">1824</span>
-<span id="1825">1825</span>
-<span id="1826">1826</span>
-<span id="1827">1827</span>
-<span id="1828">1828</span>
-<span id="1829">1829</span>
-<span id="1830">1830</span>
-<span id="1831">1831</span>
-<span id="1832">1832</span>
-<span id="1833">1833</span>
-<span id="1834">1834</span>
-<span id="1835">1835</span>
-<span id="1836">1836</span>
-<span id="1837">1837</span>
-<span id="1838">1838</span>
-<span id="1839">1839</span>
-<span id="1840">1840</span>
-<span id="1841">1841</span>
-<span id="1842">1842</span>
-<span id="1843">1843</span>
-<span id="1844">1844</span>
-<span id="1845">1845</span>
-<span id="1846">1846</span>
-<span id="1847">1847</span>
-<span id="1848">1848</span>
-<span id="1849">1849</span>
-<span id="1850">1850</span>
-<span id="1851">1851</span>
-<span id="1852">1852</span>
-<span id="1853">1853</span>
-<span id="1854">1854</span>
-<span id="1855">1855</span>
-<span id="1856">1856</span>
-<span id="1857">1857</span>
-<span id="1858">1858</span>
-<span id="1859">1859</span>
-<span id="1860">1860</span>
-<span id="1861">1861</span>
-<span id="1862">1862</span>
-<span id="1863">1863</span>
-<span id="1864">1864</span>
-<span id="1865">1865</span>
-<span id="1866">1866</span>
-<span id="1867">1867</span>
-<span id="1868">1868</span>
-<span id="1869">1869</span>
-<span id="1870">1870</span>
-<span id="1871">1871</span>
-<span id="1872">1872</span>
-<span id="1873">1873</span>
 </pre><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)</span>
 <span class="comment">// from gir-files (https://github.com/gtk-rs/gir-files.git)</span>
 <span class="comment">// DO NOT EDIT</span>
@@ -1985,12 +1933,12 @@
     <span class="doccomment">/// Widgets with native scrolling support, i.e. those whose classes implement</span>
     <span class="doccomment">/// the [`Scrollable`][crate::Scrollable] interface, are added directly. For other types</span>
     <span class="doccomment">/// of widget, the class [`Viewport`][crate::Viewport] acts as an adaptor, giving</span>
-    <span class="doccomment">/// scrollability to other widgets. [``set_child()``][`Self::set_child()`]</span>
+    <span class="doccomment">/// scrollability to other widgets. [`set_child()`][Self::set_child()]</span>
     <span class="doccomment">/// intelligently accounts for whether or not the added child is a [`Scrollable`][crate::Scrollable].</span>
     <span class="doccomment">/// If it isn’t, then it wraps the child in a [`Viewport`][crate::Viewport]. Therefore, you can</span>
     <span class="doccomment">/// just add any child widget and not worry about the details.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If [``set_child()``][`Self::set_child()`] has added a [`Viewport`][crate::Viewport] for you,</span>
+    <span class="doccomment">/// If [`set_child()`][Self::set_child()] has added a [`Viewport`][crate::Viewport] for you,</span>
     <span class="doccomment">/// you can remove both your added child widget from the [`Viewport`][crate::Viewport], and the</span>
     <span class="doccomment">/// [`Viewport`][crate::Viewport] from the [`ScrolledWindow`][crate::ScrolledWindow], like this:</span>
     <span class="doccomment">///</span>
@@ -2089,16 +2037,16 @@
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Creates a new builder-pattern struct instance to construct [`ScrolledWindow`] objects.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// This method returns an instance of [`ScrolledWindowBuilder`] which can be used to create [`ScrolledWindow`] objects.</span>
+    <span class="doccomment">/// This method returns an instance of [`ScrolledWindowBuilder`](crate::builders::ScrolledWindowBuilder) which can be used to create [`ScrolledWindow`] objects.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">builder</span>() -&gt; <span class="ident">ScrolledWindowBuilder</span> {
         <span class="ident">ScrolledWindowBuilder::default</span>()
     }
 
-    <span class="doccomment">/// Gets the child widget of `self`.</span>
+    <span class="doccomment">/// Gets the child widget of @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// the child widget of `self`</span>
+    <span class="doccomment">/// the child widget of @self</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_get_child&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_child&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">child</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span> {
@@ -2115,7 +2063,7 @@
     <span class="doccomment">/// the horizontal [`Adjustment`][crate::Adjustment]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_get_hadjustment&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_hadjustment&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">hadjustment</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Adjustment</span><span class="op">&gt;</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">hadjustment</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">Adjustment</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_none</span>(<span class="ident">ffi::gtk_scrolled_window_get_hadjustment</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -2127,7 +2075,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// [`true`] if the `self` has a frame</span>
+    <span class="doccomment">/// [`true`] if the @self has a frame</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_get_has_frame&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_has_frame&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">has_frame</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">bool</span> {
@@ -2138,14 +2086,14 @@
         }
     }
 
-    <span class="doccomment">/// Returns the horizontal scrollbar of `self`.</span>
+    <span class="doccomment">/// Returns the horizontal scrollbar of @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// the horizontal scrollbar of the scrolled window.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_get_hscrollbar&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_hscrollbar&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">hscrollbar</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">hscrollbar</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">Widget</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_none</span>(<span class="ident">ffi::gtk_scrolled_window_get_hscrollbar</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -2190,7 +2138,7 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_scrolled_window_get_max_content_width</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="doccomment">/// Gets the minimal content height of `self`.</span>
+    <span class="doccomment">/// Gets the minimal content height of @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2201,7 +2149,7 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_scrolled_window_get_min_content_height</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="doccomment">/// Gets the minimum content width of `self`.</span>
+    <span class="doccomment">/// Gets the minimum content width of @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2245,18 +2193,18 @@
     <span class="doccomment">/// Retrieves the current policy values for the horizontal and vertical</span>
     <span class="doccomment">/// scrollbars.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_policy()``][`Self::set_policy()`].</span>
+    <span class="doccomment">/// See [`set_policy()`][Self::set_policy()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `hscrollbar_policy`</span>
     <span class="doccomment">/// location to store the policy</span>
-    <span class="doccomment">///  for the horizontal scrollbar</span>
+    <span class="doccomment">///   for the horizontal scrollbar</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `vscrollbar_policy`</span>
     <span class="doccomment">/// location to store the policy</span>
-    <span class="doccomment">///  for the vertical scrollbar</span>
+    <span class="doccomment">///   for the vertical scrollbar</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_get_policy&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_policy&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">policy</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; (<span class="ident">PolicyType</span>, <span class="ident">PolicyType</span>) {
@@ -2316,7 +2264,7 @@
     <span class="doccomment">/// the vertical [`Adjustment`][crate::Adjustment]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_get_vadjustment&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_vadjustment&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">vadjustment</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Adjustment</span><span class="op">&gt;</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">vadjustment</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">Adjustment</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_none</span>(<span class="ident">ffi::gtk_scrolled_window_get_vadjustment</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -2324,14 +2272,14 @@
         }
     }
 
-    <span class="doccomment">/// Returns the vertical scrollbar of `self`.</span>
+    <span class="doccomment">/// Returns the vertical scrollbar of @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// the vertical scrollbar of the scrolled window.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_get_vscrollbar&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_vscrollbar&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">vscrollbar</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">vscrollbar</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">Widget</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_none</span>(<span class="ident">ffi::gtk_scrolled_window_get_vscrollbar</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -2339,7 +2287,7 @@
         }
     }
 
-    <span class="doccomment">/// Sets the child widget of `self`.</span>
+    <span class="doccomment">/// Sets the child widget of @self.</span>
     <span class="doccomment">/// ## `child`</span>
     <span class="doccomment">/// the child widget</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_set_child&quot;</span>)]</span>
@@ -2365,7 +2313,7 @@
         }
     }
 
-    <span class="doccomment">/// Changes the frame drawn around the contents of `self`.</span>
+    <span class="doccomment">/// Changes the frame drawn around the contents of @self.</span>
     <span class="doccomment">/// ## `has_frame`</span>
     <span class="doccomment">/// whether to draw a frame around scrolled window contents</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_set_has_frame&quot;</span>)]</span>
@@ -2391,9 +2339,9 @@
         }
     }
 
-    <span class="doccomment">/// Sets the maximum height that `self` should keep visible.</span>
+    <span class="doccomment">/// Sets the maximum height that @self should keep visible.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The `self` will grow up to this height before it starts</span>
+    <span class="doccomment">/// The @self will grow up to this height before it starts</span>
     <span class="doccomment">/// scrolling the content.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// It is a programming error to set the maximum content height to a value</span>
@@ -2407,9 +2355,9 @@
         }
     }
 
-    <span class="doccomment">/// Sets the maximum width that `self` should keep visible.</span>
+    <span class="doccomment">/// Sets the maximum width that @self should keep visible.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The `self` will grow up to this width before it starts</span>
+    <span class="doccomment">/// The @self will grow up to this width before it starts</span>
     <span class="doccomment">/// scrolling the content.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// It is a programming error to set the maximum content width to a</span>
@@ -2423,7 +2371,7 @@
         }
     }
 
-    <span class="doccomment">/// Sets the minimum height that `self` should keep visible.</span>
+    <span class="doccomment">/// Sets the minimum height that @self should keep visible.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Note that this can and (usually will) be smaller than the minimum</span>
     <span class="doccomment">/// size of the content.</span>
@@ -2439,7 +2387,7 @@
         }
     }
 
-    <span class="doccomment">/// Sets the minimum width that `self` should keep visible.</span>
+    <span class="doccomment">/// Sets the minimum width that @self should keep visible.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Note that this can and (usually will) be smaller than the minimum</span>
     <span class="doccomment">/// size of the content.</span>
@@ -2476,8 +2424,8 @@
     <span class="doccomment">/// Other values in [`CornerType`][crate::CornerType] are [`CornerType::TopRight`][crate::CornerType::TopRight],</span>
     <span class="doccomment">/// [`CornerType::BottomLeft`][crate::CornerType::BottomLeft], and [`CornerType::BottomRight`][crate::CornerType::BottomRight].</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See also [``placement()``][`Self::placement()`] and</span>
-    <span class="doccomment">/// [``unset_placement()``][`Self::unset_placement()`].</span>
+    <span class="doccomment">/// See also [`placement()`][Self::placement()] and</span>
+    <span class="doccomment">/// [`unset_placement()`][Self::unset_placement()].</span>
     <span class="doccomment">/// ## `window_placement`</span>
     <span class="doccomment">/// position of the child window</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_scrolled_window_set_placement&quot;</span>)]</span>
@@ -2567,98 +2515,50 @@
 
     <span class="doccomment">/// When the horizontal scrollbar is displayed.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Use [``set_policy()``][`Self::set_policy()`] to set</span>
+    <span class="doccomment">/// Use [`set_policy()`][Self::set_policy()] to set</span>
     <span class="doccomment">/// this property.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;hscrollbar-policy&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">hscrollbar_policy</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">PolicyType</span> {
-        <span class="kw">unsafe</span> {
-            <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">value</span> <span class="op">=</span> <span class="ident">glib::Value::from_type</span>(<span class="op">&lt;</span><span class="ident">PolicyType</span> <span class="kw">as</span> <span class="ident">StaticType</span><span class="op">&gt;</span><span class="ident">::static_type</span>());
-            <span class="ident">glib::gobject_ffi::g_object_get_property</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>,
-                <span class="string">b&quot;hscrollbar-policy\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
-                <span class="ident">value</span>.<span class="ident">to_glib_none_mut</span>().<span class="number">0</span>,
-            );
-            <span class="ident">value</span>
-                .<span class="ident">get</span>()
-                .<span class="ident">expect</span>(<span class="string">&quot;Return Value for property `hscrollbar-policy` getter&quot;</span>)
-        }
+        <span class="ident">glib::ObjectExt::property</span>(<span class="self">self</span>, <span class="string">&quot;hscrollbar-policy&quot;</span>)
     }
 
     <span class="doccomment">/// When the horizontal scrollbar is displayed.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Use [``set_policy()``][`Self::set_policy()`] to set</span>
+    <span class="doccomment">/// Use [`set_policy()`][Self::set_policy()] to set</span>
     <span class="doccomment">/// this property.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;hscrollbar-policy&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">set_hscrollbar_policy</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">hscrollbar_policy</span>: <span class="ident">PolicyType</span>) {
-        <span class="kw">unsafe</span> {
-            <span class="ident">glib::gobject_ffi::g_object_set_property</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>,
-                <span class="string">b&quot;hscrollbar-policy\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
-                <span class="ident">hscrollbar_policy</span>.<span class="ident">to_value</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-            );
-        }
+        <span class="ident">glib::ObjectExt::set_property</span>(<span class="self">self</span>, <span class="string">&quot;hscrollbar-policy&quot;</span>, <span class="kw-2">&amp;</span><span class="ident">hscrollbar_policy</span>)
     }
 
     <span class="doccomment">/// When the vertical scrollbar is displayed.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Use [``set_policy()``][`Self::set_policy()`] to set</span>
+    <span class="doccomment">/// Use [`set_policy()`][Self::set_policy()] to set</span>
     <span class="doccomment">/// this property.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;vscrollbar-policy&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">vscrollbar_policy</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">PolicyType</span> {
-        <span class="kw">unsafe</span> {
-            <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">value</span> <span class="op">=</span> <span class="ident">glib::Value::from_type</span>(<span class="op">&lt;</span><span class="ident">PolicyType</span> <span class="kw">as</span> <span class="ident">StaticType</span><span class="op">&gt;</span><span class="ident">::static_type</span>());
-            <span class="ident">glib::gobject_ffi::g_object_get_property</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>,
-                <span class="string">b&quot;vscrollbar-policy\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
-                <span class="ident">value</span>.<span class="ident">to_glib_none_mut</span>().<span class="number">0</span>,
-            );
-            <span class="ident">value</span>
-                .<span class="ident">get</span>()
-                .<span class="ident">expect</span>(<span class="string">&quot;Return Value for property `vscrollbar-policy` getter&quot;</span>)
-        }
+        <span class="ident">glib::ObjectExt::property</span>(<span class="self">self</span>, <span class="string">&quot;vscrollbar-policy&quot;</span>)
     }
 
     <span class="doccomment">/// When the vertical scrollbar is displayed.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Use [``set_policy()``][`Self::set_policy()`] to set</span>
+    <span class="doccomment">/// Use [`set_policy()`][Self::set_policy()] to set</span>
     <span class="doccomment">/// this property.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;vscrollbar-policy&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">set_vscrollbar_policy</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">vscrollbar_policy</span>: <span class="ident">PolicyType</span>) {
-        <span class="kw">unsafe</span> {
-            <span class="ident">glib::gobject_ffi::g_object_set_property</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>,
-                <span class="string">b&quot;vscrollbar-policy\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
-                <span class="ident">vscrollbar_policy</span>.<span class="ident">to_value</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-            );
-        }
+        <span class="ident">glib::ObjectExt::set_property</span>(<span class="self">self</span>, <span class="string">&quot;vscrollbar-policy&quot;</span>, <span class="kw-2">&amp;</span><span class="ident">vscrollbar_policy</span>)
     }
 
     <span class="doccomment">/// Where the contents are located with respect to the scrollbars.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;window-placement&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">window_placement</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">CornerType</span> {
-        <span class="kw">unsafe</span> {
-            <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">value</span> <span class="op">=</span> <span class="ident">glib::Value::from_type</span>(<span class="op">&lt;</span><span class="ident">CornerType</span> <span class="kw">as</span> <span class="ident">StaticType</span><span class="op">&gt;</span><span class="ident">::static_type</span>());
-            <span class="ident">glib::gobject_ffi::g_object_get_property</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>,
-                <span class="string">b&quot;window-placement\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
-                <span class="ident">value</span>.<span class="ident">to_glib_none_mut</span>().<span class="number">0</span>,
-            );
-            <span class="ident">value</span>
-                .<span class="ident">get</span>()
-                .<span class="ident">expect</span>(<span class="string">&quot;Return Value for property `window-placement` getter&quot;</span>)
-        }
+        <span class="ident">glib::ObjectExt::property</span>(<span class="self">self</span>, <span class="string">&quot;window-placement&quot;</span>)
     }
 
     <span class="doccomment">/// Where the contents are located with respect to the scrollbars.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;window-placement&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">set_window_placement</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">window_placement</span>: <span class="ident">CornerType</span>) {
-        <span class="kw">unsafe</span> {
-            <span class="ident">glib::gobject_ffi::g_object_set_property</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>,
-                <span class="string">b&quot;window-placement\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
-                <span class="ident">window_placement</span>.<span class="ident">to_value</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-            );
-        }
+        <span class="ident">glib::ObjectExt::set_property</span>(<span class="self">self</span>, <span class="string">&quot;window-placement&quot;</span>, <span class="kw-2">&amp;</span><span class="ident">window_placement</span>)
     }
 
     <span class="doccomment">/// Emitted whenever user initiated scrolling makes the scrolled</span>
@@ -2668,7 +2568,7 @@
     <span class="doccomment">/// A similar behavior without edge resistance is provided by the</span>
     <span class="doccomment">/// `signal::ScrolledWindow::edge-reached` signal.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Note: The `pos` argument is LTR/RTL aware, so callers should be</span>
+    <span class="doccomment">/// Note: The @pos argument is LTR/RTL aware, so callers should be</span>
     <span class="doccomment">/// aware too if intending to provide behavior on horizontal edges.</span>
     <span class="doccomment">/// ## `pos`</span>
     <span class="doccomment">/// edge side that was hit</span>
@@ -2680,20 +2580,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">edge_overshot_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>, <span class="ident">PositionType</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">pos</span>: <span class="ident">ffi::GtkPositionType</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>), <span class="ident">from_glib</span>(<span class="ident">pos</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;edge-overshot\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;edge-overshot\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">edge_overshot_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">edge_overshot_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -2707,7 +2607,7 @@
     <span class="doccomment">/// A similar behavior with edge resistance is provided by the</span>
     <span class="doccomment">/// `signal::ScrolledWindow::edge-overshot` signal.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Note: The `pos` argument is LTR/RTL aware, so callers should be</span>
+    <span class="doccomment">/// Note: The @pos argument is LTR/RTL aware, so callers should be</span>
     <span class="doccomment">/// aware too if intending to provide behavior on horizontal edges.</span>
     <span class="doccomment">/// ## `pos`</span>
     <span class="doccomment">/// edge side that was reached</span>
@@ -2719,20 +2619,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">edge_reached_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>, <span class="ident">PositionType</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">pos</span>: <span class="ident">ffi::GtkPositionType</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>), <span class="ident">from_glib</span>(<span class="ident">pos</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;edge-reached\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;edge-reached\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">edge_reached_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">edge_reached_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -2749,7 +2649,7 @@
     <span class="doccomment">/// move backward.</span>
     <span class="doccomment">/// ## `direction_type`</span>
     <span class="doccomment">/// either [`DirectionType::TabForward`][crate::DirectionType::TabForward] or</span>
-    <span class="doccomment">///  [`DirectionType::TabBackward`][crate::DirectionType::TabBackward]</span>
+    <span class="doccomment">///   [`DirectionType::TabBackward`][crate::DirectionType::TabBackward]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;move-focus-out&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_move_focus_out</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="ident">DirectionType</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
@@ -2758,20 +2658,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">move_focus_out_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>, <span class="ident">DirectionType</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">direction_type</span>: <span class="ident">ffi::GtkDirectionType</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>), <span class="ident">from_glib</span>(<span class="ident">direction_type</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;move-focus-out\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;move-focus-out\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">move_focus_out_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">move_focus_out_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -2779,11 +2679,7 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_move_focus_out</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">direction_type</span>: <span class="ident">DirectionType</span>) {
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;move-focus-out&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">direction_type</span>])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;move-focus-out&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">direction_type</span>]);
     }
 
     <span class="doccomment">/// Emitted when a keybinding that scrolls is pressed.</span>
@@ -2796,7 +2692,7 @@
     <span class="doccomment">/// a [`ScrollType`][crate::ScrollType] describing how much to scroll</span>
     <span class="doccomment">/// ## `horizontal`</span>
     <span class="doccomment">/// whether the keybinding scrolls the child</span>
-    <span class="doccomment">///  horizontally or not</span>
+    <span class="doccomment">///   horizontally or not</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;scroll-child&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_scroll_child</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>, <span class="ident">ScrollType</span>, <span class="ident">bool</span>) -&gt; <span class="ident">bool</span> <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
@@ -2805,12 +2701,12 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">scroll_child_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>, <span class="ident">ScrollType</span>, <span class="ident">bool</span>) -&gt; <span class="ident">bool</span> <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">scroll</span>: <span class="ident">ffi::GtkScrollType</span>,
             <span class="ident">horizontal</span>: <span class="ident">glib::ffi::gboolean</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) -&gt; <span class="ident">glib::ffi::gboolean</span> {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(
                 <span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>),
                 <span class="ident">from_glib</span>(<span class="ident">scroll</span>),
@@ -2821,10 +2717,10 @@
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;scroll-child\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;scroll-child\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">scroll_child_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">scroll_child_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -2832,33 +2728,26 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_scroll_child</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">scroll</span>: <span class="ident">ScrollType</span>, <span class="ident">horizontal</span>: <span class="ident">bool</span>) -&gt; <span class="ident">bool</span> {
-        <span class="kw">let</span> <span class="ident">res</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;scroll-child&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">scroll</span>, <span class="kw-2">&amp;</span><span class="ident">horizontal</span>])
-                .<span class="ident">unwrap</span>()
-        };
-        <span class="ident">res</span>.<span class="ident">unwrap</span>()
-            .<span class="ident">get</span>()
-            .<span class="ident">expect</span>(<span class="string">&quot;Return Value for `emit_scroll_child`&quot;</span>)
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>(<span class="string">&quot;scroll-child&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">scroll</span>, <span class="kw-2">&amp;</span><span class="ident">horizontal</span>])
     }
 
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;child&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_child_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_child_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::child\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::child\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_child_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_child_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -2868,20 +2757,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;hadjustment&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_hadjustment_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_hadjustment_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::hadjustment\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::hadjustment\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_hadjustment_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_hadjustment_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -2891,20 +2780,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;has-frame&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_has_frame_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_has_frame_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::has-frame\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::has-frame\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_has_frame_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_has_frame_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -2919,20 +2808,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_hscrollbar_policy_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::hscrollbar-policy\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::hscrollbar-policy\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_hscrollbar_policy_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_hscrollbar_policy_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -2947,20 +2836,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_kinetic_scrolling_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::kinetic-scrolling\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::kinetic-scrolling\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_kinetic_scrolling_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_kinetic_scrolling_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -2975,20 +2864,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_max_content_height_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::max-content-height\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::max-content-height\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_max_content_height_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_max_content_height_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3003,20 +2892,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_max_content_width_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::max-content-width\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::max-content-width\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_max_content_width_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_max_content_width_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3031,20 +2920,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_min_content_height_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::min-content-height\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::min-content-height\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_min_content_height_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_min_content_height_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3059,20 +2948,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_min_content_width_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::min-content-width\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::min-content-width\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_min_content_width_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_min_content_width_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3087,20 +2976,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_overlay_scrolling_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::overlay-scrolling\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::overlay-scrolling\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_overlay_scrolling_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_overlay_scrolling_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3115,20 +3004,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_propagate_natural_height_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::propagate-natural-height\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::propagate-natural-height\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_propagate_natural_height_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_propagate_natural_height_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3143,20 +3032,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_propagate_natural_width_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::propagate-natural-width\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::propagate-natural-width\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_propagate_natural_width_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_propagate_natural_width_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3166,20 +3055,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;vadjustment&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_vadjustment_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_vadjustment_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::vadjustment\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::vadjustment\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_vadjustment_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_vadjustment_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3194,20 +3083,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_vscrollbar_policy_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::vscrollbar-policy\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::vscrollbar-policy\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_vscrollbar_policy_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_vscrollbar_policy_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3219,20 +3108,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_window_placement_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">ScrolledWindow</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkScrolledWindow</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::window-placement\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::window-placement\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_window_placement_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_window_placement_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3251,6 +3140,7 @@
 <span class="doccomment">/// A [builder-pattern] type to construct [`ScrolledWindow`] objects.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html</span>
+<span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;The builder must be built to be used&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">ScrolledWindowBuilder</span> {
     <span class="ident">child</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>,
     <span class="ident">hadjustment</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Adjustment</span><span class="op">&gt;</span>,
@@ -3308,6 +3198,7 @@
 
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Build the [`ScrolledWindow`].</span>
+    <span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">build</span>(<span class="self">self</span>) -&gt; <span class="ident">ScrolledWindow</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">properties</span>: <span class="ident">Vec</span><span class="op">&lt;</span>(<span class="kw-2">&amp;</span><span class="ident">str</span>, <span class="kw-2">&amp;</span><span class="kw">dyn</span> <span class="ident">ToValue</span>)<span class="op">&gt;</span> <span class="op">=</span> <span class="macro">vec!</span>[];
         <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="kw-2">ref</span> <span class="ident">child</span>) <span class="op">=</span> <span class="self">self</span>.<span class="ident">child</span> {
@@ -3468,7 +3359,7 @@
 
     <span class="doccomment">/// When the horizontal scrollbar is displayed.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Use [``ScrolledWindow::set_policy()``][crate::`ScrolledWindow::set_policy()`] to set</span>
+    <span class="doccomment">/// Use [`ScrolledWindow::set_policy()`][crate::ScrolledWindow::set_policy()] to set</span>
     <span class="doccomment">/// this property.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">hscrollbar_policy</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">hscrollbar_policy</span>: <span class="ident">PolicyType</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">hscrollbar_policy</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">hscrollbar_policy</span>);
@@ -3483,25 +3374,25 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// The maximum content height of `scrolled_window`.</span>
+    <span class="doccomment">/// The maximum content height of @scrolled_window.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">max_content_height</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">max_content_height</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">max_content_height</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">max_content_height</span>);
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// The maximum content width of `scrolled_window`.</span>
+    <span class="doccomment">/// The maximum content width of @scrolled_window.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">max_content_width</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">max_content_width</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">max_content_width</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">max_content_width</span>);
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// The minimum content height of `scrolled_window`.</span>
+    <span class="doccomment">/// The minimum content height of @scrolled_window.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">min_content_height</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">min_content_height</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">min_content_height</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">min_content_height</span>);
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// The minimum content width of `scrolled_window`.</span>
+    <span class="doccomment">/// The minimum content width of @scrolled_window.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">min_content_width</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">min_content_width</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">min_content_width</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">min_content_width</span>);
         <span class="self">self</span>
@@ -3547,7 +3438,7 @@
 
     <span class="doccomment">/// When the vertical scrollbar is displayed.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Use [``ScrolledWindow::set_policy()``][crate::`ScrolledWindow::set_policy()`] to set</span>
+    <span class="doccomment">/// Use [`ScrolledWindow::set_policy()`][crate::ScrolledWindow::set_policy()] to set</span>
     <span class="doccomment">/// this property.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">vscrollbar_policy</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">vscrollbar_policy</span>: <span class="ident">PolicyType</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">vscrollbar_policy</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">vscrollbar_policy</span>);
@@ -3591,7 +3482,7 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// The cursor used by `widget`.</span>
+    <span class="doccomment">/// The cursor used by @widget.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cursor</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">cursor</span>: <span class="kw-2">&amp;</span><span class="ident">gdk::Cursor</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">cursor</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">cursor</span>.<span class="ident">clone</span>());
         <span class="self">self</span>
@@ -3617,9 +3508,9 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on `widget`.</span>
+    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on @widget.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// A value of [`true`] indicates that `widget` can have a tooltip, in this case</span>
+    <span class="doccomment">/// A value of [`true`] indicates that @widget can have a tooltip, in this case</span>
     <span class="doccomment">/// the widget will be queried using `signal::Widget::query-tooltip` to</span>
     <span class="doccomment">/// determine whether it will provide a tooltip or not.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">has_tooltip</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">has_tooltip</span>: <span class="ident">bool</span>) -&gt; <span class="self">Self</span> {
@@ -3661,7 +3552,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_bottom</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_bottom</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_bottom</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_bottom</span>);
         <span class="self">self</span>
@@ -3674,7 +3565,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_end</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_end</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_end</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_end</span>);
         <span class="self">self</span>
@@ -3687,7 +3578,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_start</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_start</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_start</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_start</span>);
         <span class="self">self</span>
@@ -3697,7 +3588,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_top</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_top</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_top</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_top</span>);
         <span class="self">self</span>
@@ -3739,7 +3630,7 @@
     <span class="doccomment">/// Sets the text of tooltip to be the given string, which is marked up</span>
     <span class="doccomment">/// with Pango markup.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_markup()``][crate::`Tooltip::set_markup()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_markup()`][crate::Tooltip::set_markup()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -3756,7 +3647,7 @@
 
     <span class="doccomment">/// Sets the text of tooltip to be the given string.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_text()``][crate::`Tooltip::set_text()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_text()`][crate::Tooltip::set_text()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -3813,11 +3704,10 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">ScrolledWindow</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;ScrolledWindow&quot;</span>)
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

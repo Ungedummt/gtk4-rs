@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;auto&#x2F;toggle_button.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>toggle_button.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/toggle_button.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>toggle_button.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gtk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -902,6 +907,13 @@
 <span id="829">829</span>
 <span id="830">830</span>
 <span id="831">831</span>
+<span id="832">832</span>
+<span id="833">833</span>
+<span id="834">834</span>
+<span id="835">835</span>
+<span id="836">836</span>
+<span id="837">837</span>
+<span id="838">838</span>
 </pre><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)</span>
 <span class="comment">// from gir-files (https://github.com/gtk-rs/gir-files.git)</span>
 <span class="comment">// DO NOT EDIT</span>
@@ -933,42 +945,47 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// Clicking again will cause the toggle button to return to its normal state.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// A toggle button is created by calling either [``new()``][`Self::new()`] or</span>
-    <span class="doccomment">/// [``with_label()``][`Self::with_label()`]. If using the former, it is advisable</span>
+    <span class="doccomment">/// A toggle button is created by calling either [`new()`][Self::new()] or</span>
+    <span class="doccomment">/// [`with_label()`][Self::with_label()]. If using the former, it is advisable</span>
     <span class="doccomment">/// to pack a widget, (such as a [`Label`][crate::Label] and/or a [`Image`][crate::Image]), into the toggle</span>
     <span class="doccomment">/// button’s container. (See [`Button`][crate::Button] for more information).</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The state of a [`ToggleButton`][crate::ToggleButton] can be set specifically using</span>
-    <span class="doccomment">/// [``ToggleButtonExt::set_active()``][crate::prelude::`ToggleButtonExt::set_active()`], and retrieved using</span>
-    <span class="doccomment">/// [``ToggleButtonExt::is_active()``][crate::prelude::`ToggleButtonExt::is_active()`].</span>
+    <span class="doccomment">/// [`ToggleButtonExt::set_active()`][crate::prelude::ToggleButtonExt::set_active()], and retrieved using</span>
+    <span class="doccomment">/// [`ToggleButtonExt::is_active()`][crate::prelude::ToggleButtonExt::is_active()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// To simply switch the state of a toggle button, use</span>
-    <span class="doccomment">/// [``ToggleButtonExt::toggled()``][crate::prelude::`ToggleButtonExt::toggled()`].</span>
+    <span class="doccomment">/// [`ToggleButtonExt::toggled()`][crate::prelude::ToggleButtonExt::toggled()].</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// # Grouping</span>
+    <span class="doccomment">/// ## Grouping</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Toggle buttons can be grouped together, to form mutually exclusive</span>
     <span class="doccomment">/// groups - only one of the buttons can be toggled at a time, and toggling</span>
     <span class="doccomment">/// another one will switch the currently toggled one off.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// To add a [`ToggleButton`][crate::ToggleButton] to a group, use [``ToggleButtonExt::set_group()``][crate::prelude::`ToggleButtonExt::set_group()`].</span>
+    <span class="doccomment">/// To add a [`ToggleButton`][crate::ToggleButton] to a group, use [`ToggleButtonExt::set_group()`][crate::prelude::ToggleButtonExt::set_group()].</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// # CSS nodes</span>
+    <span class="doccomment">/// ## CSS nodes</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`ToggleButton`][crate::ToggleButton] has a single CSS node with name button. To differentiate</span>
-    <span class="doccomment">/// it from a plain [`Button`][crate::Button], it gets the .toggle style class.</span>
+    <span class="doccomment">/// it from a plain [`Button`][crate::Button], it gets the `.toggle` style class.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## Creating two [`ToggleButton`][crate::ToggleButton] widgets.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// **⚠️ The following code is in c ⚠️**</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ```c</span>
-    <span class="doccomment">/// static void output_state (GtkToggleButton *source, gpointer user_data)</span>
+    <span class="doccomment">/// static void</span>
+    <span class="doccomment">/// output_state (GtkToggleButton *source,</span>
+    <span class="doccomment">///               gpointer         user_data)</span>
     <span class="doccomment">/// {</span>
-    <span class="doccomment">///   printf (&quot;Active: %d\n&quot;, gtk_toggle_button_get_active (source));</span>
+    <span class="doccomment">///   g_print (&quot;Toggle button &quot;%s&quot; is active: %s&quot;,</span>
+    <span class="doccomment">///            gtk_button_get_label (GTK_BUTTON (source)),</span>
+    <span class="doccomment">///            gtk_toggle_button_get_active (source) ? &quot;Yes&quot; : &quot;No&quot;);</span>
     <span class="doccomment">/// }</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// void make_toggles (void)</span>
+    <span class="doccomment">/// static void</span>
+    <span class="doccomment">/// make_toggles (void)</span>
     <span class="doccomment">/// {</span>
     <span class="doccomment">///   GtkWidget *window, *toggle1, *toggle2;</span>
     <span class="doccomment">///   GtkWidget *box;</span>
@@ -977,7 +994,7 @@
     <span class="doccomment">///   window = gtk_window_new ();</span>
     <span class="doccomment">///   box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">///   text = &quot;Hi, I’m a toggle button.&quot;;</span>
+    <span class="doccomment">///   text = &quot;Hi, I’m toggle button one&quot;;</span>
     <span class="doccomment">///   toggle1 = gtk_toggle_button_new_with_label (text);</span>
     <span class="doccomment">///</span>
     <span class="doccomment">///   g_signal_connect (toggle1, &quot;toggled&quot;,</span>
@@ -985,7 +1002,7 @@
     <span class="doccomment">///                     NULL);</span>
     <span class="doccomment">///   gtk_box_append (GTK_BOX (box), toggle1);</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">///   text = &quot;Hi, I’m a toggle button.&quot;;</span>
+    <span class="doccomment">///   text = &quot;Hi, I’m toggle button two&quot;;</span>
     <span class="doccomment">///   toggle2 = gtk_toggle_button_new_with_label (text);</span>
     <span class="doccomment">///   g_signal_connect (toggle2, &quot;toggled&quot;,</span>
     <span class="doccomment">///                     G_CALLBACK (output_state),</span>
@@ -1009,9 +1026,11 @@
 }
 
 <span class="kw">impl</span> <span class="ident">ToggleButton</span> {
+    <span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NONE</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="lifetime">&#39;static</span> <span class="ident">ToggleButton</span><span class="op">&gt;</span> <span class="op">=</span> <span class="prelude-val">None</span>;
+
     <span class="doccomment">/// Creates a new toggle button.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// A widget should be packed into the button, as in [``Button::new()``][crate::`Button::new()`].</span>
+    <span class="doccomment">/// A widget should be packed into the button, as in [`Button::new()`][crate::Button::new()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -1043,11 +1062,11 @@
 
     <span class="doccomment">/// Creates a new [`ToggleButton`][crate::ToggleButton] containing a label.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The label will be created using [``Label::with_mnemonic()``][crate::`Label::with_mnemonic()`],</span>
-    <span class="doccomment">/// so underscores in `label` indicate the mnemonic for the button.</span>
+    <span class="doccomment">/// The label will be created using [`Label::with_mnemonic()`][crate::Label::with_mnemonic()],</span>
+    <span class="doccomment">/// so underscores in @label indicate the mnemonic for the button.</span>
     <span class="doccomment">/// ## `label`</span>
     <span class="doccomment">/// the text of the button, with an underscore in front of the</span>
-    <span class="doccomment">///  mnemonic character</span>
+    <span class="doccomment">///   mnemonic character</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -1067,7 +1086,7 @@
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Creates a new builder-pattern struct instance to construct [`ToggleButton`] objects.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// This method returns an instance of [`ToggleButtonBuilder`] which can be used to create [`ToggleButton`] objects.</span>
+    <span class="doccomment">/// This method returns an instance of [`ToggleButtonBuilder`](crate::builders::ToggleButtonBuilder) which can be used to create [`ToggleButton`] objects.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">builder</span>() -&gt; <span class="ident">ToggleButtonBuilder</span> {
         <span class="ident">ToggleButtonBuilder::default</span>()
     }
@@ -1084,6 +1103,7 @@
 <span class="doccomment">/// A [builder-pattern] type to construct [`ToggleButton`] objects.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html</span>
+<span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;The builder must be built to be used&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">ToggleButtonBuilder</span> {
     <span class="ident">active</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">bool</span><span class="op">&gt;</span>,
     <span class="ident">group</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">ToggleButton</span><span class="op">&gt;</span>,
@@ -1135,6 +1155,7 @@
 
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Build the [`ToggleButton`].</span>
+    <span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">build</span>(<span class="self">self</span>) -&gt; <span class="ident">ToggleButton</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">properties</span>: <span class="ident">Vec</span><span class="op">&lt;</span>(<span class="kw-2">&amp;</span><span class="ident">str</span>, <span class="kw-2">&amp;</span><span class="kw">dyn</span> <span class="ident">ToValue</span>)<span class="op">&gt;</span> <span class="op">=</span> <span class="macro">vec!</span>[];
         <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="kw-2">ref</span> <span class="ident">active</span>) <span class="op">=</span> <span class="self">self</span>.<span class="ident">active</span> {
@@ -1332,7 +1353,7 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// The cursor used by `widget`.</span>
+    <span class="doccomment">/// The cursor used by @widget.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cursor</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">cursor</span>: <span class="kw-2">&amp;</span><span class="ident">gdk::Cursor</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">cursor</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">cursor</span>.<span class="ident">clone</span>());
         <span class="self">self</span>
@@ -1358,9 +1379,9 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on `widget`.</span>
+    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on @widget.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// A value of [`true`] indicates that `widget` can have a tooltip, in this case</span>
+    <span class="doccomment">/// A value of [`true`] indicates that @widget can have a tooltip, in this case</span>
     <span class="doccomment">/// the widget will be queried using `signal::Widget::query-tooltip` to</span>
     <span class="doccomment">/// determine whether it will provide a tooltip or not.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">has_tooltip</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">has_tooltip</span>: <span class="ident">bool</span>) -&gt; <span class="self">Self</span> {
@@ -1402,7 +1423,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_bottom</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_bottom</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_bottom</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_bottom</span>);
         <span class="self">self</span>
@@ -1415,7 +1436,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_end</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_end</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_end</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_end</span>);
         <span class="self">self</span>
@@ -1428,7 +1449,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_start</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_start</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_start</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_start</span>);
         <span class="self">self</span>
@@ -1438,7 +1459,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_top</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_top</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_top</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_top</span>);
         <span class="self">self</span>
@@ -1480,7 +1501,7 @@
     <span class="doccomment">/// Sets the text of tooltip to be the given string, which is marked up</span>
     <span class="doccomment">/// with Pango markup.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_markup()``][crate::`Tooltip::set_markup()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_markup()`][crate::Tooltip::set_markup()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -1497,7 +1518,7 @@
 
     <span class="doccomment">/// Sets the text of tooltip to be the given string.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_text()``][crate::`Tooltip::set_text()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_text()`][crate::Tooltip::set_text()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -1563,8 +1584,6 @@
     }
 }
 
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NONE_TOGGLE_BUTTON</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">ToggleButton</span><span class="op">&gt;</span> <span class="op">=</span> <span class="prelude-val">None</span>;
-
 <span class="doccomment">/// Trait containing all [`struct@ToggleButton`] methods.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// # Implementors</span>
@@ -1595,7 +1614,7 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_toggle_button_set_active&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">set_active</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">is_active</span>: <span class="ident">bool</span>);
 
-    <span class="doccomment">/// Adds `self_` to the group of `group`.</span>
+    <span class="doccomment">/// Adds @self_ to the group of @group.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// In a group of multiple toggle buttons, only one button can be active</span>
     <span class="doccomment">/// at a time.</span>
@@ -1608,7 +1627,7 @@
     <span class="doccomment">/// value.</span>
     <span class="doccomment">/// ## `group`</span>
     <span class="doccomment">/// another [`ToggleButton`][crate::ToggleButton] to</span>
-    <span class="doccomment">///  form a group with</span>
+    <span class="doccomment">///   form a group with</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_toggle_button_set_group&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">set_group</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">group</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">ToggleButton</span><span class="op">&gt;</span><span class="op">&gt;</span>);
 
@@ -1664,19 +1683,19 @@
 
     <span class="kw">fn</span> <span class="ident">connect_toggled</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">toggled_trampoline</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">ToggleButton</span><span class="op">&gt;</span>, <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkToggleButton</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkToggleButton</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="ident">ToggleButton::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>())
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;toggled\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;toggled\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">toggled_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">toggled_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -1685,20 +1704,20 @@
 
     <span class="kw">fn</span> <span class="ident">connect_active_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_active_trampoline</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">ToggleButton</span><span class="op">&gt;</span>, <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkToggleButton</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkToggleButton</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="ident">ToggleButton::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>())
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::active\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::active\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_active_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_active_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -1707,20 +1726,20 @@
 
     <span class="kw">fn</span> <span class="ident">connect_group_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_group_trampoline</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">ToggleButton</span><span class="op">&gt;</span>, <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkToggleButton</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkToggleButton</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="ident">ToggleButton::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>())
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::group\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::group\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_group_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_group_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -1729,11 +1748,10 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">ToggleButton</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;ToggleButton&quot;</span>)
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

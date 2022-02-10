@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;auto&#x2F;snapshot.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>snapshot.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/snapshot.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>snapshot.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gtk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -835,6 +840,194 @@
 <span id="762">762</span>
 <span id="763">763</span>
 <span id="764">764</span>
+<span id="765">765</span>
+<span id="766">766</span>
+<span id="767">767</span>
+<span id="768">768</span>
+<span id="769">769</span>
+<span id="770">770</span>
+<span id="771">771</span>
+<span id="772">772</span>
+<span id="773">773</span>
+<span id="774">774</span>
+<span id="775">775</span>
+<span id="776">776</span>
+<span id="777">777</span>
+<span id="778">778</span>
+<span id="779">779</span>
+<span id="780">780</span>
+<span id="781">781</span>
+<span id="782">782</span>
+<span id="783">783</span>
+<span id="784">784</span>
+<span id="785">785</span>
+<span id="786">786</span>
+<span id="787">787</span>
+<span id="788">788</span>
+<span id="789">789</span>
+<span id="790">790</span>
+<span id="791">791</span>
+<span id="792">792</span>
+<span id="793">793</span>
+<span id="794">794</span>
+<span id="795">795</span>
+<span id="796">796</span>
+<span id="797">797</span>
+<span id="798">798</span>
+<span id="799">799</span>
+<span id="800">800</span>
+<span id="801">801</span>
+<span id="802">802</span>
+<span id="803">803</span>
+<span id="804">804</span>
+<span id="805">805</span>
+<span id="806">806</span>
+<span id="807">807</span>
+<span id="808">808</span>
+<span id="809">809</span>
+<span id="810">810</span>
+<span id="811">811</span>
+<span id="812">812</span>
+<span id="813">813</span>
+<span id="814">814</span>
+<span id="815">815</span>
+<span id="816">816</span>
+<span id="817">817</span>
+<span id="818">818</span>
+<span id="819">819</span>
+<span id="820">820</span>
+<span id="821">821</span>
+<span id="822">822</span>
+<span id="823">823</span>
+<span id="824">824</span>
+<span id="825">825</span>
+<span id="826">826</span>
+<span id="827">827</span>
+<span id="828">828</span>
+<span id="829">829</span>
+<span id="830">830</span>
+<span id="831">831</span>
+<span id="832">832</span>
+<span id="833">833</span>
+<span id="834">834</span>
+<span id="835">835</span>
+<span id="836">836</span>
+<span id="837">837</span>
+<span id="838">838</span>
+<span id="839">839</span>
+<span id="840">840</span>
+<span id="841">841</span>
+<span id="842">842</span>
+<span id="843">843</span>
+<span id="844">844</span>
+<span id="845">845</span>
+<span id="846">846</span>
+<span id="847">847</span>
+<span id="848">848</span>
+<span id="849">849</span>
+<span id="850">850</span>
+<span id="851">851</span>
+<span id="852">852</span>
+<span id="853">853</span>
+<span id="854">854</span>
+<span id="855">855</span>
+<span id="856">856</span>
+<span id="857">857</span>
+<span id="858">858</span>
+<span id="859">859</span>
+<span id="860">860</span>
+<span id="861">861</span>
+<span id="862">862</span>
+<span id="863">863</span>
+<span id="864">864</span>
+<span id="865">865</span>
+<span id="866">866</span>
+<span id="867">867</span>
+<span id="868">868</span>
+<span id="869">869</span>
+<span id="870">870</span>
+<span id="871">871</span>
+<span id="872">872</span>
+<span id="873">873</span>
+<span id="874">874</span>
+<span id="875">875</span>
+<span id="876">876</span>
+<span id="877">877</span>
+<span id="878">878</span>
+<span id="879">879</span>
+<span id="880">880</span>
+<span id="881">881</span>
+<span id="882">882</span>
+<span id="883">883</span>
+<span id="884">884</span>
+<span id="885">885</span>
+<span id="886">886</span>
+<span id="887">887</span>
+<span id="888">888</span>
+<span id="889">889</span>
+<span id="890">890</span>
+<span id="891">891</span>
+<span id="892">892</span>
+<span id="893">893</span>
+<span id="894">894</span>
+<span id="895">895</span>
+<span id="896">896</span>
+<span id="897">897</span>
+<span id="898">898</span>
+<span id="899">899</span>
+<span id="900">900</span>
+<span id="901">901</span>
+<span id="902">902</span>
+<span id="903">903</span>
+<span id="904">904</span>
+<span id="905">905</span>
+<span id="906">906</span>
+<span id="907">907</span>
+<span id="908">908</span>
+<span id="909">909</span>
+<span id="910">910</span>
+<span id="911">911</span>
+<span id="912">912</span>
+<span id="913">913</span>
+<span id="914">914</span>
+<span id="915">915</span>
+<span id="916">916</span>
+<span id="917">917</span>
+<span id="918">918</span>
+<span id="919">919</span>
+<span id="920">920</span>
+<span id="921">921</span>
+<span id="922">922</span>
+<span id="923">923</span>
+<span id="924">924</span>
+<span id="925">925</span>
+<span id="926">926</span>
+<span id="927">927</span>
+<span id="928">928</span>
+<span id="929">929</span>
+<span id="930">930</span>
+<span id="931">931</span>
+<span id="932">932</span>
+<span id="933">933</span>
+<span id="934">934</span>
+<span id="935">935</span>
+<span id="936">936</span>
+<span id="937">937</span>
+<span id="938">938</span>
+<span id="939">939</span>
+<span id="940">940</span>
+<span id="941">941</span>
+<span id="942">942</span>
+<span id="943">943</span>
+<span id="944">944</span>
+<span id="945">945</span>
+<span id="946">946</span>
+<span id="947">947</span>
+<span id="948">948</span>
+<span id="949">949</span>
+<span id="950">950</span>
+<span id="951">951</span>
+<span id="952">952</span>
 </pre><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)</span>
 <span class="comment">// from gir-files (https://github.com/gtk-rs/gir-files.git)</span>
 <span class="comment">// DO NOT EDIT</span>
@@ -845,18 +1038,18 @@
 <span class="kw">use</span> <span class="ident">std::fmt</span>;
 
 <span class="macro">glib::wrapper!</span> {
-    <span class="doccomment">/// [`Snapshot`][crate::Snapshot] assists in creating `GskRenderNodes` for widgets.</span>
+    <span class="doccomment">/// [`Snapshot`][crate::Snapshot] assists in creating [`gsk::RenderNode`][crate::gsk::RenderNode]s for widgets.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// It functions in a similar way to a cairo context, and maintains a stack</span>
     <span class="doccomment">/// of render nodes and their associated transformations.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The node at the top of the stack is the the one that gtk_snapshot_append_…</span>
-    <span class="doccomment">/// functions operate on. Use the gtk_snapshot_push_… functions and</span>
+    <span class="doccomment">/// The node at the top of the stack is the one that `gtk_snapshot_append_…()`</span>
+    <span class="doccomment">/// functions operate on. Use the `gtk_snapshot_push_…()` functions and</span>
     <span class="doccomment">/// [`pop()`][Self::pop()] to change the current node.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The typical way to obtain a [`Snapshot`][crate::Snapshot] object is as an argument to</span>
     <span class="doccomment">/// the `vfunc::Gtk::Widget::snapshot` vfunc. If you need to create your own</span>
-    <span class="doccomment">/// [`Snapshot`][crate::Snapshot], use [``new()``][`Self::new()`].</span>
+    <span class="doccomment">/// [`Snapshot`][crate::Snapshot], use [`new()`][Self::new()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Implements</span>
     <span class="doccomment">///</span>
@@ -882,16 +1075,16 @@
     }
 
     <span class="doccomment">/// Creates a new [`gsk::CairoNode`][crate::gsk::CairoNode] and appends it to the current</span>
-    <span class="doccomment">/// render node of `self`, without changing the current node.</span>
+    <span class="doccomment">/// render node of @self, without changing the current node.</span>
     <span class="doccomment">/// ## `bounds`</span>
     <span class="doccomment">/// the bounds for the new node</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// a `cairo_t` suitable for drawing the contents of</span>
-    <span class="doccomment">///  the newly created render node</span>
+    <span class="doccomment">/// a [`cairo::Context`][crate::cairo::Context] suitable for drawing the contents of</span>
+    <span class="doccomment">///   the newly created render node</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_append_cairo&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">append_cairo</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">bounds</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Rect</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">cairo::Context</span><span class="op">&gt;</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">append_cairo</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">bounds</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Rect</span>) -&gt; <span class="ident">cairo::Context</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_full</span>(<span class="ident">ffi::gtk_snapshot_append_cairo</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -900,14 +1093,14 @@
         }
     }
 
-    <span class="doccomment">/// Creates a new render node drawing the `color` into the</span>
-    <span class="doccomment">/// given `bounds` and appends it to the current render node</span>
-    <span class="doccomment">/// of `self`.</span>
+    <span class="doccomment">/// Creates a new render node drawing the @color into the</span>
+    <span class="doccomment">/// given @bounds and appends it to the current render node</span>
+    <span class="doccomment">/// of @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// You should try to avoid calling this function if</span>
-    <span class="doccomment">/// `color` is transparent.</span>
+    <span class="doccomment">/// @color is transparent.</span>
     <span class="doccomment">/// ## `color`</span>
-    <span class="doccomment">/// the [`gdk::RGBA`][crate::gdk::RGBA] to draw</span>
+    <span class="doccomment">/// the color to draw</span>
     <span class="doccomment">/// ## `bounds`</span>
     <span class="doccomment">/// the bounds for the new node</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_append_color&quot;</span>)]</span>
@@ -921,7 +1114,38 @@
         }
     }
 
-    <span class="doccomment">/// Appends an inset shadow into the box given by `outline`.</span>
+    <span class="doccomment">/// Appends a conic gradient node with the given stops to @self.</span>
+    <span class="doccomment">/// ## `bounds`</span>
+    <span class="doccomment">/// the rectangle to render the gradient into</span>
+    <span class="doccomment">/// ## `center`</span>
+    <span class="doccomment">/// the center point of the conic gradient</span>
+    <span class="doccomment">/// ## `rotation`</span>
+    <span class="doccomment">/// the clockwise rotation in degrees of the starting angle.</span>
+    <span class="doccomment">///   0 means the starting angle is the top.</span>
+    <span class="doccomment">/// ## `stops`</span>
+    <span class="doccomment">/// the color stops defining the gradient</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_append_conic_gradient&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">append_conic_gradient</span>(
+        <span class="kw-2">&amp;</span><span class="self">self</span>,
+        <span class="ident">bounds</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Rect</span>,
+        <span class="ident">center</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Point</span>,
+        <span class="ident">rotation</span>: <span class="ident">f32</span>,
+        <span class="ident">stops</span>: <span class="kw-2">&amp;</span>[<span class="ident">gsk::ColorStop</span>],
+    ) {
+        <span class="kw">let</span> <span class="ident">n_stops</span> <span class="op">=</span> <span class="ident">stops</span>.<span class="ident">len</span>() <span class="kw">as</span> <span class="ident">usize</span>;
+        <span class="kw">unsafe</span> {
+            <span class="ident">ffi::gtk_snapshot_append_conic_gradient</span>(
+                <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">bounds</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">center</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">rotation</span>,
+                <span class="ident">stops</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">n_stops</span>,
+            );
+        }
+    }
+
+    <span class="doccomment">/// Appends an inset shadow into the box given by @outline.</span>
     <span class="doccomment">/// ## `outline`</span>
     <span class="doccomment">/// outline of the region surrounded by shadow</span>
     <span class="doccomment">/// ## `color`</span>
@@ -968,7 +1192,51 @@
         }
     }
 
-    <span class="doccomment">/// Appends an outset shadow node around the box given by `outline`.</span>
+    <span class="doccomment">/// Appends a linear gradient node with the given stops to @self.</span>
+    <span class="doccomment">/// ## `bounds`</span>
+    <span class="doccomment">/// the rectangle to render the linear gradient into</span>
+    <span class="doccomment">/// ## `start_point`</span>
+    <span class="doccomment">/// the point at which the linear gradient will begin</span>
+    <span class="doccomment">/// ## `end_point`</span>
+    <span class="doccomment">/// the point at which the linear gradient will finish</span>
+    <span class="doccomment">/// ## `stops`</span>
+    <span class="doccomment">/// the color stops defining the gradient</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_append_linear_gradient&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">append_linear_gradient</span>(
+        <span class="kw-2">&amp;</span><span class="self">self</span>,
+        <span class="ident">bounds</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Rect</span>,
+        <span class="ident">start_point</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Point</span>,
+        <span class="ident">end_point</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Point</span>,
+        <span class="ident">stops</span>: <span class="kw-2">&amp;</span>[<span class="ident">gsk::ColorStop</span>],
+    ) {
+        <span class="kw">let</span> <span class="ident">n_stops</span> <span class="op">=</span> <span class="ident">stops</span>.<span class="ident">len</span>() <span class="kw">as</span> <span class="ident">usize</span>;
+        <span class="kw">unsafe</span> {
+            <span class="ident">ffi::gtk_snapshot_append_linear_gradient</span>(
+                <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">bounds</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">start_point</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">end_point</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">stops</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">n_stops</span>,
+            );
+        }
+    }
+
+    <span class="doccomment">/// Appends @node to the current render node of @self,</span>
+    <span class="doccomment">/// without changing the current node.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// If @self does not have a current node yet, @node</span>
+    <span class="doccomment">/// will become the initial node.</span>
+    <span class="doccomment">/// ## `node`</span>
+    <span class="doccomment">/// a [`gsk::RenderNode`][crate::gsk::RenderNode]</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_append_node&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">append_node</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">node</span>: <span class="kw">impl</span> <span class="ident">AsRef</span><span class="op">&lt;</span><span class="ident">gsk::RenderNode</span><span class="op">&gt;</span>) {
+        <span class="kw">unsafe</span> {
+            <span class="ident">ffi::gtk_snapshot_append_node</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>, <span class="ident">node</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>);
+        }
+    }
+
+    <span class="doccomment">/// Appends an outset shadow node around the box given by @outline.</span>
     <span class="doccomment">/// ## `outline`</span>
     <span class="doccomment">/// outline of the region surrounded by shadow</span>
     <span class="doccomment">/// ## `color`</span>
@@ -1004,11 +1272,125 @@
         }
     }
 
-    <span class="doccomment">/// Creates a new render node drawing the `texture`</span>
-    <span class="doccomment">/// into the given `bounds` and appends it to the</span>
-    <span class="doccomment">/// current render node of `self`.</span>
+    <span class="doccomment">/// Appends a radial gradient node with the given stops to @self.</span>
+    <span class="doccomment">/// ## `bounds`</span>
+    <span class="doccomment">/// the rectangle to render the readial gradient into</span>
+    <span class="doccomment">/// ## `center`</span>
+    <span class="doccomment">/// the center point for the radial gradient</span>
+    <span class="doccomment">/// ## `hradius`</span>
+    <span class="doccomment">/// the horizontal radius</span>
+    <span class="doccomment">/// ## `vradius`</span>
+    <span class="doccomment">/// the vertical radius</span>
+    <span class="doccomment">/// ## `start`</span>
+    <span class="doccomment">/// the start position (on the horizontal axis)</span>
+    <span class="doccomment">/// ## `end`</span>
+    <span class="doccomment">/// the end position (on the horizontal axis)</span>
+    <span class="doccomment">/// ## `stops`</span>
+    <span class="doccomment">/// the color stops defining the gradient</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_append_radial_gradient&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">append_radial_gradient</span>(
+        <span class="kw-2">&amp;</span><span class="self">self</span>,
+        <span class="ident">bounds</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Rect</span>,
+        <span class="ident">center</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Point</span>,
+        <span class="ident">hradius</span>: <span class="ident">f32</span>,
+        <span class="ident">vradius</span>: <span class="ident">f32</span>,
+        <span class="ident">start</span>: <span class="ident">f32</span>,
+        <span class="ident">end</span>: <span class="ident">f32</span>,
+        <span class="ident">stops</span>: <span class="kw-2">&amp;</span>[<span class="ident">gsk::ColorStop</span>],
+    ) {
+        <span class="kw">let</span> <span class="ident">n_stops</span> <span class="op">=</span> <span class="ident">stops</span>.<span class="ident">len</span>() <span class="kw">as</span> <span class="ident">usize</span>;
+        <span class="kw">unsafe</span> {
+            <span class="ident">ffi::gtk_snapshot_append_radial_gradient</span>(
+                <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">bounds</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">center</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">hradius</span>,
+                <span class="ident">vradius</span>,
+                <span class="ident">start</span>,
+                <span class="ident">end</span>,
+                <span class="ident">stops</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">n_stops</span>,
+            );
+        }
+    }
+
+    <span class="doccomment">/// Appends a repeating linear gradient node with the given stops to @self.</span>
+    <span class="doccomment">/// ## `bounds`</span>
+    <span class="doccomment">/// the rectangle to render the linear gradient into</span>
+    <span class="doccomment">/// ## `start_point`</span>
+    <span class="doccomment">/// the point at which the linear gradient will begin</span>
+    <span class="doccomment">/// ## `end_point`</span>
+    <span class="doccomment">/// the point at which the linear gradient will finish</span>
+    <span class="doccomment">/// ## `stops`</span>
+    <span class="doccomment">/// the color stops defining the gradient</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_append_repeating_linear_gradient&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">append_repeating_linear_gradient</span>(
+        <span class="kw-2">&amp;</span><span class="self">self</span>,
+        <span class="ident">bounds</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Rect</span>,
+        <span class="ident">start_point</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Point</span>,
+        <span class="ident">end_point</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Point</span>,
+        <span class="ident">stops</span>: <span class="kw-2">&amp;</span>[<span class="ident">gsk::ColorStop</span>],
+    ) {
+        <span class="kw">let</span> <span class="ident">n_stops</span> <span class="op">=</span> <span class="ident">stops</span>.<span class="ident">len</span>() <span class="kw">as</span> <span class="ident">usize</span>;
+        <span class="kw">unsafe</span> {
+            <span class="ident">ffi::gtk_snapshot_append_repeating_linear_gradient</span>(
+                <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">bounds</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">start_point</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">end_point</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">stops</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">n_stops</span>,
+            );
+        }
+    }
+
+    <span class="doccomment">/// Appends a repeating radial gradient node with the given stops to @self.</span>
+    <span class="doccomment">/// ## `bounds`</span>
+    <span class="doccomment">/// the rectangle to render the readial gradient into</span>
+    <span class="doccomment">/// ## `center`</span>
+    <span class="doccomment">/// the center point for the radial gradient</span>
+    <span class="doccomment">/// ## `hradius`</span>
+    <span class="doccomment">/// the horizontal radius</span>
+    <span class="doccomment">/// ## `vradius`</span>
+    <span class="doccomment">/// the vertical radius</span>
+    <span class="doccomment">/// ## `start`</span>
+    <span class="doccomment">/// the start position (on the horizontal axis)</span>
+    <span class="doccomment">/// ## `end`</span>
+    <span class="doccomment">/// the end position (on the horizontal axis)</span>
+    <span class="doccomment">/// ## `stops`</span>
+    <span class="doccomment">/// the color stops defining the gradient</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_append_repeating_radial_gradient&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">append_repeating_radial_gradient</span>(
+        <span class="kw-2">&amp;</span><span class="self">self</span>,
+        <span class="ident">bounds</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Rect</span>,
+        <span class="ident">center</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Point</span>,
+        <span class="ident">hradius</span>: <span class="ident">f32</span>,
+        <span class="ident">vradius</span>: <span class="ident">f32</span>,
+        <span class="ident">start</span>: <span class="ident">f32</span>,
+        <span class="ident">end</span>: <span class="ident">f32</span>,
+        <span class="ident">stops</span>: <span class="kw-2">&amp;</span>[<span class="ident">gsk::ColorStop</span>],
+    ) {
+        <span class="kw">let</span> <span class="ident">n_stops</span> <span class="op">=</span> <span class="ident">stops</span>.<span class="ident">len</span>() <span class="kw">as</span> <span class="ident">usize</span>;
+        <span class="kw">unsafe</span> {
+            <span class="ident">ffi::gtk_snapshot_append_repeating_radial_gradient</span>(
+                <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">bounds</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">center</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">hradius</span>,
+                <span class="ident">vradius</span>,
+                <span class="ident">start</span>,
+                <span class="ident">end</span>,
+                <span class="ident">stops</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
+                <span class="ident">n_stops</span>,
+            );
+        }
+    }
+
+    <span class="doccomment">/// Creates a new render node drawing the @texture</span>
+    <span class="doccomment">/// into the given @bounds and appends it to the</span>
+    <span class="doccomment">/// current render node of @self.</span>
     <span class="doccomment">/// ## `texture`</span>
-    <span class="doccomment">/// the [`gdk::Texture`][crate::gdk::Texture] to render</span>
+    <span class="doccomment">/// the texture to render</span>
     <span class="doccomment">/// ## `bounds`</span>
     <span class="doccomment">/// the bounds for the new node</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_append_texture&quot;</span>)]</span>
@@ -1027,7 +1409,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This must be called the same number of times as the number</span>
     <span class="doccomment">/// of textures is needed for the shader in</span>
-    <span class="doccomment">/// [``push_gl_shader()``][`Self::push_gl_shader()`].</span>
+    <span class="doccomment">/// [`push_gl_shader()`][Self::push_gl_shader()].</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_gl_shader_pop_texture&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">gl_shader_pop_texture</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe</span> {
@@ -1037,7 +1419,7 @@
 
     <span class="doccomment">/// Applies a perspective projection transform.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [`gsk::`Transform::perspective()``][crate::gsk::`Transform::perspective()`] for a discussion on the details.</span>
+    <span class="doccomment">/// See [`gsk::Transform::perspective()`][crate::gsk::Transform::perspective()] for a discussion on the details.</span>
     <span class="doccomment">/// ## `depth`</span>
     <span class="doccomment">/// distance of the z=0 plane</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_perspective&quot;</span>)]</span>
@@ -1058,13 +1440,13 @@
 
     <span class="doccomment">/// Blends together two images with the given blend mode.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Until the first call to [``pop()``][`Self::pop()`], the</span>
+    <span class="doccomment">/// Until the first call to [`pop()`][Self::pop()], the</span>
     <span class="doccomment">/// bottom image for the blend operation will be recorded.</span>
     <span class="doccomment">/// After that call, the top image to be blended will be</span>
-    <span class="doccomment">/// recorded until the second call to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// recorded until the second call to [`pop()`][Self::pop()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Calling this function requires two subsequent calls</span>
-    <span class="doccomment">/// to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// to [`pop()`][Self::pop()].</span>
     <span class="doccomment">/// ## `blend_mode`</span>
     <span class="doccomment">/// blend mode to use</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_push_blend&quot;</span>)]</span>
@@ -1076,9 +1458,9 @@
 
     <span class="doccomment">/// Blurs an image.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The image is recorded until the next call to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// The image is recorded until the next call to [`pop()`][Self::pop()].</span>
     <span class="doccomment">/// ## `radius`</span>
-    <span class="doccomment">/// the blur radius to use</span>
+    <span class="doccomment">/// the blur radius to use. Must be positive</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_push_blur&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">push_blur</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">radius</span>: <span class="ident">f64</span>) {
         <span class="kw">unsafe</span> {
@@ -1088,7 +1470,7 @@
 
     <span class="doccomment">/// Clips an image to a rectangle.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The image is recorded until the next call to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// The image is recorded until the next call to [`pop()`][Self::pop()].</span>
     <span class="doccomment">/// ## `bounds`</span>
     <span class="doccomment">/// the rectangle to clip to</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_push_clip&quot;</span>)]</span>
@@ -1101,7 +1483,7 @@
     <span class="doccomment">/// Modifies the colors of an image by applying an affine transformation</span>
     <span class="doccomment">/// in RGB space.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The image is recorded until the next call to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// The image is recorded until the next call to [`pop()`][Self::pop()].</span>
     <span class="doccomment">/// ## `color_matrix`</span>
     <span class="doccomment">/// the color matrix to use</span>
     <span class="doccomment">/// ## `color_offset`</span>
@@ -1122,14 +1504,14 @@
     }
 
     <span class="doccomment">/// Snapshots a cross-fade operation between two images with the</span>
-    <span class="doccomment">/// given `progress`.</span>
+    <span class="doccomment">/// given @progress.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Until the first call to [``pop()``][`Self::pop()`], the start image</span>
+    <span class="doccomment">/// Until the first call to [`pop()`][Self::pop()], the start image</span>
     <span class="doccomment">/// will be snapshot. After that call, the end image will be recorded</span>
-    <span class="doccomment">/// until the second call to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// until the second call to [`pop()`][Self::pop()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Calling this function requires two subsequent calls</span>
-    <span class="doccomment">/// to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// to [`pop()`][Self::pop()].</span>
     <span class="doccomment">/// ## `progress`</span>
     <span class="doccomment">/// progress between 0.0 and 1.0</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_push_cross_fade&quot;</span>)]</span>
@@ -1142,33 +1524,33 @@
     <span class="doccomment">/// Push a [`gsk::GLShaderNode`][crate::gsk::GLShaderNode].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The node uses the given [`gsk::GLShader`][crate::gsk::GLShader] and uniform values</span>
-    <span class="doccomment">/// Additionally this takes a list of `n_children` other nodes</span>
+    <span class="doccomment">/// Additionally this takes a list of @n_children other nodes</span>
     <span class="doccomment">/// which will be passed to the [`gsk::GLShaderNode`][crate::gsk::GLShaderNode].</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The `take_args` argument is a block of data to use for uniform</span>
-    <span class="doccomment">/// arguments, as per types and offsets defined by the `shader`.</span>
-    <span class="doccomment">/// Normally this is generated by `Gsk::`GLShader::format_args()``</span>
+    <span class="doccomment">/// The @take_args argument is a block of data to use for uniform</span>
+    <span class="doccomment">/// arguments, as per types and offsets defined by the @shader.</span>
+    <span class="doccomment">/// Normally this is generated by `Gsk::GLShader::format_args()`</span>
     <span class="doccomment">/// or `Gsk::ShaderArgsBuilder`.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The snapshotter takes ownership of `take_args`, so the caller should</span>
+    <span class="doccomment">/// The snapshotter takes ownership of @take_args, so the caller should</span>
     <span class="doccomment">/// not free it after this.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// If the renderer doesn&#39;t support GL shaders, or if there is any</span>
     <span class="doccomment">/// problem when compiling the shader, then the node will draw pink.</span>
-    <span class="doccomment">/// You should use [``GLShader::compile()``][crate::gsk::`GLShader::compile()`] to ensure the `shader`</span>
+    <span class="doccomment">/// You should use [`GLShader::compile()`][crate::gsk::GLShader::compile()] to ensure the @shader</span>
     <span class="doccomment">/// will work for the renderer before using it.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If the shader requires textures (see [``GLShader::n_textures()``][crate::gsk::`GLShader::n_textures()`]),</span>
-    <span class="doccomment">/// then it is expected that you call [``gl_shader_pop_texture()``][`Self::gl_shader_pop_texture()`]</span>
+    <span class="doccomment">/// If the shader requires textures (see [`GLShader::n_textures()`][crate::gsk::GLShader::n_textures()]),</span>
+    <span class="doccomment">/// then it is expected that you call [`gl_shader_pop_texture()`][Self::gl_shader_pop_texture()]</span>
     <span class="doccomment">/// the number of times that are required. Each of these calls will generate</span>
     <span class="doccomment">/// a node that is added as a child to the [`gsk::GLShaderNode`][crate::gsk::GLShaderNode], which in turn</span>
     <span class="doccomment">/// will render these offscreen and pass as a texture to the shader.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Once all textures (if any) are pop:ed, you must call the regular</span>
-    <span class="doccomment">/// [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// [`pop()`][Self::pop()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// If you want to use pre-existing textures as input to the shader rather</span>
-    <span class="doccomment">/// than rendering new ones, use [``append_texture()``][`Self::append_texture()`] to</span>
+    <span class="doccomment">/// than rendering new ones, use [`append_texture()`][Self::append_texture()] to</span>
     <span class="doccomment">/// push a texture node. These will be used directly rather than being</span>
     <span class="doccomment">/// re-rendered.</span>
     <span class="doccomment">///</span>
@@ -1198,7 +1580,7 @@
 
     <span class="doccomment">/// Modifies the opacity of an image.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The image is recorded until the next call to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// The image is recorded until the next call to [`pop()`][Self::pop()].</span>
     <span class="doccomment">/// ## `opacity`</span>
     <span class="doccomment">/// the opacity to use</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_push_opacity&quot;</span>)]</span>
@@ -1210,12 +1592,12 @@
 
     <span class="doccomment">/// Creates a node that repeats the child node.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The child is recorded until the next call to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// The child is recorded until the next call to [`pop()`][Self::pop()].</span>
     <span class="doccomment">/// ## `bounds`</span>
     <span class="doccomment">/// the bounds within which to repeat</span>
     <span class="doccomment">/// ## `child_bounds`</span>
     <span class="doccomment">/// the bounds of the child or [`None`]</span>
-    <span class="doccomment">///  to use the full size of the collected child node</span>
+    <span class="doccomment">///   to use the full size of the collected child node</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_push_repeat&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">push_repeat</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">bounds</span>: <span class="kw-2">&amp;</span><span class="ident">graphene::Rect</span>, <span class="ident">child_bounds</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">graphene::Rect</span><span class="op">&gt;</span>) {
         <span class="kw">unsafe</span> {
@@ -1229,7 +1611,7 @@
 
     <span class="doccomment">/// Clips an image to a rounded rectangle.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The image is recorded until the next call to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// The image is recorded until the next call to [`pop()`][Self::pop()].</span>
     <span class="doccomment">/// ## `bounds`</span>
     <span class="doccomment">/// the rounded rectangle to clip to</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_push_rounded_clip&quot;</span>)]</span>
@@ -1241,13 +1623,12 @@
 
     <span class="doccomment">/// Applies a shadow to an image.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The image is recorded until the next call to [``pop()``][`Self::pop()`].</span>
+    <span class="doccomment">/// The image is recorded until the next call to [`pop()`][Self::pop()].</span>
     <span class="doccomment">/// ## `shadow`</span>
     <span class="doccomment">/// the first shadow specification</span>
-    <span class="doccomment">/// ## `n_shadows`</span>
-    <span class="doccomment">/// number of shadow specifications</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_push_shadow&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">push_shadow</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">shadow</span>: <span class="kw-2">&amp;</span><span class="ident">gsk::Shadow</span>, <span class="ident">n_shadows</span>: <span class="ident">usize</span>) {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">push_shadow</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">shadow</span>: <span class="kw-2">&amp;</span>[<span class="ident">gsk::Shadow</span>]) {
+        <span class="kw">let</span> <span class="ident">n_shadows</span> <span class="op">=</span> <span class="ident">shadow</span>.<span class="ident">len</span>() <span class="kw">as</span> <span class="ident">usize</span>;
         <span class="kw">unsafe</span> {
             <span class="ident">ffi::gtk_snapshot_push_shadow</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -1257,11 +1638,11 @@
         }
     }
 
-    <span class="doccomment">/// Creates a render node for the CSS background according to `context`,</span>
-    <span class="doccomment">/// and appends it to the current node of `self`, without changing</span>
+    <span class="doccomment">/// Creates a render node for the CSS background according to @context,</span>
+    <span class="doccomment">/// and appends it to the current node of @self, without changing</span>
     <span class="doccomment">/// the current node.</span>
     <span class="doccomment">/// ## `context`</span>
-    <span class="doccomment">/// the [`StyleContext`][crate::StyleContext] to use</span>
+    <span class="doccomment">/// the style context that defines the background</span>
     <span class="doccomment">/// ## `x`</span>
     <span class="doccomment">/// X origin of the rectangle</span>
     <span class="doccomment">/// ## `y`</span>
@@ -1291,11 +1672,11 @@
         }
     }
 
-    <span class="doccomment">/// Creates a render node for the focus outline according to `context`,</span>
-    <span class="doccomment">/// and appends it to the current node of `self`, without changing</span>
+    <span class="doccomment">/// Creates a render node for the focus outline according to @context,</span>
+    <span class="doccomment">/// and appends it to the current node of @self, without changing</span>
     <span class="doccomment">/// the current node.</span>
     <span class="doccomment">/// ## `context`</span>
-    <span class="doccomment">/// the [`StyleContext`][crate::StyleContext] to use</span>
+    <span class="doccomment">/// the style context that defines the focus ring</span>
     <span class="doccomment">/// ## `x`</span>
     <span class="doccomment">/// X origin of the rectangle</span>
     <span class="doccomment">/// ## `y`</span>
@@ -1325,11 +1706,11 @@
         }
     }
 
-    <span class="doccomment">/// Creates a render node for the CSS border according to `context`,</span>
-    <span class="doccomment">/// and appends it to the current node of `self`, without changing</span>
+    <span class="doccomment">/// Creates a render node for the CSS border according to @context,</span>
+    <span class="doccomment">/// and appends it to the current node of @self, without changing</span>
     <span class="doccomment">/// the current node.</span>
     <span class="doccomment">/// ## `context`</span>
-    <span class="doccomment">/// the [`StyleContext`][crate::StyleContext] to use</span>
+    <span class="doccomment">/// the style context that defines the frame</span>
     <span class="doccomment">/// ## `x`</span>
     <span class="doccomment">/// X origin of the rectangle</span>
     <span class="doccomment">/// ## `y`</span>
@@ -1359,7 +1740,7 @@
         }
     }
 
-    <span class="doccomment">/// Draws a text caret using `self` at the specified index of `layout`.</span>
+    <span class="doccomment">/// Draws a text caret using @self at the specified index of @layout.</span>
     <span class="doccomment">/// ## `context`</span>
     <span class="doccomment">/// a [`StyleContext`][crate::StyleContext]</span>
     <span class="doccomment">/// ## `x`</span>
@@ -1395,11 +1776,11 @@
         }
     }
 
-    <span class="doccomment">/// Creates a render node for rendering `layout` according to the style</span>
-    <span class="doccomment">/// information in `context`, and appends it to the current node of `self`,</span>
+    <span class="doccomment">/// Creates a render node for rendering @layout according to the style</span>
+    <span class="doccomment">/// information in @context, and appends it to the current node of @self,</span>
     <span class="doccomment">/// without changing the current node.</span>
     <span class="doccomment">/// ## `context`</span>
-    <span class="doccomment">/// the [`StyleContext`][crate::StyleContext] to use</span>
+    <span class="doccomment">/// the style context that defines the text</span>
     <span class="doccomment">/// ## `x`</span>
     <span class="doccomment">/// X origin of the rectangle</span>
     <span class="doccomment">/// ## `y`</span>
@@ -1425,7 +1806,7 @@
         }
     }
 
-    <span class="doccomment">/// Restores `self` to the state saved by a preceding call to</span>
+    <span class="doccomment">/// Restores @self to the state saved by a preceding call to</span>
     <span class="doccomment">/// [`save()`][Self::save()] and removes that state from the stack of</span>
     <span class="doccomment">/// saved states.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_restore&quot;</span>)]</span>
@@ -1435,10 +1816,10 @@
         }
     }
 
-    <span class="doccomment">/// Rotates @`self`&#39;s coordinate system by `angle` degrees in 2D space -</span>
+    <span class="doccomment">/// Rotates @@self&#39;s coordinate system by @angle degrees in 2D space -</span>
     <span class="doccomment">/// or in 3D speak, rotates around the Z axis.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// To rotate around other axes, use [`gsk::`Transform::rotate_3d()``][crate::gsk::`Transform::rotate_3d()`].</span>
+    <span class="doccomment">/// To rotate around other axes, use [`gsk::Transform::rotate_3d()`][crate::gsk::Transform::rotate_3d()].</span>
     <span class="doccomment">/// ## `angle`</span>
     <span class="doccomment">/// the rotation angle, in degrees (clockwise)</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_rotate&quot;</span>)]</span>
@@ -1448,9 +1829,9 @@
         }
     }
 
-    <span class="doccomment">/// Rotates `self`&#39;s coordinate system by `angle` degrees around `axis`.</span>
+    <span class="doccomment">/// Rotates @self&#39;s coordinate system by @angle degrees around @axis.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// For a rotation in 2D space, use [`gsk::`Transform::rotate()``][crate::gsk::`Transform::rotate()`].</span>
+    <span class="doccomment">/// For a rotation in 2D space, use [`gsk::Transform::rotate()`][crate::gsk::Transform::rotate()].</span>
     <span class="doccomment">/// ## `angle`</span>
     <span class="doccomment">/// the rotation angle, in degrees (clockwise)</span>
     <span class="doccomment">/// ## `axis`</span>
@@ -1462,17 +1843,17 @@
         }
     }
 
-    <span class="doccomment">/// Makes a copy of the current state of `self` and saves it</span>
+    <span class="doccomment">/// Makes a copy of the current state of @self and saves it</span>
     <span class="doccomment">/// on an internal stack.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// When [``restore()``][`Self::restore()`] is called, `self` will</span>
+    <span class="doccomment">/// When [`restore()`][Self::restore()] is called, @self will</span>
     <span class="doccomment">/// be restored to the saved state. Multiple calls to</span>
-    <span class="doccomment">/// [`save()`][Self::save()] and [`restore()`][Self::restore()] can be nested;</span>
-    <span class="doccomment">/// each call to [`restore()`][Self::restore()] restores the state from</span>
-    <span class="doccomment">/// the matching paired [`save()`][Self::save()].</span>
+    <span class="doccomment">/// [`save()`][Self::save()] and `Snapshot::restore` can be nested;</span>
+    <span class="doccomment">/// each call to `gtk_snapshot_restore()` restores the state from</span>
+    <span class="doccomment">/// the matching paired `gtk_snapshot_save()`.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// It is necessary to clear all saved states with corresponding</span>
-    <span class="doccomment">/// calls to [`restore()`][Self::restore()].</span>
+    <span class="doccomment">/// calls to `gtk_snapshot_restore()`.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_save&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">save</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
         <span class="kw">unsafe</span> {
@@ -1480,10 +1861,10 @@
         }
     }
 
-    <span class="doccomment">/// Scales `self`&#39;s coordinate system in 2-dimensional space by</span>
+    <span class="doccomment">/// Scales @self&#39;s coordinate system in 2-dimensional space by</span>
     <span class="doccomment">/// the given factors.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Use [``scale_3d()``][`Self::scale_3d()`] to scale in all 3 dimensions.</span>
+    <span class="doccomment">/// Use [`scale_3d()`][Self::scale_3d()] to scale in all 3 dimensions.</span>
     <span class="doccomment">/// ## `factor_x`</span>
     <span class="doccomment">/// scaling factor on the X axis</span>
     <span class="doccomment">/// ## `factor_y`</span>
@@ -1495,7 +1876,7 @@
         }
     }
 
-    <span class="doccomment">/// Scales `self`&#39;s coordinate system by the given factors.</span>
+    <span class="doccomment">/// Scales @self&#39;s coordinate system by the given factors.</span>
     <span class="doccomment">/// ## `factor_x`</span>
     <span class="doccomment">/// scaling factor on the X axis</span>
     <span class="doccomment">/// ## `factor_y`</span>
@@ -1510,11 +1891,11 @@
     }
 
     <span class="doccomment">/// Returns the render node that was constructed</span>
-    <span class="doccomment">/// by `self`.</span>
+    <span class="doccomment">/// by @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// After calling this function, it is no longer possible to</span>
-    <span class="doccomment">/// add more nodes to `self`. The only function that should</span>
-    <span class="doccomment">/// be called after this is `g_object_unref()`.</span>
+    <span class="doccomment">/// add more nodes to @self. The only function that should</span>
+    <span class="doccomment">/// be called after this is `GObject::Object::unref()`.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -1525,14 +1906,14 @@
     }
 
     <span class="doccomment">/// Returns a paintable encapsulating the render node</span>
-    <span class="doccomment">/// that was constructed by `self`.</span>
+    <span class="doccomment">/// that was constructed by @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// After calling this function, it is no longer possible to</span>
-    <span class="doccomment">/// add more nodes to `self`. The only function that should</span>
-    <span class="doccomment">/// be called after this is `g_object_unref()`.</span>
+    <span class="doccomment">/// add more nodes to @self. The only function that should</span>
+    <span class="doccomment">/// be called after this is `GObject::Object::unref()`.</span>
     <span class="doccomment">/// ## `size`</span>
     <span class="doccomment">/// The size of the resulting paintable</span>
-    <span class="doccomment">///  or [`None`] to use the bounds of the snapshot</span>
+    <span class="doccomment">///   or [`None`] to use the bounds of the snapshot</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -1547,7 +1928,7 @@
         }
     }
 
-    <span class="doccomment">/// Transforms `self`&#39;s coordinate system with the given `transform`.</span>
+    <span class="doccomment">/// Transforms @self&#39;s coordinate system with the given @transform.</span>
     <span class="doccomment">/// ## `transform`</span>
     <span class="doccomment">/// the transform to apply</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_transform&quot;</span>)]</span>
@@ -1557,7 +1938,7 @@
         }
     }
 
-    <span class="doccomment">/// Transforms `self`&#39;s coordinate system with the given `matrix`.</span>
+    <span class="doccomment">/// Transforms @self&#39;s coordinate system with the given @matrix.</span>
     <span class="doccomment">/// ## `matrix`</span>
     <span class="doccomment">/// the matrix to multiply the transform with</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_transform_matrix&quot;</span>)]</span>
@@ -1567,7 +1948,7 @@
         }
     }
 
-    <span class="doccomment">/// Translates `self`&#39;s coordinate system by `point` in 2-dimensional space.</span>
+    <span class="doccomment">/// Translates @self&#39;s coordinate system by @point in 2-dimensional space.</span>
     <span class="doccomment">/// ## `point`</span>
     <span class="doccomment">/// the point to translate the snapshot by</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_translate&quot;</span>)]</span>
@@ -1577,7 +1958,7 @@
         }
     }
 
-    <span class="doccomment">/// Translates `self`&#39;s coordinate system by `point`.</span>
+    <span class="doccomment">/// Translates @self&#39;s coordinate system by @point.</span>
     <span class="doccomment">/// ## `point`</span>
     <span class="doccomment">/// the point to translate the snapshot by</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_snapshot_translate_3d&quot;</span>)]</span>
@@ -1595,11 +1976,10 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">Snapshot</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;Snapshot&quot;</span>)
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

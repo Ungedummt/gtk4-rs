@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;text.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>text.rs - source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/text.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>text.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../gtk4/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -476,61 +481,6 @@
 <span id="403">403</span>
 <span id="404">404</span>
 <span id="405">405</span>
-<span id="406">406</span>
-<span id="407">407</span>
-<span id="408">408</span>
-<span id="409">409</span>
-<span id="410">410</span>
-<span id="411">411</span>
-<span id="412">412</span>
-<span id="413">413</span>
-<span id="414">414</span>
-<span id="415">415</span>
-<span id="416">416</span>
-<span id="417">417</span>
-<span id="418">418</span>
-<span id="419">419</span>
-<span id="420">420</span>
-<span id="421">421</span>
-<span id="422">422</span>
-<span id="423">423</span>
-<span id="424">424</span>
-<span id="425">425</span>
-<span id="426">426</span>
-<span id="427">427</span>
-<span id="428">428</span>
-<span id="429">429</span>
-<span id="430">430</span>
-<span id="431">431</span>
-<span id="432">432</span>
-<span id="433">433</span>
-<span id="434">434</span>
-<span id="435">435</span>
-<span id="436">436</span>
-<span id="437">437</span>
-<span id="438">438</span>
-<span id="439">439</span>
-<span id="440">440</span>
-<span id="441">441</span>
-<span id="442">442</span>
-<span id="443">443</span>
-<span id="444">444</span>
-<span id="445">445</span>
-<span id="446">446</span>
-<span id="447">447</span>
-<span id="448">448</span>
-<span id="449">449</span>
-<span id="450">450</span>
-<span id="451">451</span>
-<span id="452">452</span>
-<span id="453">453</span>
-<span id="454">454</span>
-<span id="455">455</span>
-<span id="456">456</span>
-<span id="457">457</span>
-<span id="458">458</span>
-<span id="459">459</span>
-<span id="460">460</span>
 </pre><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
 <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::prelude</span>::<span class="kw-2">*</span>;
@@ -546,20 +496,20 @@
     <span class="doccomment">/// Emitted when the user hits the Enter key.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal are all forms</span>
-    <span class="doccomment">/// of the `&lt;kbd&gt;`Enter`&lt;/kbd&gt;` key.</span>
+    <span class="doccomment">/// of the &lt;kbd&gt;Enter&lt;/kbd&gt; key.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_activate</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">activate_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;activate\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;activate\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">activate_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -571,20 +521,20 @@
     <span class="doccomment">/// This is a [keybinding signal](class.SignalAction.html).</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal are</span>
-    <span class="doccomment">/// `&lt;kbd&gt;`Backspace`&lt;/kbd&gt;` and `&lt;kbd&gt;`Shift`&lt;/kbd&gt;`-`&lt;kbd&gt;`Backspace`&lt;/kbd&gt;`.</span>
+    <span class="doccomment">/// &lt;kbd&gt;Backspace&lt;/kbd&gt; and &lt;kbd&gt;Shift&lt;/kbd&gt;-&lt;kbd&gt;Backspace&lt;/kbd&gt;.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_backspace</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">backspace_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;backspace\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;backspace\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">backspace_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -596,21 +546,21 @@
     <span class="doccomment">/// This is a [keybinding signal](class.SignalAction.html).</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal are</span>
-    <span class="doccomment">/// `&lt;kbd&gt;`Ctrl`&lt;/kbd&gt;`-`&lt;kbd&gt;`c`&lt;/kbd&gt;` and</span>
-    <span class="doccomment">/// `&lt;kbd&gt;`Ctrl`&lt;/kbd&gt;`-`&lt;kbd&gt;`Insert`&lt;/kbd&gt;`.</span>
+    <span class="doccomment">/// &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;c&lt;/kbd&gt; and</span>
+    <span class="doccomment">/// &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;Insert&lt;/kbd&gt;.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_copy_clipboard</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">copy_clipboard_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;copy-clipboard\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;copy-clipboard\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">copy_clipboard_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -622,21 +572,21 @@
     <span class="doccomment">/// This is a [keybinding signal](class.SignalAction.html).</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal are</span>
-    <span class="doccomment">/// `&lt;kbd&gt;`Ctrl`&lt;/kbd&gt;`-`&lt;kbd&gt;`x`&lt;/kbd&gt;` and</span>
-    <span class="doccomment">/// `&lt;kbd&gt;`Shift`&lt;/kbd&gt;`-`&lt;kbd&gt;`Delete`&lt;/kbd&gt;`.</span>
+    <span class="doccomment">/// &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;x&lt;/kbd&gt; and</span>
+    <span class="doccomment">/// &lt;kbd&gt;Shift&lt;/kbd&gt;-&lt;kbd&gt;Delete&lt;/kbd&gt;.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_cut_clipboard</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">cut_clipboard_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;cut-clipboard\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;cut-clipboard\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">cut_clipboard_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -647,17 +597,17 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a [keybinding signal](class.SignalAction.html).</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If the `type_` is [`DeleteType::Chars`][crate::DeleteType::Chars], GTK deletes the selection</span>
+    <span class="doccomment">/// If the @type_ is [`DeleteType::Chars`][crate::DeleteType::Chars], GTK deletes the selection</span>
     <span class="doccomment">/// if there is one, otherwise it deletes the requested number</span>
     <span class="doccomment">/// of characters.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The default bindings for this signal are `&lt;kbd&gt;`Delete`&lt;/kbd&gt;`</span>
-    <span class="doccomment">/// for deleting a character and `&lt;kbd&gt;`Ctrl`&lt;/kbd&gt;`-`&lt;kbd&gt;`Delete`&lt;/kbd&gt;`</span>
+    <span class="doccomment">/// The default bindings for this signal are &lt;kbd&gt;Delete&lt;/kbd&gt;</span>
+    <span class="doccomment">/// for deleting a character and &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;Delete&lt;/kbd&gt;</span>
     <span class="doccomment">/// for deleting a word.</span>
     <span class="doccomment">/// ## `type_`</span>
     <span class="doccomment">/// the granularity of the deletion, as a [`DeleteType`][crate::DeleteType]</span>
     <span class="doccomment">/// ## `count`</span>
-    <span class="doccomment">/// the number of `type_` units to delete</span>
+    <span class="doccomment">/// the number of @type_ units to delete</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_delete_from_cursor</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="ident">DeleteType</span>, <span class="ident">i32</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         <span class="ident">f</span>: <span class="ident">F</span>,
@@ -665,19 +615,19 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">delete_from_cursor_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="ident">DeleteType</span>, <span class="ident">i32</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
             <span class="ident">type_</span>: <span class="ident">ffi::GtkDeleteType</span>,
             <span class="ident">count</span>: <span class="ident">libc::c_int</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>), <span class="ident">from_glib</span>(<span class="ident">type_</span>), <span class="ident">count</span>)
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;delete-from-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;delete-from-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">delete_from_cursor_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -694,18 +644,18 @@
     <span class="doccomment">/// the string to insert</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_insert_at_cursor</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="kw-2">&amp;</span><span class="ident">str</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">insert_at_cursor_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="kw-2">&amp;</span><span class="ident">str</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
-            <span class="ident">string</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">libc::c_char</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">string</span>: <span class="kw-2">*mut</span> <span class="ident">libc::c_char</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>), <span class="kw-2">&amp;</span><span class="ident">GString::from_glib_borrow</span>(<span class="ident">string</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;insert-at-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;insert-at-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">insert_at_cursor_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -717,21 +667,21 @@
     <span class="doccomment">/// This is a [keybinding signal](class.SignalAction.html).</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal are</span>
-    <span class="doccomment">/// `&lt;kbd&gt;`Ctrl`&lt;/kbd&gt;`-`&lt;kbd&gt;`.`&lt;/kbd&gt;` and</span>
-    <span class="doccomment">/// `&lt;kbd&gt;`Ctrl`&lt;/kbd&gt;`-`&lt;kbd&gt;`;`&lt;/kbd&gt;`</span>
+    <span class="doccomment">/// &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;.&lt;/kbd&gt; and</span>
+    <span class="doccomment">/// &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;;&lt;/kbd&gt;</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_insert_emoji</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">insert_emoji_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;insert-emoji\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;insert-emoji\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">insert_emoji_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -740,28 +690,28 @@
 
     <span class="doccomment">/// Emitted when the user initiates a cursor movement.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If the cursor is not visible in `self_`, this signal causes</span>
+    <span class="doccomment">/// If the cursor is not visible in @self_, this signal causes</span>
     <span class="doccomment">/// the viewport to be moved instead.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a [keybinding signal](class.SignalAction.html).</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Applications should not connect to it, but may emit it with</span>
-    <span class="doccomment">/// `g_signal_emit_by_name()` if they need to control the cursor</span>
+    <span class="doccomment">/// g_signal_emit_by_name() if they need to control the cursor</span>
     <span class="doccomment">/// programmatically.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal come in two variants,</span>
-    <span class="doccomment">/// the variant with the `&lt;kbd&gt;`Shift`&lt;/kbd&gt;` modifier extends the</span>
+    <span class="doccomment">/// the variant with the &lt;kbd&gt;Shift&lt;/kbd&gt; modifier extends the</span>
     <span class="doccomment">/// selection, the variant without it does not.</span>
     <span class="doccomment">/// There are too many key combinations to list them all here.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// - `&lt;kbd&gt;`←`&lt;/kbd&gt;`, `&lt;kbd&gt;`→`&lt;/kbd&gt;`, `&lt;kbd&gt;`↑`&lt;/kbd&gt;`, `&lt;kbd&gt;`↓`&lt;/kbd&gt;`</span>
-    <span class="doccomment">///  move by individual characters/lines</span>
-    <span class="doccomment">/// - `&lt;kbd&gt;`Ctrl`&lt;/kbd&gt;`-`&lt;kbd&gt;`→`&lt;/kbd&gt;`, etc. move by words/paragraphs</span>
-    <span class="doccomment">/// - `&lt;kbd&gt;`Home`&lt;/kbd&gt;`, `&lt;kbd&gt;`End`&lt;/kbd&gt;` move to the ends of the buffer</span>
+    <span class="doccomment">/// - &lt;kbd&gt;←&lt;/kbd&gt;, &lt;kbd&gt;→&lt;/kbd&gt;, &lt;kbd&gt;↑&lt;/kbd&gt;, &lt;kbd&gt;↓&lt;/kbd&gt;</span>
+    <span class="doccomment">///   move by individual characters/lines</span>
+    <span class="doccomment">/// - &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;→&lt;/kbd&gt;, etc. move by words/paragraphs</span>
+    <span class="doccomment">/// - &lt;kbd&gt;Home&lt;/kbd&gt;, &lt;kbd&gt;End&lt;/kbd&gt; move to the ends of the buffer</span>
     <span class="doccomment">/// ## `step`</span>
     <span class="doccomment">/// the granularity of the move, as a [`MovementStep`][crate::MovementStep]</span>
     <span class="doccomment">/// ## `count`</span>
-    <span class="doccomment">/// the number of `step` units to move</span>
+    <span class="doccomment">/// the number of @step units to move</span>
     <span class="doccomment">/// ## `extend`</span>
     <span class="doccomment">/// [`true`] if the move should extend the selection</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_move_cursor</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="ident">MovementStep</span>, <span class="ident">i32</span>, <span class="ident">bool</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
@@ -771,13 +721,13 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">move_cursor_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="ident">MovementStep</span>, <span class="ident">i32</span>, <span class="ident">bool</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
             <span class="ident">step</span>: <span class="ident">ffi::GtkMovementStep</span>,
             <span class="ident">count</span>: <span class="ident">libc::c_int</span>,
             <span class="ident">extend</span>: <span class="ident">glib::ffi::gboolean</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(
                 <span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>),
                 <span class="ident">from_glib</span>(<span class="ident">step</span>),
@@ -788,8 +738,8 @@
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;move-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;move-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">move_cursor_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -801,20 +751,20 @@
     <span class="doccomment">/// This is a [keybinding signal](class.SignalAction.html).</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal are</span>
-    <span class="doccomment">/// `&lt;kbd&gt;`Ctrl`&lt;/kbd&gt;`-`&lt;kbd&gt;`v`&lt;/kbd&gt;` and `&lt;kbd&gt;`Shift`&lt;/kbd&gt;`-`&lt;kbd&gt;`Insert`&lt;/kbd&gt;`.</span>
+    <span class="doccomment">/// &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;v&lt;/kbd&gt; and &lt;kbd&gt;Shift&lt;/kbd&gt;-&lt;kbd&gt;Insert&lt;/kbd&gt;.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_paste_clipboard</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">paste_clipboard_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;paste-clipboard\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;paste-clipboard\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">paste_clipboard_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -823,18 +773,18 @@
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_populate_popup</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="kw-2">&amp;</span><span class="ident">Widget</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">populate_popup_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="kw-2">&amp;</span><span class="ident">Widget</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
-            <span class="ident">widget</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkWidget</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">widget</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkWidget</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>), <span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">widget</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;populate-popup\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;populate-popup\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">populate_popup_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -850,18 +800,18 @@
     <span class="doccomment">/// the current preedit string</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_preedit_changed</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="kw-2">&amp;</span><span class="ident">str</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">preedit_changed_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>, <span class="kw-2">&amp;</span><span class="ident">str</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
-            <span class="ident">preedit</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">libc::c_char</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">preedit</span>: <span class="kw-2">*mut</span> <span class="ident">libc::c_char</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>), <span class="kw-2">&amp;</span><span class="ident">GString::from_glib_borrow</span>(<span class="ident">preedit</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;preedit-changed\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;preedit-changed\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">preedit_changed_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -872,20 +822,20 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a [keybinding signal](class.SignalAction.html).</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The default bindings for this signal is `&lt;kbd&gt;`Insert`&lt;/kbd&gt;`.</span>
+    <span class="doccomment">/// The default bindings for this signal is &lt;kbd&gt;Insert&lt;/kbd&gt;.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_toggle_overwrite</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">toggle_overwrite_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Text</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkText</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;toggle-overwrite\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;toggle-overwrite\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>(<span class="ident">toggle_overwrite_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="ident">usize</span>)),
                 <span class="ident">Box::into_raw</span>(<span class="ident">f</span>),
             )
@@ -893,105 +843,49 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_activate</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;activate&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;activate&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_backspace</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;backspace&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;backspace&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_copy_clipboard</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;copy-clipboard&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;copy-clipboard&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_cut_clipboard</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;cut-clipboard&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;cut-clipboard&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_delete_from_cursor</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">type_</span>: <span class="ident">DeleteType</span>, <span class="ident">count</span>: <span class="ident">i32</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;delete-from-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">type_</span>, <span class="kw-2">&amp;</span><span class="ident">count</span>])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;delete-from-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">type_</span>, <span class="kw-2">&amp;</span><span class="ident">count</span>]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_insert_at_cursor</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">string</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;insert-at-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">string</span>])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;insert-at-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">string</span>]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_insert_emoji</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;insert-emoji&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;insert-emoji&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_move_cursor</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">step</span>: <span class="ident">MovementStep</span>, <span class="ident">count</span>: <span class="ident">i32</span>, <span class="ident">extend</span>: <span class="ident">bool</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;move-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">step</span>, <span class="kw-2">&amp;</span><span class="ident">count</span>, <span class="kw-2">&amp;</span><span class="ident">extend</span>])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;move-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">step</span>, <span class="kw-2">&amp;</span><span class="ident">count</span>, <span class="kw-2">&amp;</span><span class="ident">extend</span>]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_paste_clipboard</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;paste-clipboard&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;paste-clipboard&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_preedit_changed</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">preedit</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;preedit-changed&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">preedit</span>])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;preedit-changed&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">preedit</span>]);
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_toggle_overwrite</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="ident">stash</span>: <span class="ident">Stash</span><span class="op">&lt;</span><span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkText</span>, <span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">to_glib_none</span>();
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="ident">stash</span>.<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;toggle-overwrite&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;toggle-overwrite&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk4" data-search-index-js="../../search-index.js" data-search-js="../../search.js"></div>
-    <script src="../../main.js"></script><script src="../../source-script.js"></script><script src="../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;auto&#x2F;icon_view.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>icon_view.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/icon_view.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>icon_view.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gtk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
 <span id="2">   2</span>
 <span id="3">   3</span>
 <span id="4">   4</span>
@@ -2614,37 +2619,6 @@
 <span id="2541">2541</span>
 <span id="2542">2542</span>
 <span id="2543">2543</span>
-<span id="2544">2544</span>
-<span id="2545">2545</span>
-<span id="2546">2546</span>
-<span id="2547">2547</span>
-<span id="2548">2548</span>
-<span id="2549">2549</span>
-<span id="2550">2550</span>
-<span id="2551">2551</span>
-<span id="2552">2552</span>
-<span id="2553">2553</span>
-<span id="2554">2554</span>
-<span id="2555">2555</span>
-<span id="2556">2556</span>
-<span id="2557">2557</span>
-<span id="2558">2558</span>
-<span id="2559">2559</span>
-<span id="2560">2560</span>
-<span id="2561">2561</span>
-<span id="2562">2562</span>
-<span id="2563">2563</span>
-<span id="2564">2564</span>
-<span id="2565">2565</span>
-<span id="2566">2566</span>
-<span id="2567">2567</span>
-<span id="2568">2568</span>
-<span id="2569">2569</span>
-<span id="2570">2570</span>
-<span id="2571">2571</span>
-<span id="2572">2572</span>
-<span id="2573">2573</span>
-<span id="2574">2574</span>
 </pre><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)</span>
 <span class="comment">// from gir-files (https://github.com/gtk-rs/gir-files.git)</span>
 <span class="comment">// DO NOT EDIT</span>
@@ -2692,7 +2666,7 @@
     <span class="doccomment">/// [`IconView`][crate::IconView] provides an alternative view on a [`TreeModel`][crate::TreeModel].</span>
     <span class="doccomment">/// It displays the model as a grid of icons with labels. Like</span>
     <span class="doccomment">/// [`TreeView`][crate::TreeView], it allows to select one or multiple items</span>
-    <span class="doccomment">/// (depending on the selection mode, see [``set_selection_mode()``][`Self::set_selection_mode()`]).</span>
+    <span class="doccomment">/// (depending on the selection mode, see [`set_selection_mode()`][Self::set_selection_mode()]).</span>
     <span class="doccomment">/// In addition to selection with the arrow keys, [`IconView`][crate::IconView] supports</span>
     <span class="doccomment">/// rubberband selection, which is controlled by dragging the pointer.</span>
     <span class="doccomment">///</span>
@@ -2735,7 +2709,7 @@
     }
 
     <span class="doccomment">/// Creates a new [`IconView`][crate::IconView] widget using the</span>
-    <span class="doccomment">/// specified `area` to layout cells inside the icons.</span>
+    <span class="doccomment">/// specified @area to layout cells inside the icons.</span>
     <span class="doccomment">/// ## `area`</span>
     <span class="doccomment">/// the [`CellArea`][crate::CellArea] to use to layout cells</span>
     <span class="doccomment">///</span>
@@ -2754,7 +2728,7 @@
         }
     }
 
-    <span class="doccomment">/// Creates a new [`IconView`][crate::IconView] widget with the model `model`.</span>
+    <span class="doccomment">/// Creates a new [`IconView`][crate::IconView] widget with the model @model.</span>
     <span class="doccomment">/// ## `model`</span>
     <span class="doccomment">/// The model.</span>
     <span class="doccomment">///</span>
@@ -2776,19 +2750,19 @@
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Creates a new builder-pattern struct instance to construct [`IconView`] objects.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// This method returns an instance of [`IconViewBuilder`] which can be used to create [`IconView`] objects.</span>
+    <span class="doccomment">/// This method returns an instance of [`IconViewBuilder`](crate::builders::IconViewBuilder) which can be used to create [`IconView`] objects.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">builder</span>() -&gt; <span class="ident">IconViewBuilder</span> {
         <span class="ident">IconViewBuilder::default</span>()
     }
 
-    <span class="doccomment">/// Creates a `cairo_surface_t` representation of the item at `path`.</span>
+    <span class="doccomment">/// Creates a [`gdk::Paintable`][crate::gdk::Paintable] representation of the item at @path.</span>
     <span class="doccomment">/// This image is used for a drag icon.</span>
     <span class="doccomment">/// ## `path`</span>
-    <span class="doccomment">/// a [`TreePath`][crate::TreePath] in `self`</span>
+    <span class="doccomment">/// a [`TreePath`][crate::TreePath] in @self</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// a newly-allocated surface of the drag icon.</span>
+    <span class="doccomment">/// a newly-allocated [`gdk::Paintable`][crate::gdk::Paintable] of the drag icon.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_create_drag_icon&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">create_drag_icon</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;</span><span class="ident">TreePath</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gdk::Paintable</span><span class="op">&gt;</span> {
         <span class="kw">unsafe</span> {
@@ -2799,13 +2773,13 @@
         }
     }
 
-    <span class="doccomment">/// Turns `self` into a drop destination for automatic DND. Calling this</span>
+    <span class="doccomment">/// Turns @self into a drop destination for automatic DND. Calling this</span>
     <span class="doccomment">/// method sets [`IconView`][crate::IconView]:reorderable to [`false`].</span>
     <span class="doccomment">/// ## `formats`</span>
     <span class="doccomment">/// the formats that the drag will support</span>
     <span class="doccomment">/// ## `actions`</span>
     <span class="doccomment">/// the bitmask of possible actions for a drag to this</span>
-    <span class="doccomment">///  widget</span>
+    <span class="doccomment">///    widget</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_enable_model_drag_dest&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">enable_model_drag_dest</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">formats</span>: <span class="kw-2">&amp;</span><span class="ident">gdk::ContentFormats</span>, <span class="ident">actions</span>: <span class="ident">gdk::DragAction</span>) {
         <span class="kw">unsafe</span> {
@@ -2817,7 +2791,7 @@
         }
     }
 
-    <span class="doccomment">/// Turns `self` into a drag source for automatic DND. Calling this</span>
+    <span class="doccomment">/// Turns @self into a drag source for automatic DND. Calling this</span>
     <span class="doccomment">/// method sets [`IconView`][crate::IconView]:reorderable to [`false`].</span>
     <span class="doccomment">/// ## `start_button_mask`</span>
     <span class="doccomment">/// Mask of allowed buttons to start drag</span>
@@ -2825,7 +2799,7 @@
     <span class="doccomment">/// the formats that the drag will support</span>
     <span class="doccomment">/// ## `actions`</span>
     <span class="doccomment">/// the bitmask of possible actions for a drag from this</span>
-    <span class="doccomment">///  widget</span>
+    <span class="doccomment">///    widget</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_enable_model_drag_source&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">enable_model_drag_source</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
@@ -2843,7 +2817,7 @@
         }
     }
 
-    <span class="doccomment">/// Gets the setting set by [`set_activate_on_single_click()`][Self::set_activate_on_single_click()].</span>
+    <span class="doccomment">/// Gets the setting set by gtk_icon_view_set_activate_on_single_click().</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2859,9 +2833,9 @@
     }
 
     <span class="doccomment">/// Fills the bounding rectangle in widget coordinates for the cell specified by</span>
-    <span class="doccomment">/// `path` and `cell`. If `cell` is [`None`] the main cell area is used.</span>
+    <span class="doccomment">/// @path and @cell. If @cell is [`None`] the main cell area is used.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// This function is only valid if `self` is realized.</span>
+    <span class="doccomment">/// This function is only valid if @self is realized.</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// a [`TreePath`][crate::TreePath]</span>
     <span class="doccomment">/// ## `cell`</span>
@@ -2918,11 +2892,11 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_icon_view_get_columns</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="doccomment">/// Fills in `path` and `cell` with the current cursor path and cell.</span>
-    <span class="doccomment">/// If the cursor isn’t currently set, then *`path` will be [`None`].</span>
-    <span class="doccomment">/// If no cell currently has focus, then *`cell` will be [`None`].</span>
+    <span class="doccomment">/// Fills in @path and @cell with the current cursor path and cell.</span>
+    <span class="doccomment">/// If the cursor isn’t currently set, then *@path will be [`None`].</span>
+    <span class="doccomment">/// If no cell currently has focus, then *@cell will be [`None`].</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The returned [`TreePath`][crate::TreePath] must be freed with `gtk_tree_path_free()`.</span>
+    <span class="doccomment">/// The returned [`TreePath`][crate::TreePath] must be freed with gtk_tree_path_free().</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2930,11 +2904,11 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// Return location for the current</span>
-    <span class="doccomment">///  cursor path</span>
+    <span class="doccomment">///   cursor path</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `cell`</span>
     <span class="doccomment">/// Return location the current</span>
-    <span class="doccomment">///  focus cell</span>
+    <span class="doccomment">///   focus cell</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_get_cursor&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_cursor&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cursor</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span>(<span class="ident">TreePath</span>, <span class="ident">CellRenderer</span>)<span class="op">&gt;</span> {
@@ -2943,8 +2917,8 @@
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">cell</span> <span class="op">=</span> <span class="ident">ptr::null_mut</span>();
             <span class="kw">let</span> <span class="ident">ret</span> <span class="op">=</span> <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_icon_view_get_cursor</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">path</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">cell</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">path</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">cell</span>,
             ));
             <span class="kw">if</span> <span class="ident">ret</span> {
                 <span class="prelude-val">Some</span>((<span class="ident">from_glib_full</span>(<span class="ident">path</span>), <span class="ident">from_glib_none</span>(<span class="ident">cell</span>)))
@@ -2983,7 +2957,7 @@
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">drag_x</span>,
                 <span class="ident">drag_y</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">path</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">path</span>,
                 <span class="ident">pos</span>.<span class="ident">as_mut_ptr</span>(),
             ));
             <span class="kw">let</span> <span class="ident">pos</span> <span class="op">=</span> <span class="ident">pos</span>.<span class="ident">assume_init</span>();
@@ -3002,7 +2976,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// Return location for the path of</span>
-    <span class="doccomment">///  the highlighted item</span>
+    <span class="doccomment">///   the highlighted item</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `pos`</span>
     <span class="doccomment">/// Return location for the drop position</span>
@@ -3014,7 +2988,7 @@
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">pos</span> <span class="op">=</span> <span class="ident">mem::MaybeUninit::uninit</span>();
             <span class="ident">ffi::gtk_icon_view_get_drag_dest_item</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">path</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">path</span>,
                 <span class="ident">pos</span>.<span class="ident">as_mut_ptr</span>(),
             );
             <span class="kw">let</span> <span class="ident">pos</span> <span class="op">=</span> <span class="ident">pos</span>.<span class="ident">assume_init</span>();
@@ -3037,7 +3011,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `cell`</span>
     <span class="doccomment">/// Return location for the renderer</span>
-    <span class="doccomment">///  responsible for the cell at (`x`, `y`)</span>
+    <span class="doccomment">///   responsible for the cell at (@x, @y)</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_get_item_at_pos&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_item_at_pos&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">item_at_pos</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">x</span>: <span class="ident">i32</span>, <span class="ident">y</span>: <span class="ident">i32</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span>(<span class="ident">TreePath</span>, <span class="ident">CellRenderer</span>)<span class="op">&gt;</span> {
@@ -3048,8 +3022,8 @@
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">x</span>,
                 <span class="ident">y</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">path</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">cell</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">path</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">cell</span>,
             ));
             <span class="kw">if</span> <span class="ident">ret</span> {
                 <span class="prelude-val">Some</span>((<span class="ident">from_glib_full</span>(<span class="ident">path</span>), <span class="ident">from_glib_none</span>(<span class="ident">cell</span>)))
@@ -3059,7 +3033,7 @@
         }
     }
 
-    <span class="doccomment">/// Gets the column in which the item `path` is currently</span>
+    <span class="doccomment">/// Gets the column in which the item @path is currently</span>
     <span class="doccomment">/// displayed. Column numbers start at 0.</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// the [`TreePath`][crate::TreePath] of the item</span>
@@ -3105,7 +3079,7 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_icon_view_get_item_padding</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="doccomment">/// Gets the row in which the item `path` is currently</span>
+    <span class="doccomment">/// Gets the row in which the item @path is currently</span>
     <span class="doccomment">/// displayed. Row numbers start at 0.</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// the [`TreePath`][crate::TreePath] of the item</span>
@@ -3146,7 +3120,7 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_icon_view_get_margin</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="doccomment">/// Returns the column with markup text for `self`.</span>
+    <span class="doccomment">/// Returns the column with markup text for @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -3157,7 +3131,7 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_icon_view_get_markup_column</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="doccomment">/// Returns the model the [`IconView`][crate::IconView] is based on. Returns [`None`] if the</span>
+    <span class="doccomment">/// Returns the model the [`IconView`][crate::IconView] is based on.  Returns [`None`] if the</span>
     <span class="doccomment">/// model is unset.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
@@ -3191,7 +3165,7 @@
         }
     }
 
-    <span class="doccomment">/// Returns the column with pixbufs for `self`.</span>
+    <span class="doccomment">/// Returns the column with pixbufs for @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -3203,7 +3177,7 @@
     }
 
     <span class="doccomment">/// Retrieves whether the user can reorder the list via drag-and-drop.</span>
-    <span class="doccomment">/// See [`set_reorderable()`][Self::set_reorderable()].</span>
+    <span class="doccomment">/// See gtk_icon_view_set_reorderable().</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -3228,14 +3202,21 @@
     <span class="doccomment">/// Creates a list of paths of all selected items. Additionally, if you are</span>
     <span class="doccomment">/// planning on modifying the model after calling this function, you may</span>
     <span class="doccomment">/// want to convert the returned list into a list of `GtkTreeRowReferences`.</span>
-    <span class="doccomment">/// To do this, you can use [`TreeRowReference::new()`][crate::TreeRowReference::new()].</span>
+    <span class="doccomment">/// To do this, you can use gtk_tree_row_reference_new().</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// To free the return value, use:</span>
+    <span class="doccomment">/// To free the return value, use `g_list_free_full`:</span>
     <span class="doccomment">///</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// **⚠️ The following code is in C ⚠️**</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ```C</span>
+    <span class="doccomment">/// GtkWidget *icon_view = gtk_icon_view_new ();</span>
+    <span class="doccomment">/// // Use icon_view</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// GList *list = gtk_icon_view_get_selected_items (GTK_ICON_VIEW (icon_view));</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// // use list</span>
+    <span class="doccomment">///</span>
     <span class="doccomment">/// g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);</span>
     <span class="doccomment">/// ```</span>
     <span class="doccomment">///</span>
@@ -3252,7 +3233,7 @@
         }
     }
 
-    <span class="doccomment">/// Gets the selection mode of the `self`.</span>
+    <span class="doccomment">/// Gets the selection mode of the @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -3274,7 +3255,7 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_icon_view_get_spacing</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="doccomment">/// Returns the column with text for `self`.</span>
+    <span class="doccomment">/// Returns the column with text for @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -3285,8 +3266,8 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_icon_view_get_text_column</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="doccomment">/// Returns the column of `self`’s model which is being used for</span>
-    <span class="doccomment">/// displaying tooltips on `self`’s rows.</span>
+    <span class="doccomment">/// Returns the column of @self’s model which is being used for</span>
+    <span class="doccomment">/// displaying tooltips on @self’s rows.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -3299,14 +3280,14 @@
     }
 
     <span class="doccomment">/// This function is supposed to be used in a `GtkWidget::query-tooltip`</span>
-    <span class="doccomment">/// signal handler for [`IconView`][crate::IconView]. The `x`, `y` and `keyboard_tip` values</span>
+    <span class="doccomment">/// signal handler for [`IconView`][crate::IconView]. The @x, @y and @keyboard_tip values</span>
     <span class="doccomment">/// which are received in the signal handler, should be passed to this</span>
     <span class="doccomment">/// function without modification.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The return value indicates whether there is an icon view item at the given</span>
     <span class="doccomment">/// coordinates ([`true`]) or not ([`false`]) for mouse tooltips. For keyboard</span>
     <span class="doccomment">/// tooltips the item returned will be the cursor item. When [`true`], then any of</span>
-    <span class="doccomment">/// `model`, `path` and `iter` which have been provided will be set to point to</span>
+    <span class="doccomment">/// @model, @path and @iter which have been provided will be set to point to</span>
     <span class="doccomment">/// that row and the corresponding model.</span>
     <span class="doccomment">/// ## `x`</span>
     <span class="doccomment">/// the x coordinate (relative to widget coordinates)</span>
@@ -3344,8 +3325,8 @@
                 <span class="ident">x</span>,
                 <span class="ident">y</span>,
                 <span class="ident">keyboard_tip</span>.<span class="ident">into_glib</span>(),
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">model</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">path</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">model</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">path</span>,
                 <span class="ident">iter</span>.<span class="ident">to_glib_none_mut</span>().<span class="number">0</span>,
             ));
             <span class="kw">if</span> <span class="ident">ret</span> {
@@ -3356,14 +3337,14 @@
         }
     }
 
-    <span class="doccomment">/// Sets `start_path` and `end_path` to be the first and last visible path.</span>
+    <span class="doccomment">/// Sets @start_path and @end_path to be the first and last visible path.</span>
     <span class="doccomment">/// Note that there may be invisible paths in between.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Both paths should be freed with `gtk_tree_path_free()` after use.</span>
+    <span class="doccomment">/// Both paths should be freed with gtk_tree_path_free() after use.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// [`true`], if valid paths were placed in `start_path` and `end_path`</span>
+    <span class="doccomment">/// [`true`], if valid paths were placed in @start_path and @end_path</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `start_path`</span>
     <span class="doccomment">/// Return location for start of region</span>
@@ -3378,8 +3359,8 @@
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">end_path</span> <span class="op">=</span> <span class="ident">ptr::null_mut</span>();
             <span class="kw">let</span> <span class="ident">ret</span> <span class="op">=</span> <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_icon_view_get_visible_range</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">start_path</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">end_path</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">start_path</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">end_path</span>,
             ));
             <span class="kw">if</span> <span class="ident">ret</span> {
                 <span class="prelude-val">Some</span>((<span class="ident">from_glib_full</span>(<span class="ident">start_path</span>), <span class="ident">from_glib_full</span>(<span class="ident">end_path</span>)))
@@ -3389,7 +3370,7 @@
         }
     }
 
-    <span class="doccomment">/// Activates the item determined by `path`.</span>
+    <span class="doccomment">/// Activates the item determined by @path.</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// The [`TreePath`][crate::TreePath] to be activated</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_item_activated&quot;</span>)]</span>
@@ -3402,14 +3383,14 @@
         }
     }
 
-    <span class="doccomment">/// Returns [`true`] if the icon pointed to by `path` is currently</span>
-    <span class="doccomment">/// selected. If `path` does not point to a valid location, [`false`] is returned.</span>
+    <span class="doccomment">/// Returns [`true`] if the icon pointed to by @path is currently</span>
+    <span class="doccomment">/// selected. If @path does not point to a valid location, [`false`] is returned.</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// A [`TreePath`][crate::TreePath] to check selection on.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// [`true`] if `path` is selected.</span>
+    <span class="doccomment">/// [`true`] if @path is selected.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_path_is_selected&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">path_is_selected</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;</span><span class="ident">TreePath</span>) -&gt; <span class="ident">bool</span> {
         <span class="kw">unsafe</span> {
@@ -3420,28 +3401,28 @@
         }
     }
 
-    <span class="doccomment">/// Moves the alignments of `self` to the position specified by `path`.</span>
-    <span class="doccomment">/// `row_align` determines where the row is placed, and `col_align` determines</span>
-    <span class="doccomment">/// where `column` is placed. Both are expected to be between 0.0 and 1.0.</span>
+    <span class="doccomment">/// Moves the alignments of @self to the position specified by @path.</span>
+    <span class="doccomment">/// @row_align determines where the row is placed, and @col_align determines</span>
+    <span class="doccomment">/// where @column is placed.  Both are expected to be between 0.0 and 1.0.</span>
     <span class="doccomment">/// 0.0 means left/top alignment, 1.0 means right/bottom alignment, 0.5 means</span>
     <span class="doccomment">/// center.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If `use_align` is [`false`], then the alignment arguments are ignored, and the</span>
+    <span class="doccomment">/// If @use_align is [`false`], then the alignment arguments are ignored, and the</span>
     <span class="doccomment">/// tree does the minimum amount of work to scroll the item onto the screen.</span>
     <span class="doccomment">/// This means that the item will be scrolled to the edge closest to its current</span>
-    <span class="doccomment">/// position. If the item is currently visible on the screen, nothing is done.</span>
+    <span class="doccomment">/// position.  If the item is currently visible on the screen, nothing is done.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// This function only works if the model is set, and `path` is a valid row on</span>
-    <span class="doccomment">/// the model. If the model changes before the `self` is realized, the</span>
+    <span class="doccomment">/// This function only works if the model is set, and @path is a valid row on</span>
+    <span class="doccomment">/// the model. If the model changes before the @self is realized, the</span>
     <span class="doccomment">/// centered path will be modified to reflect this change.</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// The path of the item to move to.</span>
     <span class="doccomment">/// ## `use_align`</span>
     <span class="doccomment">/// whether to use alignment arguments, or [`false`].</span>
     <span class="doccomment">/// ## `row_align`</span>
-    <span class="doccomment">/// The vertical alignment of the item specified by `path`.</span>
+    <span class="doccomment">/// The vertical alignment of the item specified by @path.</span>
     <span class="doccomment">/// ## `col_align`</span>
-    <span class="doccomment">/// The horizontal alignment of the item specified by `path`.</span>
+    <span class="doccomment">/// The horizontal alignment of the item specified by @path.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_scroll_to_path&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">scroll_to_path</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;</span><span class="ident">TreePath</span>, <span class="ident">use_align</span>: <span class="ident">bool</span>, <span class="ident">row_align</span>: <span class="ident">f32</span>, <span class="ident">col_align</span>: <span class="ident">f32</span>) {
         <span class="kw">unsafe</span> {
@@ -3455,7 +3436,7 @@
         }
     }
 
-    <span class="doccomment">/// Selects all the icons. `self` must has its selection mode set</span>
+    <span class="doccomment">/// Selects all the icons. @self must has its selection mode set</span>
     <span class="doccomment">/// to [`SelectionMode::Multiple`][crate::SelectionMode::Multiple].</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_select_all&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">select_all</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
@@ -3464,7 +3445,7 @@
         }
     }
 
-    <span class="doccomment">/// Selects the row at `path`.</span>
+    <span class="doccomment">/// Selects the row at @path.</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// The [`TreePath`][crate::TreePath] to be selected.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_select_path&quot;</span>)]</span>
@@ -3485,13 +3466,13 @@
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">selected_foreach</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">FnMut</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>, <span class="kw-2">&amp;</span><span class="ident">TreePath</span>)<span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">func</span>: <span class="ident">P</span>) {
         <span class="kw">let</span> <span class="ident">func_data</span>: <span class="ident">P</span> <span class="op">=</span> <span class="ident">func</span>;
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">func_func</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">FnMut</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>, <span class="kw-2">&amp;</span><span class="ident">TreePath</span>)<span class="op">&gt;</span>(
-            <span class="ident">icon_view</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
-            <span class="ident">path</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkTreePath</span>,
+            <span class="ident">icon_view</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">path</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkTreePath</span>,
             <span class="ident">data</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
             <span class="kw">let</span> <span class="ident">icon_view</span> <span class="op">=</span> <span class="ident">from_glib_borrow</span>(<span class="ident">icon_view</span>);
             <span class="kw">let</span> <span class="ident">path</span> <span class="op">=</span> <span class="ident">from_glib_borrow</span>(<span class="ident">path</span>);
-            <span class="kw">let</span> <span class="ident">callback</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">P</span> <span class="op">=</span> <span class="ident">data</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span> <span class="kw">as</span> <span class="ident">usize</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">P</span>;
+            <span class="kw">let</span> <span class="ident">callback</span>: <span class="kw-2">*mut</span> <span class="ident">P</span> <span class="op">=</span> <span class="ident">data</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span> <span class="kw">as</span> <span class="ident">usize</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="ident">P</span>;
             (<span class="kw-2">*</span><span class="ident">callback</span>)(<span class="kw-2">&amp;</span><span class="ident">icon_view</span>, <span class="kw-2">&amp;</span><span class="ident">path</span>);
         }
         <span class="kw">let</span> <span class="ident">func</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">func_func</span>::<span class="op">&lt;</span><span class="ident">P</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw">_</span>);
@@ -3500,7 +3481,7 @@
             <span class="ident">ffi::gtk_icon_view_selected_foreach</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">func</span>,
-                <span class="ident">super_callback0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span> <span class="kw">as</span> <span class="ident">usize</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
+                <span class="ident">super_callback0</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span> <span class="kw">as</span> <span class="ident">usize</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
             );
         }
     }
@@ -3531,7 +3512,7 @@
     }
 
     <span class="doccomment">/// Sets the ::columns property which determines in how</span>
-    <span class="doccomment">/// many columns the icons are arranged. If `columns` is</span>
+    <span class="doccomment">/// many columns the icons are arranged. If @columns is</span>
     <span class="doccomment">/// -1, the number of columns will be chosen automatically</span>
     <span class="doccomment">/// to fill the available area.</span>
     <span class="doccomment">/// ## `columns`</span>
@@ -3543,10 +3524,10 @@
         }
     }
 
-    <span class="doccomment">/// Sets the current keyboard focus to be at `path`, and selects it. This is</span>
+    <span class="doccomment">/// Sets the current keyboard focus to be at @path, and selects it.  This is</span>
     <span class="doccomment">/// useful when you want to focus the user’s attention on a particular item.</span>
-    <span class="doccomment">/// If `cell` is not [`None`], then focus is given to the cell specified by</span>
-    <span class="doccomment">/// it. Additionally, if `start_editing` is [`true`], then editing should be</span>
+    <span class="doccomment">/// If @cell is not [`None`], then focus is given to the cell specified by</span>
+    <span class="doccomment">/// it. Additionally, if @start_editing is [`true`], then editing should be</span>
     <span class="doccomment">/// started in the specified cell.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This function is often followed by `gtk_widget_grab_focus</span>
@@ -3555,7 +3536,7 @@
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// A [`TreePath`][crate::TreePath]</span>
     <span class="doccomment">/// ## `cell`</span>
-    <span class="doccomment">/// One of the cell renderers of `self`</span>
+    <span class="doccomment">/// One of the cell renderers of @self</span>
     <span class="doccomment">/// ## `start_editing`</span>
     <span class="doccomment">/// [`true`] if the specified cell should start being edited.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_set_cursor&quot;</span>)]</span>
@@ -3637,10 +3618,10 @@
         }
     }
 
-    <span class="doccomment">/// Sets the column with markup information for `self` to be</span>
-    <span class="doccomment">/// `column`. The markup column must be of type `G_TYPE_STRING`.</span>
+    <span class="doccomment">/// Sets the column with markup information for @self to be</span>
+    <span class="doccomment">/// @column. The markup column must be of type `G_TYPE_STRING`.</span>
     <span class="doccomment">/// If the markup column is set to something, it overrides</span>
-    <span class="doccomment">/// the text column set by [`set_text_column()`][Self::set_text_column()].</span>
+    <span class="doccomment">/// the text column set by gtk_icon_view_set_text_column().</span>
     <span class="doccomment">/// ## `column`</span>
     <span class="doccomment">/// A column in the currently used model, or -1 to display no text</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_set_markup_column&quot;</span>)]</span>
@@ -3651,8 +3632,8 @@
     }
 
     <span class="doccomment">/// Sets the model for a [`IconView`][crate::IconView].</span>
-    <span class="doccomment">/// If the `self` already has a model set, it will remove</span>
-    <span class="doccomment">/// it before setting the new model. If `model` is [`None`], then</span>
+    <span class="doccomment">/// If the @self already has a model set, it will remove</span>
+    <span class="doccomment">/// it before setting the new model.  If @model is [`None`], then</span>
     <span class="doccomment">/// it will unset the old model.</span>
     <span class="doccomment">/// ## `model`</span>
     <span class="doccomment">/// The model.</span>
@@ -3666,7 +3647,7 @@
         }
     }
 
-    <span class="doccomment">/// Sets the column with pixbufs for `self` to be `column`. The pixbuf</span>
+    <span class="doccomment">/// Sets the column with pixbufs for @self to be @column. The pixbuf</span>
     <span class="doccomment">/// column must be of type `GDK_TYPE_PIXBUF`</span>
     <span class="doccomment">/// ## `column`</span>
     <span class="doccomment">/// A column in the currently used model, or -1 to disable</span>
@@ -3679,15 +3660,15 @@
 
     <span class="doccomment">/// This function is a convenience function to allow you to reorder models that</span>
     <span class="doccomment">/// support the `GtkTreeDragSourceIface` and the `GtkTreeDragDestIface`. Both</span>
-    <span class="doccomment">/// [`TreeStore`][crate::TreeStore] and [`ListStore`][crate::ListStore] support these. If `reorderable` is [`true`], then</span>
-    <span class="doccomment">/// the user can reorder the model by dragging and dropping rows. The</span>
+    <span class="doccomment">/// [`TreeStore`][crate::TreeStore] and [`ListStore`][crate::ListStore] support these. If @reorderable is [`true`], then</span>
+    <span class="doccomment">/// the user can reorder the model by dragging and dropping rows.  The</span>
     <span class="doccomment">/// developer can listen to these changes by connecting to the model&#39;s</span>
     <span class="doccomment">/// row_inserted and row_deleted signals. The reordering is implemented by setting up</span>
     <span class="doccomment">/// the icon view as a drag source and destination. Therefore, drag and</span>
     <span class="doccomment">/// drop can not be used in a reorderable view for any other purpose.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This function does not give you any degree of control over the order -- any</span>
-    <span class="doccomment">/// reordering is allowed. If more control is needed, you should probably</span>
+    <span class="doccomment">/// reordering is allowed.  If more control is needed, you should probably</span>
     <span class="doccomment">/// handle drag and drop manually.</span>
     <span class="doccomment">/// ## `reorderable`</span>
     <span class="doccomment">/// [`true`], if the list of items can be reordered.</span>
@@ -3709,7 +3690,7 @@
         }
     }
 
-    <span class="doccomment">/// Sets the selection mode of the `self`.</span>
+    <span class="doccomment">/// Sets the selection mode of the @self.</span>
     <span class="doccomment">/// ## `mode`</span>
     <span class="doccomment">/// The selection mode</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_set_selection_mode&quot;</span>)]</span>
@@ -3731,7 +3712,7 @@
         }
     }
 
-    <span class="doccomment">/// Sets the column with text for `self` to be `column`. The text</span>
+    <span class="doccomment">/// Sets the column with text for @self to be @column. The text</span>
     <span class="doccomment">/// column must be of type `G_TYPE_STRING`.</span>
     <span class="doccomment">/// ## `column`</span>
     <span class="doccomment">/// A column in the currently used model, or -1 to display no text</span>
@@ -3742,10 +3723,10 @@
         }
     }
 
-    <span class="doccomment">/// Sets the tip area of `tooltip` to the area which `cell` occupies in</span>
-    <span class="doccomment">/// the item pointed to by `path`. See also [`Tooltip::set_tip_area()`][crate::Tooltip::set_tip_area()].</span>
+    <span class="doccomment">/// Sets the tip area of @tooltip to the area which @cell occupies in</span>
+    <span class="doccomment">/// the item pointed to by @path. See also gtk_tooltip_set_tip_area().</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See also [`set_tooltip_column()`][Self::set_tooltip_column()] for a simpler alternative.</span>
+    <span class="doccomment">/// See also gtk_icon_view_set_tooltip_column() for a simpler alternative.</span>
     <span class="doccomment">/// ## `tooltip`</span>
     <span class="doccomment">/// a [`Tooltip`][crate::Tooltip]</span>
     <span class="doccomment">/// ## `path`</span>
@@ -3771,16 +3752,16 @@
 
     <span class="doccomment">/// If you only plan to have simple (text-only) tooltips on full items, you</span>
     <span class="doccomment">/// can use this function to have [`IconView`][crate::IconView] handle these automatically</span>
-    <span class="doccomment">/// for you. `column` should be set to the column in `self`’s model</span>
+    <span class="doccomment">/// for you. @column should be set to the column in @self’s model</span>
     <span class="doccomment">/// containing the tooltip texts, or -1 to disable this feature.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// When enabled, `GtkWidget:has-tooltip` will be set to [`true`] and</span>
-    <span class="doccomment">/// `self` will connect a `GtkWidget::query-tooltip` signal handler.</span>
+    <span class="doccomment">/// @self will connect a `GtkWidget::query-tooltip` signal handler.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Note that the signal handler sets the text with [`Tooltip::set_markup()`][crate::Tooltip::set_markup()],</span>
+    <span class="doccomment">/// Note that the signal handler sets the text with gtk_tooltip_set_markup(),</span>
     <span class="doccomment">/// so &amp;, &lt;, etc have to be escaped in the text.</span>
     <span class="doccomment">/// ## `column`</span>
-    <span class="doccomment">/// an integer, which is a valid column number for `self`’s model</span>
+    <span class="doccomment">/// an integer, which is a valid column number for @self’s model</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_set_tooltip_column&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">set_tooltip_column</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">column</span>: <span class="ident">i32</span>) {
         <span class="kw">unsafe</span> {
@@ -3788,9 +3769,9 @@
         }
     }
 
-    <span class="doccomment">/// Sets the tip area of `tooltip` to be the area covered by the item at `path`.</span>
-    <span class="doccomment">/// See also [`set_tooltip_column()`][Self::set_tooltip_column()] for a simpler alternative.</span>
-    <span class="doccomment">/// See also [`Tooltip::set_tip_area()`][crate::Tooltip::set_tip_area()].</span>
+    <span class="doccomment">/// Sets the tip area of @tooltip to be the area covered by the item at @path.</span>
+    <span class="doccomment">/// See also gtk_icon_view_set_tooltip_column() for a simpler alternative.</span>
+    <span class="doccomment">/// See also gtk_tooltip_set_tip_area().</span>
     <span class="doccomment">/// ## `tooltip`</span>
     <span class="doccomment">/// a [`Tooltip`][crate::Tooltip]</span>
     <span class="doccomment">/// ## `path`</span>
@@ -3814,7 +3795,7 @@
         }
     }
 
-    <span class="doccomment">/// Unselects the row at `path`.</span>
+    <span class="doccomment">/// Unselects the row at @path.</span>
     <span class="doccomment">/// ## `path`</span>
     <span class="doccomment">/// The [`TreePath`][crate::TreePath] to be unselected.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_unselect_path&quot;</span>)]</span>
@@ -3827,7 +3808,7 @@
         }
     }
 
-    <span class="doccomment">/// Undoes the effect of [`enable_model_drag_dest()`][Self::enable_model_drag_dest()]. Calling this</span>
+    <span class="doccomment">/// Undoes the effect of gtk_icon_view_enable_model_drag_dest(). Calling this</span>
     <span class="doccomment">/// method sets [`IconView`][crate::IconView]:reorderable to [`false`].</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_unset_model_drag_dest&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">unset_model_drag_dest</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
@@ -3836,7 +3817,7 @@
         }
     }
 
-    <span class="doccomment">/// Undoes the effect of [`enable_model_drag_source()`][Self::enable_model_drag_source()]. Calling this</span>
+    <span class="doccomment">/// Undoes the effect of gtk_icon_view_enable_model_drag_source(). Calling this</span>
     <span class="doccomment">/// method sets [`IconView`][crate::IconView]:reorderable to [`false`].</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_icon_view_unset_model_drag_source&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">unset_model_drag_source</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
@@ -3847,21 +3828,11 @@
 
     <span class="doccomment">/// The [`CellArea`][crate::CellArea] used to layout cell renderers for this view.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If no area is specified when creating the icon view with [`with_area()`][Self::with_area()]</span>
+    <span class="doccomment">/// If no area is specified when creating the icon view with gtk_icon_view_new_with_area()</span>
     <span class="doccomment">/// a [`CellAreaBox`][crate::CellAreaBox] will be used.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;cell-area&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cell_area</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">CellArea</span><span class="op">&gt;</span> {
-        <span class="kw">unsafe</span> {
-            <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">value</span> <span class="op">=</span> <span class="ident">glib::Value::from_type</span>(<span class="op">&lt;</span><span class="ident">CellArea</span> <span class="kw">as</span> <span class="ident">StaticType</span><span class="op">&gt;</span><span class="ident">::static_type</span>());
-            <span class="ident">glib::gobject_ffi::g_object_get_property</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>,
-                <span class="string">b&quot;cell-area\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
-                <span class="ident">value</span>.<span class="ident">to_glib_none_mut</span>().<span class="number">0</span>,
-            );
-            <span class="ident">value</span>
-                .<span class="ident">get</span>()
-                .<span class="ident">expect</span>(<span class="string">&quot;Return Value for property `cell-area` getter&quot;</span>)
-        }
+        <span class="ident">glib::ObjectExt::property</span>(<span class="self">self</span>, <span class="string">&quot;cell-area&quot;</span>)
     }
 
     <span class="doccomment">/// A [keybinding signal][`SignalAction`][crate::SignalAction]</span>
@@ -3869,7 +3840,7 @@
     <span class="doccomment">/// focused item.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Applications should not connect to it, but may emit it with</span>
-    <span class="doccomment">/// `g_signal_emit_by_name()` if they need to control activation</span>
+    <span class="doccomment">/// g_signal_emit_by_name() if they need to control activation</span>
     <span class="doccomment">/// programmatically.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal are Space, Return and Enter.</span>
@@ -3879,19 +3850,19 @@
         <span class="ident">f</span>: <span class="ident">F</span>,
     ) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">activate_cursor_item_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) -&gt; <span class="ident">bool</span> <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) -&gt; <span class="ident">glib::ffi::gboolean</span> {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>)).<span class="ident">into_glib</span>()
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;activate-cursor-item\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;activate-cursor-item\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">activate_cursor_item_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">activate_cursor_item_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3899,18 +3870,11 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_activate_cursor_item</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">bool</span> {
-        <span class="kw">let</span> <span class="ident">res</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;activate-cursor-item&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
-        <span class="ident">res</span>.<span class="ident">unwrap</span>()
-            .<span class="ident">get</span>()
-            .<span class="ident">expect</span>(<span class="string">&quot;Return Value for `emit_activate_cursor_item`&quot;</span>)
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>(<span class="string">&quot;activate-cursor-item&quot;</span>, <span class="kw-2">&amp;</span>[])
     }
 
     <span class="doccomment">/// The ::item-activated signal is emitted when the method</span>
-    <span class="doccomment">/// [`item_activated()`][Self::item_activated()] is called, when the user double</span>
+    <span class="doccomment">/// gtk_icon_view_item_activated() is called, when the user double</span>
     <span class="doccomment">/// clicks an item with the &quot;activate-on-single-click&quot; property set</span>
     <span class="doccomment">/// to [`false`], or when the user single clicks an item when the</span>
     <span class="doccomment">/// &quot;activate-on-single-click&quot; property set to [`true`]. It is also</span>
@@ -3924,20 +3888,20 @@
         <span class="ident">f</span>: <span class="ident">F</span>,
     ) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">item_activated_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>, <span class="kw-2">&amp;</span><span class="ident">TreePath</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
-            <span class="ident">path</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkTreePath</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">path</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkTreePath</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>), <span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">path</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;item-activated\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;item-activated\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">item_activated_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">item_activated_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3949,7 +3913,7 @@
     <span class="doccomment">/// which gets emitted when the user initiates a cursor movement.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Applications should not connect to it, but may emit it with</span>
-    <span class="doccomment">/// `g_signal_emit_by_name()` if they need to control the cursor</span>
+    <span class="doccomment">/// g_signal_emit_by_name() if they need to control the cursor</span>
     <span class="doccomment">/// programmatically.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal include</span>
@@ -3961,7 +3925,7 @@
     <span class="doccomment">/// ## `step`</span>
     <span class="doccomment">/// the granularity of the move, as a [`MovementStep`][crate::MovementStep]</span>
     <span class="doccomment">/// ## `count`</span>
-    <span class="doccomment">/// the number of `step` units to move</span>
+    <span class="doccomment">/// the number of @step units to move</span>
     <span class="doccomment">/// ## `extend`</span>
     <span class="doccomment">/// whether to extend the selection</span>
     <span class="doccomment">/// ## `modify`</span>
@@ -3974,14 +3938,14 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">move_cursor_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>, <span class="ident">MovementStep</span>, <span class="ident">i32</span>, <span class="ident">bool</span>, <span class="ident">bool</span>) -&gt; <span class="ident">bool</span> <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">step</span>: <span class="ident">ffi::GtkMovementStep</span>,
             <span class="ident">count</span>: <span class="ident">libc::c_int</span>,
             <span class="ident">extend</span>: <span class="ident">glib::ffi::gboolean</span>,
             <span class="ident">modify</span>: <span class="ident">glib::ffi::gboolean</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) -&gt; <span class="ident">glib::ffi::gboolean</span> {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(
                 <span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>),
                 <span class="ident">from_glib</span>(<span class="ident">step</span>),
@@ -3994,10 +3958,10 @@
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;move-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;move-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">move_cursor_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">move_cursor_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4011,40 +3975,33 @@
         <span class="ident">extend</span>: <span class="ident">bool</span>,
         <span class="ident">modify</span>: <span class="ident">bool</span>,
     ) -&gt; <span class="ident">bool</span> {
-        <span class="kw">let</span> <span class="ident">res</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;move-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">step</span>, <span class="kw-2">&amp;</span><span class="ident">count</span>, <span class="kw-2">&amp;</span><span class="ident">extend</span>, <span class="kw-2">&amp;</span><span class="ident">modify</span>])
-                .<span class="ident">unwrap</span>()
-        };
-        <span class="ident">res</span>.<span class="ident">unwrap</span>()
-            .<span class="ident">get</span>()
-            .<span class="ident">expect</span>(<span class="string">&quot;Return Value for `emit_move_cursor`&quot;</span>)
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>(<span class="string">&quot;move-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">step</span>, <span class="kw-2">&amp;</span><span class="ident">count</span>, <span class="kw-2">&amp;</span><span class="ident">extend</span>, <span class="kw-2">&amp;</span><span class="ident">modify</span>])
     }
 
-    <span class="doccomment">/// A [keybinding signal][class.Gtk.SignalAction]</span>
+    <span class="doccomment">/// A [keybinding signal][`SignalAction`][crate::SignalAction]</span>
     <span class="doccomment">/// which gets emitted when the user selects all items.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Applications should not connect to it, but may emit it with</span>
-    <span class="doccomment">/// `g_signal_emit_by_name()` if they need to control selection</span>
+    <span class="doccomment">/// g_signal_emit_by_name() if they need to control selection</span>
     <span class="doccomment">/// programmatically.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default binding for this signal is Ctrl-a.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;select-all&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_select_all</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">select_all_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;select-all\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;select-all\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">select_all_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">select_all_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4052,11 +4009,7 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_select_all</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;select-all&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;select-all&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="doccomment">/// A [keybinding signal][`SignalAction`][crate::SignalAction]</span>
@@ -4064,26 +4017,26 @@
     <span class="doccomment">/// focused.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Applications should not connect to it, but may emit it with</span>
-    <span class="doccomment">/// `g_signal_emit_by_name()` if they need to control selection</span>
+    <span class="doccomment">/// g_signal_emit_by_name() if they need to control selection</span>
     <span class="doccomment">/// programmatically.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// There is no default binding for this signal.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;select-cursor-item&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_select_cursor_item</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">select_cursor_item_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;select-cursor-item\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;select-cursor-item\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">select_cursor_item_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">select_cursor_item_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4091,11 +4044,7 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_select_cursor_item</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;select-cursor-item&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;select-cursor-item&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="doccomment">/// The ::selection-changed signal is emitted when the selection</span>
@@ -4103,19 +4052,19 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;selection-changed&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_selection_changed</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">selection_changed_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;selection-changed\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;selection-changed\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">selection_changed_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">selection_changed_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4128,26 +4077,26 @@
     <span class="doccomment">/// depend on the selection mode.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Applications should not connect to it, but may emit it with</span>
-    <span class="doccomment">/// `g_signal_emit_by_name()` if they need to control selection</span>
+    <span class="doccomment">/// g_signal_emit_by_name() if they need to control selection</span>
     <span class="doccomment">/// programmatically.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// There is no default binding for this signal is Ctrl-Space.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;toggle-cursor-item&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_toggle_cursor_item</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">toggle_cursor_item_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;toggle-cursor-item\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;toggle-cursor-item\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">toggle_cursor_item_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">toggle_cursor_item_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4155,37 +4104,33 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_toggle_cursor_item</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;toggle-cursor-item&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;toggle-cursor-item&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="doccomment">/// A [keybinding signal][`SignalAction`][crate::SignalAction]</span>
     <span class="doccomment">/// which gets emitted when the user unselects all items.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Applications should not connect to it, but may emit it with</span>
-    <span class="doccomment">/// `g_signal_emit_by_name()` if they need to control selection</span>
+    <span class="doccomment">/// g_signal_emit_by_name() if they need to control selection</span>
     <span class="doccomment">/// programmatically.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default binding for this signal is Ctrl-Shift-a.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;unselect-all&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_unselect_all</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">unselect_all_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;unselect-all\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;unselect-all\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">unselect_all_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">unselect_all_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4193,11 +4138,7 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_unselect_all</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;unselect-all&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;unselect-all&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;activate-on-single-click&quot;</span>)]</span>
@@ -4208,20 +4149,20 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_activate_on_single_click_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::activate-on-single-click\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::activate-on-single-click\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_activate_on_single_click_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_activate_on_single_click_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4231,20 +4172,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;column-spacing&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_column_spacing_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_column_spacing_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::column-spacing\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::column-spacing\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_column_spacing_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_column_spacing_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4254,20 +4195,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;columns&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_columns_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_columns_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::columns\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::columns\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_columns_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_columns_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4277,20 +4218,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;item-orientation&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_item_orientation_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_item_orientation_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::item-orientation\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::item-orientation\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_item_orientation_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_item_orientation_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4300,20 +4241,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;item-padding&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_item_padding_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_item_padding_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::item-padding\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::item-padding\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_item_padding_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_item_padding_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4323,20 +4264,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;item-width&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_item_width_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_item_width_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::item-width\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::item-width\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_item_width_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_item_width_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4346,20 +4287,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;margin&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_margin_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_margin_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::margin\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::margin\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_margin_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_margin_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4369,20 +4310,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;markup-column&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_markup_column_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_markup_column_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::markup-column\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::markup-column\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_markup_column_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_markup_column_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4392,20 +4333,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;model&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_model_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_model_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::model\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::model\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_model_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_model_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4415,20 +4356,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;pixbuf-column&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_pixbuf_column_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_pixbuf_column_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::pixbuf-column\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::pixbuf-column\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_pixbuf_column_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_pixbuf_column_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4438,20 +4379,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;reorderable&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_reorderable_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_reorderable_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::reorderable\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::reorderable\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_reorderable_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_reorderable_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4461,20 +4402,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;row-spacing&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_row_spacing_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_row_spacing_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::row-spacing\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::row-spacing\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_row_spacing_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_row_spacing_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4484,20 +4425,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;selection-mode&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_selection_mode_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_selection_mode_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::selection-mode\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::selection-mode\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_selection_mode_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_selection_mode_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4507,20 +4448,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;spacing&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_spacing_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_spacing_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::spacing\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::spacing\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_spacing_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_spacing_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4530,20 +4471,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;text-column&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_text_column_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_text_column_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::text-column\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::text-column\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_text_column_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_text_column_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4553,20 +4494,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;tooltip-column&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_tooltip_column_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_tooltip_column_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">IconView</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkIconView</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkIconView</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::tooltip-column\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::tooltip-column\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_tooltip_column_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_tooltip_column_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -4585,6 +4526,7 @@
 <span class="doccomment">/// A [builder-pattern] type to construct [`IconView`] objects.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html</span>
+<span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;The builder must be built to be used&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">IconViewBuilder</span> {
     <span class="ident">activate_on_single_click</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">bool</span><span class="op">&gt;</span>,
     <span class="ident">cell_area</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">CellArea</span><span class="op">&gt;</span>,
@@ -4648,6 +4590,7 @@
 
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Build the [`IconView`].</span>
+    <span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">build</span>(<span class="self">self</span>) -&gt; <span class="ident">IconView</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">properties</span>: <span class="ident">Vec</span><span class="op">&lt;</span>(<span class="kw-2">&amp;</span><span class="ident">str</span>, <span class="kw-2">&amp;</span><span class="kw">dyn</span> <span class="ident">ToValue</span>)<span class="op">&gt;</span> <span class="op">=</span> <span class="macro">vec!</span>[];
         <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="kw-2">ref</span> <span class="ident">activate_on_single_click</span>) <span class="op">=</span> <span class="self">self</span>.<span class="ident">activate_on_single_click</span> {
@@ -4816,7 +4759,7 @@
 
     <span class="doccomment">/// The [`CellArea`][crate::CellArea] used to layout cell renderers for this view.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If no area is specified when creating the icon view with [`IconView::with_area()`][crate::IconView::with_area()]</span>
+    <span class="doccomment">/// If no area is specified when creating the icon view with gtk_icon_view_new_with_area()</span>
     <span class="doccomment">/// a [`CellAreaBox`][crate::CellAreaBox] will be used.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cell_area</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">cell_area</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">CellArea</span><span class="op">&gt;</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">cell_area</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">cell_area</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
@@ -4965,7 +4908,7 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// The cursor used by `widget`.</span>
+    <span class="doccomment">/// The cursor used by @widget.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cursor</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">cursor</span>: <span class="kw-2">&amp;</span><span class="ident">gdk::Cursor</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">cursor</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">cursor</span>.<span class="ident">clone</span>());
         <span class="self">self</span>
@@ -4991,9 +4934,9 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on `widget`.</span>
+    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on @widget.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// A value of [`true`] indicates that `widget` can have a tooltip, in this case</span>
+    <span class="doccomment">/// A value of [`true`] indicates that @widget can have a tooltip, in this case</span>
     <span class="doccomment">/// the widget will be queried using `signal::Widget::query-tooltip` to</span>
     <span class="doccomment">/// determine whether it will provide a tooltip or not.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">has_tooltip</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">has_tooltip</span>: <span class="ident">bool</span>) -&gt; <span class="self">Self</span> {
@@ -5035,7 +4978,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_bottom</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_bottom</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_bottom</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_bottom</span>);
         <span class="self">self</span>
@@ -5048,7 +4991,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_end</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_end</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_end</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_end</span>);
         <span class="self">self</span>
@@ -5061,7 +5004,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_start</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_start</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_start</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_start</span>);
         <span class="self">self</span>
@@ -5071,7 +5014,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_top</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_top</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_top</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_top</span>);
         <span class="self">self</span>
@@ -5113,7 +5056,7 @@
     <span class="doccomment">/// Sets the text of tooltip to be the given string, which is marked up</span>
     <span class="doccomment">/// with Pango markup.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_markup()``][crate::`Tooltip::set_markup()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_markup()`][crate::Tooltip::set_markup()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -5130,7 +5073,7 @@
 
     <span class="doccomment">/// Sets the text of tooltip to be the given string.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_text()``][crate::`Tooltip::set_text()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_text()`][crate::Tooltip::set_text()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -5215,11 +5158,10 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">IconView</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;IconView&quot;</span>)
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

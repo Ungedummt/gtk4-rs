@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;auto&#x2F;fixed.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>fixed.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/fixed.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>fixed.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gtk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -708,6 +713,8 @@
 <span id="635">635</span>
 <span id="636">636</span>
 <span id="637">637</span>
+<span id="638">638</span>
+<span id="639">639</span>
 </pre><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)</span>
 <span class="comment">// from gir-files (https://github.com/gtk-rs/gir-files.git)</span>
 <span class="comment">// DO NOT EDIT</span>
@@ -735,20 +742,20 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// For most applications, you should not use this container! It keeps</span>
     <span class="doccomment">/// you from having to learn about the other GTK containers, but it</span>
-    <span class="doccomment">/// results in broken applications. With [`Fixed`][crate::Fixed], the following</span>
+    <span class="doccomment">/// results in broken applications.  With [`Fixed`][crate::Fixed], the following</span>
     <span class="doccomment">/// things will result in truncated text, overlapping widgets, and</span>
     <span class="doccomment">/// other display bugs:</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// - Themes, which may change widget sizes.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// - Fonts other than the one you used to write the app will of course</span>
-    <span class="doccomment">///  change the size of widgets containing text; keep in mind that</span>
-    <span class="doccomment">///  users may use a larger font because of difficulty reading the</span>
-    <span class="doccomment">///  default, or they may be using a different OS that provides different fonts.</span>
+    <span class="doccomment">///   change the size of widgets containing text; keep in mind that</span>
+    <span class="doccomment">///   users may use a larger font because of difficulty reading the</span>
+    <span class="doccomment">///   default, or they may be using a different OS that provides different fonts.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// - Translation of text into other languages changes its size. Also,</span>
-    <span class="doccomment">///  display of non-English text will use a different font in many</span>
-    <span class="doccomment">///  cases.</span>
+    <span class="doccomment">///   display of non-English text will use a different font in many</span>
+    <span class="doccomment">///   cases.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// In addition, [`Fixed`][crate::Fixed] does not pay attention to text direction and</span>
     <span class="doccomment">/// thus may produce unwanted results if your app is run under right-to-left</span>
@@ -779,6 +786,8 @@
 }
 
 <span class="kw">impl</span> <span class="ident">Fixed</span> {
+    <span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NONE</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="lifetime">&#39;static</span> <span class="ident">Fixed</span><span class="op">&gt;</span> <span class="op">=</span> <span class="prelude-val">None</span>;
+
     <span class="doccomment">/// Creates a new [`Fixed`][crate::Fixed].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
@@ -793,7 +802,7 @@
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Creates a new builder-pattern struct instance to construct [`Fixed`] objects.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// This method returns an instance of [`FixedBuilder`] which can be used to create [`Fixed`] objects.</span>
+    <span class="doccomment">/// This method returns an instance of [`FixedBuilder`](crate::builders::FixedBuilder) which can be used to create [`Fixed`] objects.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">builder</span>() -&gt; <span class="ident">FixedBuilder</span> {
         <span class="ident">FixedBuilder::default</span>()
     }
@@ -810,6 +819,7 @@
 <span class="doccomment">/// A [builder-pattern] type to construct [`Fixed`] objects.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html</span>
+<span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;The builder must be built to be used&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">FixedBuilder</span> {
     <span class="ident">can_focus</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">bool</span><span class="op">&gt;</span>,
     <span class="ident">can_target</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">bool</span><span class="op">&gt;</span>,
@@ -852,6 +862,7 @@
 
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Build the [`Fixed`].</span>
+    <span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">build</span>(<span class="self">self</span>) -&gt; <span class="ident">Fixed</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">properties</span>: <span class="ident">Vec</span><span class="op">&lt;</span>(<span class="kw-2">&amp;</span><span class="ident">str</span>, <span class="kw-2">&amp;</span><span class="kw">dyn</span> <span class="ident">ToValue</span>)<span class="op">&gt;</span> <span class="op">=</span> <span class="macro">vec!</span>[];
         <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="kw-2">ref</span> <span class="ident">can_focus</span>) <span class="op">=</span> <span class="self">self</span>.<span class="ident">can_focus</span> {
@@ -978,7 +989,7 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// The cursor used by `widget`.</span>
+    <span class="doccomment">/// The cursor used by @widget.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cursor</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">cursor</span>: <span class="kw-2">&amp;</span><span class="ident">gdk::Cursor</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">cursor</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">cursor</span>.<span class="ident">clone</span>());
         <span class="self">self</span>
@@ -1004,9 +1015,9 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on `widget`.</span>
+    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on @widget.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// A value of [`true`] indicates that `widget` can have a tooltip, in this case</span>
+    <span class="doccomment">/// A value of [`true`] indicates that @widget can have a tooltip, in this case</span>
     <span class="doccomment">/// the widget will be queried using `signal::Widget::query-tooltip` to</span>
     <span class="doccomment">/// determine whether it will provide a tooltip or not.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">has_tooltip</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">has_tooltip</span>: <span class="ident">bool</span>) -&gt; <span class="self">Self</span> {
@@ -1048,7 +1059,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_bottom</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_bottom</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_bottom</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_bottom</span>);
         <span class="self">self</span>
@@ -1061,7 +1072,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_end</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_end</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_end</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_end</span>);
         <span class="self">self</span>
@@ -1074,7 +1085,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_start</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_start</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_start</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_start</span>);
         <span class="self">self</span>
@@ -1084,7 +1095,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_top</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_top</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_top</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_top</span>);
         <span class="self">self</span>
@@ -1126,7 +1137,7 @@
     <span class="doccomment">/// Sets the text of tooltip to be the given string, which is marked up</span>
     <span class="doccomment">/// with Pango markup.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_markup()``][crate::`Tooltip::set_markup()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_markup()`][crate::Tooltip::set_markup()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -1143,7 +1154,7 @@
 
     <span class="doccomment">/// Sets the text of tooltip to be the given string.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_text()``][crate::`Tooltip::set_text()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_text()`][crate::Tooltip::set_text()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -1199,8 +1210,6 @@
     }
 }
 
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NONE_FIXED</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">Fixed</span><span class="op">&gt;</span> <span class="op">=</span> <span class="prelude-val">None</span>;
-
 <span class="doccomment">/// Trait containing all [`struct@Fixed`] methods.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// # Implementors</span>
@@ -1210,26 +1219,26 @@
     <span class="doccomment">/// Retrieves the translation transformation of the</span>
     <span class="doccomment">/// given child [`Widget`][crate::Widget] in the [`Fixed`][crate::Fixed].</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See also: [``child_transform()``][`Self::child_transform()`].</span>
+    <span class="doccomment">/// See also: [`child_transform()`][Self::child_transform()].</span>
     <span class="doccomment">/// ## `widget`</span>
-    <span class="doccomment">/// a child of `self`</span>
+    <span class="doccomment">/// a child of @self</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `x`</span>
-    <span class="doccomment">/// the horizontal position of the `widget`</span>
+    <span class="doccomment">/// the horizontal position of the @widget</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `y`</span>
-    <span class="doccomment">/// the vertical position of the `widget`</span>
+    <span class="doccomment">/// the vertical position of the @widget</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_fixed_get_child_position&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_child_position&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">child_position</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) -&gt; (<span class="ident">f64</span>, <span class="ident">f64</span>);
 
-    <span class="doccomment">/// Retrieves the transformation for `widget` set using</span>
-    <span class="doccomment">/// [`set_child_transform()`][Self::set_child_transform()].</span>
+    <span class="doccomment">/// Retrieves the transformation for @widget set using</span>
+    <span class="doccomment">/// gtk_fixed_set_child_transform().</span>
     <span class="doccomment">/// ## `widget`</span>
-    <span class="doccomment">/// a [`Widget`][crate::Widget], child of `self`</span>
+    <span class="doccomment">/// a [`Widget`][crate::Widget], child of @self</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -1252,22 +1261,22 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_fixed_put&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">put</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">x</span>: <span class="ident">f64</span>, <span class="ident">y</span>: <span class="ident">f64</span>);
 
-    <span class="doccomment">/// Removes a child from `self`.</span>
+    <span class="doccomment">/// Removes a child from @self.</span>
     <span class="doccomment">/// ## `widget`</span>
     <span class="doccomment">/// the child widget to remove</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_fixed_remove&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">remove</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>);
 
-    <span class="doccomment">/// Sets the transformation for `widget`.</span>
+    <span class="doccomment">/// Sets the transformation for @widget.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience function that retrieves the</span>
     <span class="doccomment">/// [`FixedLayoutChild`][crate::FixedLayoutChild] instance associated to</span>
-    <span class="doccomment">/// `widget` and calls [``FixedLayoutChild::set_transform()``][crate::`FixedLayoutChild::set_transform()`].</span>
+    <span class="doccomment">/// @widget and calls [`FixedLayoutChild::set_transform()`][crate::FixedLayoutChild::set_transform()].</span>
     <span class="doccomment">/// ## `widget`</span>
-    <span class="doccomment">/// a [`Widget`][crate::Widget], child of `self`</span>
+    <span class="doccomment">/// a [`Widget`][crate::Widget], child of @self</span>
     <span class="doccomment">/// ## `transform`</span>
-    <span class="doccomment">/// the transformation assigned to `widget`</span>
-    <span class="doccomment">///  to reset `widget`&#39;s transform</span>
+    <span class="doccomment">/// the transformation assigned to @widget</span>
+    <span class="doccomment">///   to reset @widget&#39;s transform</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_fixed_set_child_transform&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">set_child_transform</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">transform</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">gsk::Transform</span><span class="op">&gt;</span>);
 }
@@ -1341,11 +1350,10 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">Fixed</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;Fixed&quot;</span>)
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

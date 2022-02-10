@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;tree_store.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>tree_store.rs - source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/tree_store.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>tree_store.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../gtk4/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -363,21 +368,6 @@
 <span id="290">290</span>
 <span id="291">291</span>
 <span id="292">292</span>
-<span id="293">293</span>
-<span id="294">294</span>
-<span id="295">295</span>
-<span id="296">296</span>
-<span id="297">297</span>
-<span id="298">298</span>
-<span id="299">299</span>
-<span id="300">300</span>
-<span id="301">301</span>
-<span id="302">302</span>
-<span id="303">303</span>
-<span id="304">304</span>
-<span id="305">305</span>
-<span id="306">306</span>
-<span id="307">307</span>
 </pre><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
 <span class="kw">use</span> <span class="kw">crate</span>::{<span class="ident">TreeIter</span>, <span class="ident">TreeModel</span>, <span class="ident">TreeStore</span>};
@@ -386,8 +376,8 @@
 <span class="kw">use</span> <span class="ident">libc::c_int</span>;
 
 <span class="kw">impl</span> <span class="ident">TreeStore</span> {
-    <span class="doccomment">/// Creates a new tree store as with `n_columns` columns each of the types passed</span>
-    <span class="doccomment">/// in. Note that only types derived from standard GObject fundamental types</span>
+    <span class="doccomment">/// Creates a new tree store as with @n_columns columns each of the types passed</span>
+    <span class="doccomment">/// in.  Note that only types derived from standard GObject fundamental types</span>
     <span class="doccomment">/// are supported.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// As an example,</span>
@@ -418,32 +408,17 @@
         }
     }
 
-    <span class="doccomment">/// Creates a new row at `position`. `iter` will be changed to point to this</span>
-    <span class="doccomment">/// new row. If `position` is -1, or larger than the number of rows on the list, then</span>
-    <span class="doccomment">/// the new row will be appended to the list. The row will be filled with</span>
-    <span class="doccomment">/// the values given to this function.</span>
-    <span class="doccomment">///</span>
-    <span class="doccomment">/// Calling</span>
-    <span class="doccomment">/// `gtk_tree_store_insert_with_values (tree_store, iter, position, ...)`</span>
-    <span class="doccomment">/// has the same effect as calling</span>
-    <span class="doccomment">///</span>
-    <span class="doccomment">///</span>
-    <span class="doccomment">/// **⚠️ The following code is in C ⚠️**</span>
-    <span class="doccomment">///</span>
-    <span class="doccomment">/// ```C</span>
-    <span class="doccomment">/// gtk_tree_store_insert (tree_store, iter, position);</span>
-    <span class="doccomment">/// gtk_tree_store_set (tree_store, iter, ...);</span>
-    <span class="doccomment">/// ```</span>
-    <span class="doccomment">/// with the different that the former will only emit a row_inserted signal,</span>
-    <span class="doccomment">/// while the latter will emit row_inserted, row_changed and if the tree store</span>
-    <span class="doccomment">/// is sorted, rows_reordered. Since emitting the rows_reordered signal</span>
-    <span class="doccomment">/// repeatedly can affect the performance of the program,</span>
-    <span class="doccomment">/// `gtk_tree_store_insert_with_values()` should generally be preferred when</span>
-    <span class="doccomment">/// inserting rows in a sorted tree store.</span>
+    <span class="doccomment">/// A variant of gtk_tree_store_insert_with_values() which takes</span>
+    <span class="doccomment">/// the columns and values as two arrays, instead of varargs.  This</span>
+    <span class="doccomment">/// function is mainly intended for language bindings.</span>
     <span class="doccomment">/// ## `parent`</span>
     <span class="doccomment">/// A valid [`TreeIter`][crate::TreeIter]</span>
     <span class="doccomment">/// ## `position`</span>
-    <span class="doccomment">/// position to insert the new row, or -1 to append after existing rows</span>
+    <span class="doccomment">/// position to insert the new row, or -1 for last</span>
+    <span class="doccomment">/// ## `columns`</span>
+    <span class="doccomment">/// an array of column numbers</span>
+    <span class="doccomment">/// ## `values`</span>
+    <span class="doccomment">/// an array of GValues</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -508,23 +483,23 @@
                 <span class="ident">iter</span>.<span class="ident">to_glib_none_mut</span>().<span class="number">0</span>,
                 <span class="ident">mut_override</span>(<span class="ident">parent</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>),
                 <span class="ident">position</span>.<span class="ident">map_or</span>(<span class="op">-</span><span class="number">1</span>, <span class="op">|</span><span class="ident">n</span><span class="op">|</span> <span class="ident">n</span> <span class="kw">as</span> <span class="ident">c_int</span>),
-                <span class="ident">mut_override</span>(<span class="ident">columns</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">c_int</span>),
-                <span class="ident">mut_override</span>(<span class="ident">values</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">glib::gobject_ffi::GValue</span>),
+                <span class="ident">mut_override</span>(<span class="ident">columns</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">c_int</span>),
+                <span class="ident">mut_override</span>(<span class="ident">values</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">glib::gobject_ffi::GValue</span>),
                 <span class="ident">columns</span>.<span class="ident">len</span>() <span class="kw">as</span> <span class="ident">c_int</span>,
             );
             <span class="ident">iter</span>
         }
     }
 
-    <span class="doccomment">/// Reorders the children of `parent` in `self` to follow the order</span>
-    <span class="doccomment">/// indicated by `new_order`. Note that this function only works with</span>
+    <span class="doccomment">/// Reorders the children of @parent in @self to follow the order</span>
+    <span class="doccomment">/// indicated by @new_order. Note that this function only works with</span>
     <span class="doccomment">/// unsorted stores.</span>
     <span class="doccomment">/// ## `parent`</span>
     <span class="doccomment">/// A [`TreeIter`][crate::TreeIter]</span>
     <span class="doccomment">/// ## `new_order`</span>
     <span class="doccomment">/// an array of integers mapping the new position of each child</span>
-    <span class="doccomment">///  to its old position before the re-ordering,</span>
-    <span class="doccomment">///  i.e. `new_order``[newpos] = oldpos`.</span>
+    <span class="doccomment">///   to its old position before the re-ordering,</span>
+    <span class="doccomment">///   i.e. @new_order`[newpos] = oldpos`.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_tree_store_reorder&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">reorder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">parent</span>: <span class="kw-2">&amp;</span><span class="ident">TreeIter</span>, <span class="ident">new_order</span>: <span class="kw-2">&amp;</span>[<span class="ident">u32</span>]) {
         <span class="kw">unsafe</span> {
@@ -554,13 +529,13 @@
                 <span class="ident">ffi::gtk_tree_store_reorder</span>(
                     <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                     <span class="ident">mut_override</span>(<span class="ident">parent</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>),
-                    <span class="ident">mut_override</span>(<span class="ident">new_order</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">c_int</span>),
+                    <span class="ident">mut_override</span>(<span class="ident">new_order</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">c_int</span>),
                 );
             }
         }
     }
 
-    <span class="doccomment">/// Sets the value of one or more cells in the row referenced by `iter`.</span>
+    <span class="doccomment">/// Sets the value of one or more cells in the row referenced by @iter.</span>
     <span class="doccomment">/// The variable argument list should contain integer column numbers,</span>
     <span class="doccomment">/// each column number followed by the value to be set.</span>
     <span class="doccomment">/// The list is terminated by a -1. For example, to set column 0 with type</span>
@@ -617,8 +592,8 @@
             <span class="ident">ffi::gtk_tree_store_set_valuesv</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">mut_override</span>(<span class="ident">iter</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>),
-                <span class="ident">mut_override</span>(<span class="ident">columns</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">c_int</span>),
-                <span class="ident">mut_override</span>(<span class="ident">values</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">glib::gobject_ffi::GValue</span>),
+                <span class="ident">mut_override</span>(<span class="ident">columns</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">c_int</span>),
+                <span class="ident">mut_override</span>(<span class="ident">values</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">glib::gobject_ffi::GValue</span>),
                 <span class="ident">columns</span>.<span class="ident">len</span>() <span class="kw">as</span> <span class="ident">c_int</span>,
             );
         }
@@ -626,7 +601,7 @@
 
     <span class="doccomment">/// This function is meant primarily for `GObjects` that inherit from</span>
     <span class="doccomment">/// [`TreeStore`][crate::TreeStore], and should only be used when constructing a new</span>
-    <span class="doccomment">/// [`TreeStore`][crate::TreeStore]. It will not function after a row has been added,</span>
+    <span class="doccomment">/// [`TreeStore`][crate::TreeStore].  It will not function after a row has been added,</span>
     <span class="doccomment">/// or a method on the [`TreeModel`][crate::TreeModel] interface is called.</span>
     <span class="doccomment">/// ## `types`</span>
     <span class="doccomment">/// An array of `GType` types, one for each column</span>
@@ -642,8 +617,8 @@
         }
     }
 
-    <span class="doccomment">/// Sets the data in the cell specified by `iter` and `column`.</span>
-    <span class="doccomment">/// The type of `value` must be convertible to the type of the</span>
+    <span class="doccomment">/// Sets the data in the cell specified by @iter and @column.</span>
+    <span class="doccomment">/// The type of @value must be convertible to the type of the</span>
     <span class="doccomment">/// column.</span>
     <span class="doccomment">/// ## `iter`</span>
     <span class="doccomment">/// A valid [`TreeIter`][crate::TreeIter] for the row being modified</span>
@@ -686,6 +661,5 @@
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk4" data-search-index-js="../../search-index.js" data-search-js="../../search.js"></div>
-    <script src="../../main.js"></script><script src="../../source-script.js"></script><script src="../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

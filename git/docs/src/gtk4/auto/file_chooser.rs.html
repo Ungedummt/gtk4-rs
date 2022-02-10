@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;auto&#x2F;file_chooser.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>file_chooser.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/file_chooser.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>file_chooser.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gtk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -862,6 +867,12 @@
 <span id="789">789</span>
 <span id="790">790</span>
 <span id="791">791</span>
+<span id="792">792</span>
+<span id="793">793</span>
+<span id="794">794</span>
+<span id="795">795</span>
+<span id="796">796</span>
+<span id="797">797</span>
 </pre><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)</span>
 <span class="comment">// from gir-files (https://github.com/gtk-rs/gir-files.git)</span>
 <span class="comment">// DO NOT EDIT</span>
@@ -895,15 +906,15 @@
     <span class="doccomment">/// sources and in various flavours, so lets explain the terminology here:</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// - Bookmarks: are created by the user, by dragging folders from the</span>
-    <span class="doccomment">///  right pane to the left pane, or by using the “Add”. Bookmarks</span>
-    <span class="doccomment">///  can be renamed and deleted by the user.</span>
+    <span class="doccomment">///   right pane to the left pane, or by using the “Add”. Bookmarks</span>
+    <span class="doccomment">///   can be renamed and deleted by the user.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// - Shortcuts: can be provided by the application. For example, a Paint</span>
-    <span class="doccomment">///  program may want to add a shortcut for a Clipart folder. Shortcuts</span>
-    <span class="doccomment">///  cannot be modified by the user.</span>
+    <span class="doccomment">///   program may want to add a shortcut for a Clipart folder. Shortcuts</span>
+    <span class="doccomment">///   cannot be modified by the user.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// - Volumes: are provided by the underlying filesystem abstraction. They are</span>
-    <span class="doccomment">///  the “roots” of the filesystem.</span>
+    <span class="doccomment">///   the “roots” of the filesystem.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # File Names and Encodings</span>
     <span class="doccomment">///</span>
@@ -914,7 +925,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// You can add extra widgets to a file chooser to provide options</span>
     <span class="doccomment">/// that are not present in the default design, by using</span>
-    <span class="doccomment">/// `Gtk::`FileChooser::add_choice()``. Each choice has an identifier and</span>
+    <span class="doccomment">/// [`FileChooserExtManual::add_choice()`][crate::prelude::FileChooserExtManual::add_choice()]. Each choice has an identifier and</span>
     <span class="doccomment">/// a user visible label; additionally, each choice can have multiple</span>
     <span class="doccomment">/// options. If a choice has no option, it will be rendered as a</span>
     <span class="doccomment">/// check button with the given label; if a choice has options, it will</span>
@@ -922,7 +933,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Implements</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// [`FileChooserExt`][trait@crate::prelude::FileChooserExt]</span>
+    <span class="doccomment">/// [`FileChooserExt`][trait@crate::prelude::FileChooserExt], [`FileChooserExtManual`][trait@crate::prelude::FileChooserExtManual]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GtkFileChooser&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">FileChooser</span>(<span class="ident">Interface</span><span class="op">&lt;</span><span class="ident">ffi::GtkFileChooser</span><span class="op">&gt;</span>);
 
@@ -931,7 +942,9 @@
     }
 }
 
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NONE_FILE_CHOOSER</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">FileChooser</span><span class="op">&gt;</span> <span class="op">=</span> <span class="prelude-val">None</span>;
+<span class="kw">impl</span> <span class="ident">FileChooser</span> {
+    <span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NONE</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="lifetime">&#39;static</span> <span class="ident">FileChooser</span><span class="op">&gt;</span> <span class="op">=</span> <span class="prelude-val">None</span>;
+}
 
 <span class="doccomment">/// Trait containing all [`struct@FileChooser`] methods.</span>
 <span class="doccomment">///</span>
@@ -939,12 +952,12 @@
 <span class="doccomment">///</span>
 <span class="doccomment">/// [`FileChooserDialog`][struct@crate::FileChooserDialog], [`FileChooserNative`][struct@crate::FileChooserNative], [`FileChooserWidget`][struct@crate::FileChooserWidget], [`FileChooser`][struct@crate::FileChooser]</span>
 <span class="kw">pub</span> <span class="kw">trait</span> <span class="ident">FileChooserExt</span>: <span class="lifetime">&#39;static</span> {
-    <span class="doccomment">/// Adds `filter` to the list of filters that the user can select between.</span>
+    <span class="doccomment">/// Adds @filter to the list of filters that the user can select between.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// When a filter is selected, only files that are passed by that</span>
     <span class="doccomment">/// filter are displayed.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Note that the `self` takes ownership of the filter if it is floating,</span>
+    <span class="doccomment">/// Note that the @self takes ownership of the filter if it is floating,</span>
     <span class="doccomment">/// so you have to ref and sink it if you want to keep a reference.</span>
     <span class="doccomment">/// ## `filter`</span>
     <span class="doccomment">/// a [`FileFilter`][crate::FileFilter]</span>
@@ -959,7 +972,7 @@
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`true`] if the folder could be added successfully,</span>
-    <span class="doccomment">///  [`false`] otherwise.</span>
+    <span class="doccomment">///   [`false`] otherwise.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_add_shortcut_folder&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">add_shortcut_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">folder</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">glib::Error</span><span class="op">&gt;</span>;
 
@@ -992,14 +1005,14 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_create_folders&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">creates_folders</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">bool</span>;
 
-    <span class="doccomment">/// Gets the current folder of `self` as `GFile`.</span>
+    <span class="doccomment">/// Gets the current folder of @self as `GFile`.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// the `GFile` for the current folder.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_get_current_folder&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_current_folder&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">current_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span>;
+    <span class="kw">fn</span> <span class="ident">current_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">gio::File</span>;
 
     <span class="doccomment">/// Gets the current name in the file selector, as entered by the user.</span>
     <span class="doccomment">///</span>
@@ -1009,13 +1022,13 @@
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The raw text from the file chooser’s “Name” entry. Free with</span>
-    <span class="doccomment">///  `g_free()`. Note that this string is not a full pathname or URI; it is</span>
-    <span class="doccomment">///  whatever the contents of the entry are. Note also that this string is</span>
-    <span class="doccomment">///  in UTF-8 encoding, which is not necessarily the system’s encoding for</span>
-    <span class="doccomment">///  filenames.</span>
+    <span class="doccomment">///   g_free(). Note that this string is not a full pathname or URI; it is</span>
+    <span class="doccomment">///   whatever the contents of the entry are. Note also that this string is</span>
+    <span class="doccomment">///   in UTF-8 encoding, which is not necessarily the system’s encoding for</span>
+    <span class="doccomment">///   filenames.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_get_current_name&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_current_name&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">current_name</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">glib::GString</span><span class="op">&gt;</span>;
+    <span class="kw">fn</span> <span class="ident">current_name</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">glib::GString</span>;
 
     <span class="doccomment">/// Gets the `GFile` for the currently selected file in</span>
     <span class="doccomment">/// the file selector.</span>
@@ -1029,22 +1042,22 @@
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// a selected `GFile`. You own the</span>
-    <span class="doccomment">///  returned file; use `g_object_unref()` to release it.</span>
+    <span class="doccomment">///   returned file; use g_object_unref() to release it.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_get_file&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_file&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">file</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span>;
 
     <span class="doccomment">/// Lists all the selected files and subfolders in the current folder</span>
-    <span class="doccomment">/// of `self` as `GFile`.</span>
+    <span class="doccomment">/// of @self as `GFile`.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// a list model containing a `GFile` for each</span>
-    <span class="doccomment">///  selected file and subfolder in the current folder. Free the returned</span>
-    <span class="doccomment">///  list with `g_object_unref()`.</span>
+    <span class="doccomment">///   selected file and subfolder in the current folder. Free the returned</span>
+    <span class="doccomment">///   list with g_object_unref().</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_get_files&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_files&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">files</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::ListModel</span><span class="op">&gt;</span>;
+    <span class="kw">fn</span> <span class="ident">files</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">gio::ListModel</span>;
 
     <span class="doccomment">/// Gets the current filter.</span>
     <span class="doccomment">///</span>
@@ -1057,19 +1070,19 @@
 
     <span class="doccomment">/// Gets the current set of user-selectable filters, as a list model.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``add_filter()``][`Self::add_filter()`] and</span>
-    <span class="doccomment">/// [``remove_filter()``][`Self::remove_filter()`] for changing individual filters.</span>
+    <span class="doccomment">/// See [`add_filter()`][Self::add_filter()] and</span>
+    <span class="doccomment">/// [`remove_filter()`][Self::remove_filter()] for changing individual filters.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// You should not modify the returned list model. Future changes to</span>
-    <span class="doccomment">/// `self` may or may not affect the returned model.</span>
+    <span class="doccomment">/// @self may or may not affect the returned model.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// a `GListModel` containing the current set</span>
-    <span class="doccomment">///  of user-selectable filters.</span>
+    <span class="doccomment">///   of user-selectable filters.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_get_filters&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_filters&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">filters</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::ListModel</span><span class="op">&gt;</span>;
+    <span class="kw">fn</span> <span class="ident">filters</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">gio::ListModel</span>;
 
     <span class="doccomment">/// Gets whether multiple files can be selected in the file</span>
     <span class="doccomment">/// chooser.</span>
@@ -1084,22 +1097,22 @@
     <span class="doccomment">/// Queries the list of shortcut folders in the file chooser.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// You should not modify the returned list model. Future changes to</span>
-    <span class="doccomment">/// `self` may or may not affect the returned model.</span>
+    <span class="doccomment">/// @self may or may not affect the returned model.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// A list model of `GFile`s</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_get_shortcut_folders&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_shortcut_folders&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">shortcut_folders</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::ListModel</span><span class="op">&gt;</span>;
+    <span class="kw">fn</span> <span class="ident">shortcut_folders</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">gio::ListModel</span>;
 
-    <span class="doccomment">/// Removes a &#39;choice&#39; that has been added with `gtk_file_chooser_add_choice()`.</span>
+    <span class="doccomment">/// Removes a &#39;choice&#39; that has been added with gtk_file_chooser_add_choice().</span>
     <span class="doccomment">/// ## `id`</span>
     <span class="doccomment">/// the ID of the choice to remove</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_remove_choice&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">remove_choice</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">id</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>);
 
-    <span class="doccomment">/// Removes `filter` from the list of filters that the user can select between.</span>
+    <span class="doccomment">/// Removes @filter from the list of filters that the user can select between.</span>
     <span class="doccomment">/// ## `filter`</span>
     <span class="doccomment">/// a [`FileFilter`][crate::FileFilter]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_remove_filter&quot;</span>)]</span>
@@ -1112,7 +1125,7 @@
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`true`] if the folder could be removed successfully,</span>
-    <span class="doccomment">///  [`false`] otherwise.</span>
+    <span class="doccomment">///   [`false`] otherwise.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_remove_shortcut_folder&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">remove_shortcut_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">folder</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">glib::Error</span><span class="op">&gt;</span>;
 
@@ -1129,7 +1142,7 @@
     <span class="kw">fn</span> <span class="ident">set_action</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">action</span>: <span class="ident">FileChooserAction</span>);
 
     <span class="doccomment">/// Selects an option in a &#39;choice&#39; that has been added with</span>
-    <span class="doccomment">/// `gtk_file_chooser_add_choice()`.</span>
+    <span class="doccomment">/// gtk_file_chooser_add_choice().</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// For a boolean choice, the possible options are &quot;true&quot; and &quot;false&quot;.</span>
     <span class="doccomment">/// ## `id`</span>
@@ -1148,14 +1161,14 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_set_create_folders&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">set_create_folders</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">create_folders</span>: <span class="ident">bool</span>);
 
-    <span class="doccomment">/// Sets the current folder for `self` from a `GFile`.</span>
+    <span class="doccomment">/// Sets the current folder for @self from a `GFile`.</span>
     <span class="doccomment">/// ## `file`</span>
     <span class="doccomment">/// the `GFile` for the new folder</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`true`] if the folder could be changed successfully, [`false`]</span>
-    <span class="doccomment">///  otherwise.</span>
+    <span class="doccomment">///   otherwise.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_set_current_folder&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">set_current_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">file</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">glib::Error</span><span class="op">&gt;</span>;
 
@@ -1164,27 +1177,27 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// Note that the name passed in here is a UTF-8 string rather</span>
     <span class="doccomment">/// than a filename. This function is meant for such uses as a</span>
-    <span class="doccomment">/// suggested name in a “Save As...” dialog. You can pass</span>
-    <span class="doccomment">/// “Untitled.doc” or a similarly suitable suggestion for the `name`.</span>
+    <span class="doccomment">/// suggested name in a “Save As...” dialog.  You can pass</span>
+    <span class="doccomment">/// “Untitled.doc” or a similarly suitable suggestion for the @name.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// If you want to preselect a particular existing file, you should</span>
-    <span class="doccomment">/// use [``set_file()``][`Self::set_file()`] instead.</span>
+    <span class="doccomment">/// use [`set_file()`][Self::set_file()] instead.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Please see the documentation for those functions for an example</span>
-    <span class="doccomment">/// of using [``set_current_name()``][`Self::set_current_name()`] as well.</span>
+    <span class="doccomment">/// of using [`set_current_name()`][Self::set_current_name()] as well.</span>
     <span class="doccomment">/// ## `name`</span>
     <span class="doccomment">/// the filename to use, as a UTF-8 string</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_file_chooser_set_current_name&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">set_current_name</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">name</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>);
 
-    <span class="doccomment">/// Sets `file` as the current filename for the file chooser.</span>
+    <span class="doccomment">/// Sets @file as the current filename for the file chooser.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This includes changing to the file’s parent folder and actually selecting</span>
-    <span class="doccomment">/// the file in list. If the `self` is in [`FileChooserAction::Save`][crate::FileChooserAction::Save] mode,</span>
+    <span class="doccomment">/// the file in list. If the @self is in [`FileChooserAction::Save`][crate::FileChooserAction::Save] mode,</span>
     <span class="doccomment">/// the file’s base name will also appear in the dialog’s file name entry.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If the file name isn’t in the current folder of `self`, then the current</span>
-    <span class="doccomment">/// folder of `self` will be changed to the folder containing `file`.</span>
+    <span class="doccomment">/// If the file name isn’t in the current folder of @self, then the current</span>
+    <span class="doccomment">/// folder of @self will be changed to the folder containing @file.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Note that the file must exist, or nothing will be done except</span>
     <span class="doccomment">/// for the directory change.</span>
@@ -1286,11 +1299,12 @@
     <span class="kw">fn</span> <span class="ident">add_shortcut_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">folder</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">glib::Error</span><span class="op">&gt;</span> {
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">error</span> <span class="op">=</span> <span class="ident">ptr::null_mut</span>();
-            <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="ident">ffi::gtk_file_chooser_add_shortcut_folder</span>(
+            <span class="kw">let</span> <span class="ident">is_ok</span> <span class="op">=</span> <span class="ident">ffi::gtk_file_chooser_add_shortcut_folder</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">folder</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">error</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">error</span>,
             );
+            <span class="macro">assert_eq!</span>(<span class="ident">is_ok</span> <span class="op">==</span> <span class="ident">glib::ffi::GFALSE</span>, <span class="op">!</span><span class="ident">error</span>.<span class="ident">is_null</span>());
             <span class="kw">if</span> <span class="ident">error</span>.<span class="ident">is_null</span>() {
                 <span class="prelude-val">Ok</span>(())
             } <span class="kw">else</span> {
@@ -1324,7 +1338,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">current_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">current_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">gio::File</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_full</span>(<span class="ident">ffi::gtk_file_chooser_get_current_folder</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -1332,7 +1346,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">current_name</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">glib::GString</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">current_name</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">glib::GString</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_full</span>(<span class="ident">ffi::gtk_file_chooser_get_current_name</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -1348,7 +1362,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">files</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::ListModel</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">files</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">gio::ListModel</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_full</span>(<span class="ident">ffi::gtk_file_chooser_get_files</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -1364,7 +1378,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">filters</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::ListModel</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">filters</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">gio::ListModel</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_full</span>(<span class="ident">ffi::gtk_file_chooser_get_filters</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -1380,7 +1394,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">shortcut_folders</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::ListModel</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">shortcut_folders</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">gio::ListModel</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_full</span>(<span class="ident">ffi::gtk_file_chooser_get_shortcut_folders</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -1409,11 +1423,12 @@
     <span class="kw">fn</span> <span class="ident">remove_shortcut_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">folder</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">glib::Error</span><span class="op">&gt;</span> {
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">error</span> <span class="op">=</span> <span class="ident">ptr::null_mut</span>();
-            <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="ident">ffi::gtk_file_chooser_remove_shortcut_folder</span>(
+            <span class="kw">let</span> <span class="ident">is_ok</span> <span class="op">=</span> <span class="ident">ffi::gtk_file_chooser_remove_shortcut_folder</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">folder</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">error</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">error</span>,
             );
+            <span class="macro">assert_eq!</span>(<span class="ident">is_ok</span> <span class="op">==</span> <span class="ident">glib::ffi::GFALSE</span>, <span class="op">!</span><span class="ident">error</span>.<span class="ident">is_null</span>());
             <span class="kw">if</span> <span class="ident">error</span>.<span class="ident">is_null</span>() {
                 <span class="prelude-val">Ok</span>(())
             } <span class="kw">else</span> {
@@ -1450,11 +1465,12 @@
     <span class="kw">fn</span> <span class="ident">set_current_folder</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">file</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">glib::Error</span><span class="op">&gt;</span> {
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">error</span> <span class="op">=</span> <span class="ident">ptr::null_mut</span>();
-            <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="ident">ffi::gtk_file_chooser_set_current_folder</span>(
+            <span class="kw">let</span> <span class="ident">is_ok</span> <span class="op">=</span> <span class="ident">ffi::gtk_file_chooser_set_current_folder</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">file</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">error</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">error</span>,
             );
+            <span class="macro">assert_eq!</span>(<span class="ident">is_ok</span> <span class="op">==</span> <span class="ident">glib::ffi::GFALSE</span>, <span class="op">!</span><span class="ident">error</span>.<span class="ident">is_null</span>());
             <span class="kw">if</span> <span class="ident">error</span>.<span class="ident">is_null</span>() {
                 <span class="prelude-val">Ok</span>(())
             } <span class="kw">else</span> {
@@ -1475,11 +1491,12 @@
     <span class="kw">fn</span> <span class="ident">set_file</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">file</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">gio::File</span><span class="op">&gt;</span>) -&gt; <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">glib::Error</span><span class="op">&gt;</span> {
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">error</span> <span class="op">=</span> <span class="ident">ptr::null_mut</span>();
-            <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="ident">ffi::gtk_file_chooser_set_file</span>(
+            <span class="kw">let</span> <span class="ident">is_ok</span> <span class="op">=</span> <span class="ident">ffi::gtk_file_chooser_set_file</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">file</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">error</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">error</span>,
             );
+            <span class="macro">assert_eq!</span>(<span class="ident">is_ok</span> <span class="op">==</span> <span class="ident">glib::ffi::GFALSE</span>, <span class="op">!</span><span class="ident">error</span>.<span class="ident">is_null</span>());
             <span class="kw">if</span> <span class="ident">error</span>.<span class="ident">is_null</span>() {
                 <span class="prelude-val">Ok</span>(())
             } <span class="kw">else</span> {
@@ -1508,20 +1525,20 @@
 
     <span class="kw">fn</span> <span class="ident">connect_action_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_action_trampoline</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">FileChooser</span><span class="op">&gt;</span>, <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkFileChooser</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkFileChooser</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="ident">FileChooser::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>())
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::action\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::action\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_action_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_action_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -1533,20 +1550,20 @@
             <span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">FileChooser</span><span class="op">&gt;</span>,
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkFileChooser</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkFileChooser</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="ident">FileChooser::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>())
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::create-folders\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::create-folders\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_create_folders_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_create_folders_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -1555,20 +1572,20 @@
 
     <span class="kw">fn</span> <span class="ident">connect_filter_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_filter_trampoline</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">FileChooser</span><span class="op">&gt;</span>, <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkFileChooser</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkFileChooser</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="ident">FileChooser::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>())
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::filter\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::filter\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_filter_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_filter_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -1577,20 +1594,20 @@
 
     <span class="kw">fn</span> <span class="ident">connect_filters_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_filters_trampoline</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">FileChooser</span><span class="op">&gt;</span>, <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkFileChooser</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkFileChooser</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="ident">FileChooser::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>())
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::filters\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::filters\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_filters_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_filters_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -1602,20 +1619,20 @@
             <span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">FileChooser</span><span class="op">&gt;</span>,
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkFileChooser</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkFileChooser</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="ident">FileChooser::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>())
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::select-multiple\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::select-multiple\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_select_multiple_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_select_multiple_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -1627,20 +1644,20 @@
             <span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">FileChooser</span><span class="op">&gt;</span>,
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkFileChooser</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkFileChooser</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="ident">FileChooser::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>())
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::shortcut-folders\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::shortcut-folders\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_shortcut_folders_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_shortcut_folders_trampoline</span>::<span class="op">&lt;</span><span class="self">Self</span>, <span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -1649,11 +1666,10 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">FileChooser</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;FileChooser&quot;</span>)
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

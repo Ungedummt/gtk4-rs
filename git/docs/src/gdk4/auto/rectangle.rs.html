@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk4&#x2F;src&#x2F;auto&#x2F;rectangle.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>rectangle.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk4/src/auto/rectangle.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>rectangle.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gdk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gdk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gdk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gdk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -206,12 +211,6 @@
 <span id="133">133</span>
 <span id="134">134</span>
 <span id="135">135</span>
-<span id="136">136</span>
-<span id="137">137</span>
-<span id="138">138</span>
-<span id="139">139</span>
-<span id="140">140</span>
-<span id="141">141</span>
 </pre><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)</span>
 <span class="comment">// from gir-files (https://github.com/gtk-rs/gir-files.git)</span>
 <span class="comment">// DO NOT EDIT</span>
@@ -222,14 +221,14 @@
     <span class="doccomment">/// A [`Rectangle`][crate::Rectangle] data type for representing rectangles.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`Rectangle`][crate::Rectangle] is identical to `cairo_rectangle_t`. Together with Cairo’s</span>
-    <span class="doccomment">/// `cairo_region_t` data type, these are the central types for representing</span>
+    <span class="doccomment">/// [`cairo::Region`][crate::cairo::Region] data type, these are the central types for representing</span>
     <span class="doccomment">/// sets of pixels.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The intersection of two rectangles can be computed with</span>
-    <span class="doccomment">/// [``intersect()``][`Self::intersect()`]; to find the union of two rectangles use</span>
-    <span class="doccomment">/// [``union()``][`Self::union()`].</span>
+    <span class="doccomment">/// [`intersect()`][Self::intersect()]; to find the union of two rectangles use</span>
+    <span class="doccomment">/// [`union()`][Self::union()].</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The `cairo_region_t` type provided by Cairo is usually used for managing</span>
+    <span class="doccomment">/// The [`cairo::Region`][crate::cairo::Region] type provided by Cairo is usually used for managing</span>
     <span class="doccomment">/// non-rectangular clipping of graphical operations.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The Graphene library has a number of other data types for regions and</span>
@@ -237,14 +236,14 @@
     <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Rectangle</span>(<span class="ident">BoxedInline</span><span class="op">&lt;</span><span class="ident">ffi::GdkRectangle</span><span class="op">&gt;</span>);
 
     <span class="kw">match</span> <span class="kw">fn</span> {
-        <span class="ident">copy</span> =&gt; <span class="op">|</span><span class="ident">ptr</span><span class="op">|</span> <span class="ident">glib::gobject_ffi::g_boxed_copy</span>(<span class="ident">ffi::gdk_rectangle_get_type</span>(), <span class="ident">ptr</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>) <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkRectangle</span>,
-        <span class="ident">free</span> =&gt; <span class="op">|</span><span class="ident">ptr</span><span class="op">|</span> <span class="ident">glib::gobject_ffi::g_boxed_free</span>(<span class="ident">ffi::gdk_rectangle_get_type</span>(), <span class="ident">ptr</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>),
+        <span class="ident">copy</span> =&gt; <span class="op">|</span><span class="ident">ptr</span><span class="op">|</span> <span class="ident">glib::gobject_ffi::g_boxed_copy</span>(<span class="ident">ffi::gdk_rectangle_get_type</span>(), <span class="ident">ptr</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>) <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="ident">ffi::GdkRectangle</span>,
+        <span class="ident">free</span> =&gt; <span class="op">|</span><span class="ident">ptr</span><span class="op">|</span> <span class="ident">glib::gobject_ffi::g_boxed_free</span>(<span class="ident">ffi::gdk_rectangle_get_type</span>(), <span class="ident">ptr</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>),
         <span class="ident">type_</span> =&gt; <span class="op">|</span><span class="op">|</span> <span class="ident">ffi::gdk_rectangle_get_type</span>(),
     }
 }
 
 <span class="kw">impl</span> <span class="ident">Rectangle</span> {
-    <span class="doccomment">/// Returns [`true`] if `self` contains the point described by `x` and `y`.</span>
+    <span class="doccomment">/// Returns [`true`] if @self contains the point described by @x and @y.</span>
     <span class="doccomment">/// ## `x`</span>
     <span class="doccomment">/// X coordinate</span>
     <span class="doccomment">/// ## `y`</span>
@@ -252,7 +251,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// [`true`] if `self` contains the point</span>
+    <span class="doccomment">/// [`true`] if @self contains the point</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_rectangle_contains_point&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">contains_point</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">x</span>: <span class="ident">i32</span>, <span class="ident">y</span>: <span class="ident">i32</span>) -&gt; <span class="ident">bool</span> {
         <span class="kw">unsafe</span> {
@@ -264,13 +263,6 @@
         }
     }
 
-    <span class="doccomment">/// Checks if the two given rectangles are equal.</span>
-    <span class="doccomment">/// ## `rect2`</span>
-    <span class="doccomment">/// a [`Rectangle`][crate::Rectangle]</span>
-    <span class="doccomment">///</span>
-    <span class="doccomment">/// # Returns</span>
-    <span class="doccomment">///</span>
-    <span class="doccomment">/// [`true`] if the rectangles are equal.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_rectangle_equal&quot;</span>)]</span>
     <span class="kw">fn</span> <span class="ident">equal</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">rect2</span>: <span class="kw-2">&amp;</span><span class="ident">Rectangle</span>) -&gt; <span class="ident">bool</span> {
         <span class="kw">unsafe</span> {
@@ -283,11 +275,11 @@
 
     <span class="doccomment">/// Calculates the intersection of two rectangles.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// It is allowed for `dest` to be the same as either `self` or `src2`.</span>
-    <span class="doccomment">/// If the rectangles do not intersect, `dest`’s width and height is set</span>
+    <span class="doccomment">/// It is allowed for @dest to be the same as either @self or @src2.</span>
+    <span class="doccomment">/// If the rectangles do not intersect, @dest’s width and height is set</span>
     <span class="doccomment">/// to 0 and its x and y values are undefined. If you are only interested</span>
     <span class="doccomment">/// in whether the rectangles intersect, but not in the intersecting area</span>
-    <span class="doccomment">/// itself, pass [`None`] for `dest`.</span>
+    <span class="doccomment">/// itself, pass [`None`] for @dest.</span>
     <span class="doccomment">/// ## `src2`</span>
     <span class="doccomment">/// a [`Rectangle`][crate::Rectangle]</span>
     <span class="doccomment">///</span>
@@ -297,7 +289,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `dest`</span>
     <span class="doccomment">/// return location for the</span>
-    <span class="doccomment">///  intersection of `self` and `src2`</span>
+    <span class="doccomment">///   intersection of @self and @src2</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_rectangle_intersect&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">intersect</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">src2</span>: <span class="kw-2">&amp;</span><span class="ident">Rectangle</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Rectangle</span><span class="op">&gt;</span> {
         <span class="kw">unsafe</span> {
@@ -317,9 +309,9 @@
 
     <span class="doccomment">/// Calculates the union of two rectangles.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The union of rectangles `self` and `src2` is the smallest rectangle which</span>
-    <span class="doccomment">/// includes both `self` and `src2` within it. It is allowed for `dest` to be</span>
-    <span class="doccomment">/// the same as either `self` or `src2`.</span>
+    <span class="doccomment">/// The union of rectangles @self and @src2 is the smallest rectangle which</span>
+    <span class="doccomment">/// includes both @self and @src2 within it. It is allowed for @dest to be</span>
+    <span class="doccomment">/// the same as either @self or @src2.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Note that this function does not ignore &#39;empty&#39; rectangles (ie. with</span>
     <span class="doccomment">/// zero width or height).</span>
@@ -330,8 +322,9 @@
     <span class="doccomment">///</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// ## `dest`</span>
-    <span class="doccomment">/// return location for the union of `self` and `src2`</span>
+    <span class="doccomment">/// return location for the union of @self and @src2</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_rectangle_union&quot;</span>)]</span>
+    <span class="attribute">#[<span class="ident">must_use</span>]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">union</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">src2</span>: <span class="kw-2">&amp;</span><span class="ident">Rectangle</span>) -&gt; <span class="ident">Rectangle</span> {
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">dest</span> <span class="op">=</span> <span class="ident">Rectangle::uninitialized</span>();
@@ -354,6 +347,5 @@
 
 <span class="kw">impl</span> <span class="ident">Eq</span> <span class="kw">for</span> <span class="ident">Rectangle</span> {}
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gdk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gdk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

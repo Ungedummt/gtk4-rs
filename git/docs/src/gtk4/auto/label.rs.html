@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;auto&#x2F;label.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>label.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/label.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>label.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gtk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
 <span id="2">   2</span>
 <span id="3">   3</span>
 <span id="4">   4</span>
@@ -2280,6 +2285,84 @@
 <span id="2207">2207</span>
 <span id="2208">2208</span>
 <span id="2209">2209</span>
+<span id="2210">2210</span>
+<span id="2211">2211</span>
+<span id="2212">2212</span>
+<span id="2213">2213</span>
+<span id="2214">2214</span>
+<span id="2215">2215</span>
+<span id="2216">2216</span>
+<span id="2217">2217</span>
+<span id="2218">2218</span>
+<span id="2219">2219</span>
+<span id="2220">2220</span>
+<span id="2221">2221</span>
+<span id="2222">2222</span>
+<span id="2223">2223</span>
+<span id="2224">2224</span>
+<span id="2225">2225</span>
+<span id="2226">2226</span>
+<span id="2227">2227</span>
+<span id="2228">2228</span>
+<span id="2229">2229</span>
+<span id="2230">2230</span>
+<span id="2231">2231</span>
+<span id="2232">2232</span>
+<span id="2233">2233</span>
+<span id="2234">2234</span>
+<span id="2235">2235</span>
+<span id="2236">2236</span>
+<span id="2237">2237</span>
+<span id="2238">2238</span>
+<span id="2239">2239</span>
+<span id="2240">2240</span>
+<span id="2241">2241</span>
+<span id="2242">2242</span>
+<span id="2243">2243</span>
+<span id="2244">2244</span>
+<span id="2245">2245</span>
+<span id="2246">2246</span>
+<span id="2247">2247</span>
+<span id="2248">2248</span>
+<span id="2249">2249</span>
+<span id="2250">2250</span>
+<span id="2251">2251</span>
+<span id="2252">2252</span>
+<span id="2253">2253</span>
+<span id="2254">2254</span>
+<span id="2255">2255</span>
+<span id="2256">2256</span>
+<span id="2257">2257</span>
+<span id="2258">2258</span>
+<span id="2259">2259</span>
+<span id="2260">2260</span>
+<span id="2261">2261</span>
+<span id="2262">2262</span>
+<span id="2263">2263</span>
+<span id="2264">2264</span>
+<span id="2265">2265</span>
+<span id="2266">2266</span>
+<span id="2267">2267</span>
+<span id="2268">2268</span>
+<span id="2269">2269</span>
+<span id="2270">2270</span>
+<span id="2271">2271</span>
+<span id="2272">2272</span>
+<span id="2273">2273</span>
+<span id="2274">2274</span>
+<span id="2275">2275</span>
+<span id="2276">2276</span>
+<span id="2277">2277</span>
+<span id="2278">2278</span>
+<span id="2279">2279</span>
+<span id="2280">2280</span>
+<span id="2281">2281</span>
+<span id="2282">2282</span>
+<span id="2283">2283</span>
+<span id="2284">2284</span>
+<span id="2285">2285</span>
+<span id="2286">2286</span>
+<span id="2287">2287</span>
 </pre><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)</span>
 <span class="comment">// from gir-files (https://github.com/gtk-rs/gir-files.git)</span>
 <span class="comment">// DO NOT EDIT</span>
@@ -2292,6 +2375,9 @@
 <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::Justification</span>;
 <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::LayoutManager</span>;
 <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::MovementStep</span>;
+<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
+<span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>, <span class="ident">doc</span>(<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>)))]</span>
+<span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::NaturalWrapMode</span>;
 <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::Overflow</span>;
 <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::Widget</span>;
 <span class="kw">use</span> <span class="ident">glib::object::Cast</span>;
@@ -2340,8 +2426,8 @@
     <span class="doccomment">/// # GtkLabel as GtkBuildable</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The GtkLabel implementation of the GtkBuildable interface supports a</span>
-    <span class="doccomment">/// custom `&lt;attributes&gt;` element, which supports any number of `&lt;attribute&gt;`</span>
-    <span class="doccomment">/// elements. The `&lt;attribute&gt;` element has attributes named “name“, “value“,</span>
+    <span class="doccomment">/// custom &lt;attributes&gt; element, which supports any number of &lt;attribute&gt;</span>
+    <span class="doccomment">/// elements. The &lt;attribute&gt; element has attributes named “name“, “value“,</span>
     <span class="doccomment">/// “start“ and “end“ and allows you to specify `Pango::Attribute`</span>
     <span class="doccomment">/// values for this label.</span>
     <span class="doccomment">///</span>
@@ -2370,13 +2456,13 @@
     <span class="doccomment">/// Labels may contain “mnemonics”. Mnemonics are underlined characters in the</span>
     <span class="doccomment">/// label, used for keyboard navigation. Mnemonics are created by providing a</span>
     <span class="doccomment">/// string with an underscore before the mnemonic character, such as `&quot;_File&quot;`,</span>
-    <span class="doccomment">/// to the functions [``with_mnemonic()``][`Self::with_mnemonic()`] or</span>
-    <span class="doccomment">/// [``set_text_with_mnemonic()``][`Self::set_text_with_mnemonic()`].</span>
+    <span class="doccomment">/// to the functions [`with_mnemonic()`][Self::with_mnemonic()] or</span>
+    <span class="doccomment">/// [`set_text_with_mnemonic()`][Self::set_text_with_mnemonic()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Mnemonics automatically activate any activatable widget the label is</span>
     <span class="doccomment">/// inside, such as a [`Button`][crate::Button]; if the label is not inside the</span>
     <span class="doccomment">/// mnemonic’s target widget, you have to tell the label about the target</span>
-    <span class="doccomment">/// using [class`Gtk`.set_mnemonic_widget]. Here’s a simple example where</span>
+    <span class="doccomment">/// using [class@Gtk.Label.set_mnemonic_widget]. Here’s a simple example where</span>
     <span class="doccomment">/// the label is inside a button:</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// **⚠️ The following code is in c ⚠️**</span>
@@ -2400,7 +2486,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// To create a mnemonic for a widget alongside the label, such as a</span>
     <span class="doccomment">/// [`Entry`][crate::Entry], you have to point the label at the entry with</span>
-    <span class="doccomment">/// [``set_mnemonic_widget()``][`Self::set_mnemonic_widget()`]:</span>
+    <span class="doccomment">/// [`set_mnemonic_widget()`][Self::set_mnemonic_widget()]:</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// **⚠️ The following code is in c ⚠️**</span>
     <span class="doccomment">///</span>
@@ -2426,16 +2512,16 @@
     <span class="doccomment">/// ```</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// (See the Pango manual for complete documentation] of available</span>
-    <span class="doccomment">/// tags, ``parse_markup()``)</span>
+    <span class="doccomment">/// tags, `parse_markup()`)</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The markup passed to [`set_markup()`][Self::set_markup()] must be valid; for example,</span>
+    <span class="doccomment">/// The markup passed to gtk_label_set_markup() must be valid; for example,</span>
     <span class="doccomment">/// literal &lt;, &gt; and &amp; characters must be escaped as &amp;lt;, &amp;gt;, and &amp;amp;.</span>
     <span class="doccomment">/// If you pass text obtained from the user, file, or a network to</span>
-    <span class="doccomment">/// [``set_markup()``][`Self::set_markup()`], you’ll want to escape it with</span>
-    <span class="doccomment">/// `g_markup_escape_text()` or `g_markup_printf_escaped()`.</span>
+    <span class="doccomment">/// [`set_markup()`][Self::set_markup()], you’ll want to escape it with</span>
+    <span class="doccomment">/// g_markup_escape_text() or g_markup_printf_escaped().</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Markup strings are just a convenient way to set the [`pango::AttrList`][crate::pango::AttrList]</span>
-    <span class="doccomment">/// on a label; [``set_attributes()``][`Self::set_attributes()`] may be a simpler way to set</span>
+    <span class="doccomment">/// on a label; [`set_attributes()`][Self::set_attributes()] may be a simpler way to set</span>
     <span class="doccomment">/// attributes in some cases. Be careful though; [`pango::AttrList`][crate::pango::AttrList] tends</span>
     <span class="doccomment">/// to cause internationalization problems, unless you’re applying attributes</span>
     <span class="doccomment">/// to the entire string (i.e. unless you set the range of each attribute</span>
@@ -2445,7 +2531,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Selectable labels</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Labels can be made selectable with [``set_selectable()``][`Self::set_selectable()`].</span>
+    <span class="doccomment">/// Labels can be made selectable with [`set_selectable()`][Self::set_selectable()].</span>
     <span class="doccomment">/// Selectable labels allow the user to copy the label contents to</span>
     <span class="doccomment">/// the clipboard. Only labels that contain useful-to-copy information</span>
     <span class="doccomment">/// — such as error messages — should be made selectable.</span>
@@ -2457,9 +2543,9 @@
     <span class="doccomment">/// Paragraphs are separated by newlines or other paragraph separators</span>
     <span class="doccomment">/// understood by Pango.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Labels can automatically wrap text if you call [``set_wrap()``][`Self::set_wrap()`].</span>
+    <span class="doccomment">/// Labels can automatically wrap text if you call [`set_wrap()`][Self::set_wrap()].</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// [``set_justify()``][`Self::set_justify()`] sets how the lines in a label align</span>
+    <span class="doccomment">/// [`set_justify()`][Self::set_justify()] sets how the lines in a label align</span>
     <span class="doccomment">/// with one another. If you want to set how the label as a whole aligns</span>
     <span class="doccomment">/// in its available space, see the `property::Widget::halign` and</span>
     <span class="doccomment">/// `property::Widget::valign` properties.</span>
@@ -2476,7 +2562,7 @@
     <span class="doccomment">/// # Links</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// GTK supports markup for clickable hyperlinks in addition to regular Pango</span>
-    <span class="doccomment">/// markup. The markup for links is borrowed from HTML, using the ``&lt;a&gt;`` with</span>
+    <span class="doccomment">/// markup. The markup for links is borrowed from HTML, using the `&lt;a&gt;` with</span>
     <span class="doccomment">/// “href“, “title“ and “class“ attributes. GTK renders links similar to the</span>
     <span class="doccomment">/// way they appear in web browsers, with colored, underlined text. The “title“</span>
     <span class="doccomment">/// attribute is displayed as a tooltip on the link. The “class“ attribute is</span>
@@ -2497,7 +2583,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// It is possible to implement custom handling for links and their tooltips</span>
     <span class="doccomment">/// with the `signal::Label::activate-link` signal and the</span>
-    <span class="doccomment">/// [``current_uri()``][`Self::current_uri()`] function.</span>
+    <span class="doccomment">/// [`current_uri()`][Self::current_uri()] function.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Implements</span>
     <span class="doccomment">///</span>
@@ -2526,23 +2612,23 @@
         <span class="kw">unsafe</span> { <span class="ident">Widget::from_glib_none</span>(<span class="ident">ffi::gtk_label_new</span>(<span class="ident">str</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>)).<span class="ident">unsafe_cast</span>() }
     }
 
-    <span class="doccomment">/// Creates a new [`Label`][crate::Label], containing the text in `str`.</span>
+    <span class="doccomment">/// Creates a new [`Label`][crate::Label], containing the text in @str.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If characters in `str` are preceded by an underscore, they are</span>
+    <span class="doccomment">/// If characters in @str are preceded by an underscore, they are</span>
     <span class="doccomment">/// underlined. If you need a literal underscore character in a label, use</span>
     <span class="doccomment">/// &#39;__&#39; (two underscores). The first underlined character represents a</span>
     <span class="doccomment">/// keyboard accelerator called a mnemonic. The mnemonic key can be used</span>
     <span class="doccomment">/// to activate another widget, chosen automatically, or explicitly using</span>
-    <span class="doccomment">/// [``set_mnemonic_widget()``][`Self::set_mnemonic_widget()`].</span>
+    <span class="doccomment">/// [`set_mnemonic_widget()`][Self::set_mnemonic_widget()].</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If [``set_mnemonic_widget()``][`Self::set_mnemonic_widget()`] is not called, then the first</span>
+    <span class="doccomment">/// If [`set_mnemonic_widget()`][Self::set_mnemonic_widget()] is not called, then the first</span>
     <span class="doccomment">/// activatable ancestor of the [`Label`][crate::Label] will be chosen as the mnemonic</span>
     <span class="doccomment">/// widget. For instance, if the label is inside a button or menu item,</span>
     <span class="doccomment">/// the button or menu item will automatically become the mnemonic widget</span>
     <span class="doccomment">/// and be activated by the mnemonic.</span>
     <span class="doccomment">/// ## `str`</span>
     <span class="doccomment">/// The text of the label, with an underscore in front of the</span>
-    <span class="doccomment">///  mnemonic character</span>
+    <span class="doccomment">///   mnemonic character</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2560,7 +2646,7 @@
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Creates a new builder-pattern struct instance to construct [`Label`] objects.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// This method returns an instance of [`LabelBuilder`] which can be used to create [`Label`] objects.</span>
+    <span class="doccomment">/// This method returns an instance of [`LabelBuilder`](crate::builders::LabelBuilder) which can be used to create [`Label`] objects.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">builder</span>() -&gt; <span class="ident">LabelBuilder</span> {
         <span class="ident">LabelBuilder::default</span>()
     }
@@ -2568,9 +2654,9 @@
     <span class="doccomment">/// Gets the labels attribute list.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is the [`pango::AttrList`][crate::pango::AttrList] that was set on the label using</span>
-    <span class="doccomment">/// [``set_attributes()``][`Self::set_attributes()`], if any. This function does not</span>
+    <span class="doccomment">/// [`set_attributes()`][Self::set_attributes()], if any. This function does not</span>
     <span class="doccomment">/// reflect attributes that come from the labels markup (see</span>
-    <span class="doccomment">/// [``set_markup()``][`Self::set_markup()`]). If you want to get the effective</span>
+    <span class="doccomment">/// [`set_markup()`][Self::set_markup()]). If you want to get the effective</span>
     <span class="doccomment">/// attributes for the label, use</span>
     <span class="doccomment">/// `pango_layout_get_attribute (gtk_label_get_layout (self))`.</span>
     <span class="doccomment">///</span>
@@ -2603,7 +2689,7 @@
 
     <span class="doccomment">/// Returns the ellipsizing position of the label.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_ellipsize()``][`Self::set_ellipsize()`].</span>
+    <span class="doccomment">/// See [`set_ellipsize()`][Self::set_ellipsize()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2614,9 +2700,9 @@
         <span class="kw">unsafe</span> { <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_label_get_ellipsize</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>)) }
     }
 
-    <span class="doccomment">/// Gets the extra menu model of `label`.</span>
+    <span class="doccomment">/// Gets the extra menu model of @label.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_extra_menu()``][`Self::set_extra_menu()`].</span>
+    <span class="doccomment">/// See [`set_extra_menu()`][Self::set_extra_menu()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2629,7 +2715,7 @@
 
     <span class="doccomment">/// Returns the justification of the label.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_justify()``][`Self::set_justify()`].</span>
+    <span class="doccomment">/// See [`set_justify()`][Self::set_justify()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2643,12 +2729,12 @@
     <span class="doccomment">/// Fetches the text from a label.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The returned text includes any embedded underlines indicating</span>
-    <span class="doccomment">/// mnemonics and Pango markup. (See [``text()``][`Self::text()`]).</span>
+    <span class="doccomment">/// mnemonics and Pango markup. (See [`text()`][Self::text()]).</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// the text of the label widget. This string is</span>
-    <span class="doccomment">///  owned by the widget and must not be modified or freed.</span>
+    <span class="doccomment">///   owned by the widget and must not be modified or freed.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_get_label&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_label&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">label</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">glib::GString</span> {
@@ -2658,9 +2744,9 @@
     <span class="doccomment">/// Gets the [`pango::Layout`][crate::pango::Layout] used to display the label.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The layout is useful to e.g. convert text positions to pixel</span>
-    <span class="doccomment">/// positions, in combination with [``layout_offsets()``][`Self::layout_offsets()`].</span>
-    <span class="doccomment">/// The returned layout is owned by the `label` so need not be</span>
-    <span class="doccomment">/// freed by the caller. The `label` is free to recreate its layout</span>
+    <span class="doccomment">/// positions, in combination with [`layout_offsets()`][Self::layout_offsets()].</span>
+    <span class="doccomment">/// The returned layout is owned by the @label so need not be</span>
+    <span class="doccomment">/// freed by the caller. The @label is free to recreate its layout</span>
     <span class="doccomment">/// at any time, so it should be considered read-only.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
@@ -2708,7 +2794,7 @@
     <span class="doccomment">/// Gets the number of lines to which an ellipsized, wrapping</span>
     <span class="doccomment">/// label should be limited.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_lines()``][`Self::set_lines()`].</span>
+    <span class="doccomment">/// See [`set_lines()`][Self::set_lines()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2719,9 +2805,9 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_label_get_lines</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="doccomment">/// Retrieves the desired maximum width of `label`, in characters.</span>
+    <span class="doccomment">/// Retrieves the desired maximum width of @label, in characters.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_width_chars()``][`Self::set_width_chars()`].</span>
+    <span class="doccomment">/// See [`set_width_chars()`][Self::set_width_chars()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2735,16 +2821,31 @@
     <span class="doccomment">/// Retrieves the target of the mnemonic (keyboard shortcut) of this</span>
     <span class="doccomment">/// label.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_mnemonic_widget()``][`Self::set_mnemonic_widget()`].</span>
+    <span class="doccomment">/// See [`set_mnemonic_widget()`][Self::set_mnemonic_widget()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// the target of the label’s mnemonic,</span>
-    <span class="doccomment">///  or [`None`] if none has been set and the default algorithm will be used.</span>
+    <span class="doccomment">///   or [`None`] if none has been set and the default algorithm will be used.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_get_mnemonic_widget&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_mnemonic_widget&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">mnemonic_widget</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span> {
         <span class="kw">unsafe</span> { <span class="ident">from_glib_none</span>(<span class="ident">ffi::gtk_label_get_mnemonic_widget</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>)) }
+    }
+
+    <span class="doccomment">/// Returns line wrap mode used by the label.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// See [`set_natural_wrap_mode()`][Self::set_natural_wrap_mode()].</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// # Returns</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// the natural line wrap mode</span>
+    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
+    <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>, <span class="ident">doc</span>(<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>)))]</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_get_natural_wrap_mode&quot;</span>)]</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_natural_wrap_mode&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">natural_wrap_mode</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">NaturalWrapMode</span> {
+        <span class="kw">unsafe</span> { <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_label_get_natural_wrap_mode</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>)) }
     }
 
     <span class="doccomment">/// Returns whether the label is selectable.</span>
@@ -2805,12 +2906,12 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// The returned text is as it appears on screen. This does not include</span>
     <span class="doccomment">/// any embedded underlines indicating mnemonics or Pango markup. (See</span>
-    <span class="doccomment">/// [``label()``][`Self::label()`])</span>
+    <span class="doccomment">/// [`label()`][Self::label()])</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// the text in the label widget. This is the internal</span>
-    <span class="doccomment">///  string used by the label, and must not be modified.</span>
+    <span class="doccomment">///   string used by the label, and must not be modified.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_get_text&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_text&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">text</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">glib::GString</span> {
@@ -2819,7 +2920,7 @@
 
     <span class="doccomment">/// Returns whether the label’s text is interpreted as Pango markup.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_use_markup()``][`Self::set_use_markup()`].</span>
+    <span class="doccomment">/// See [`set_use_markup()`][Self::set_use_markup()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2832,21 +2933,21 @@
 
     <span class="doccomment">/// Returns whether an embedded underlines in the label indicate mnemonics.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_use_underline()``][`Self::set_use_underline()`].</span>
+    <span class="doccomment">/// See [`set_use_underline()`][Self::set_use_underline()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`true`] whether an embedded underline in the label indicates</span>
-    <span class="doccomment">///  the mnemonic accelerator keys.</span>
+    <span class="doccomment">///   the mnemonic accelerator keys.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_get_use_underline&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_use_underline&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">uses_underline</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">bool</span> {
         <span class="kw">unsafe</span> { <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_label_get_use_underline</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>)) }
     }
 
-    <span class="doccomment">/// Retrieves the desired width of `label`, in characters.</span>
+    <span class="doccomment">/// Retrieves the desired width of @label, in characters.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_width_chars()``][`Self::set_width_chars()`].</span>
+    <span class="doccomment">/// See [`set_width_chars()`][Self::set_width_chars()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2859,7 +2960,7 @@
 
     <span class="doccomment">/// Returns whether lines in the label are automatically wrapped.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_wrap()``][`Self::set_wrap()`].</span>
+    <span class="doccomment">/// See [`set_wrap()`][Self::set_wrap()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
@@ -2872,11 +2973,11 @@
 
     <span class="doccomment">/// Returns line wrap mode used by the label.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_wrap_mode()``][`Self::set_wrap_mode()`].</span>
+    <span class="doccomment">/// See [`set_wrap_mode()`][Self::set_wrap_mode()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// [`true`] if the lines of the label are automatically wrapped.</span>
+    <span class="doccomment">/// the line wrap mode</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_get_wrap_mode&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_wrap_mode&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">wrap_mode</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">pango::WrapMode</span> {
@@ -2911,9 +3012,9 @@
 
     <span class="doccomment">/// Selects a range of characters in the label, if the label is selectable.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_selectable()``][`Self::set_selectable()`]. If the label is not selectable,</span>
-    <span class="doccomment">/// this function has no effect. If `start_offset` or</span>
-    <span class="doccomment">/// `end_offset` are -1, then the end of the label will be substituted.</span>
+    <span class="doccomment">/// See [`set_selectable()`][Self::set_selectable()]. If the label is not selectable,</span>
+    <span class="doccomment">/// this function has no effect. If @start_offset or</span>
+    <span class="doccomment">/// @end_offset are -1, then the end of the label will be substituted.</span>
     <span class="doccomment">/// ## `start_offset`</span>
     <span class="doccomment">/// start offset (in characters not bytes)</span>
     <span class="doccomment">/// ## `end_offset`</span>
@@ -2956,7 +3057,7 @@
     }
 
     <span class="doccomment">/// Sets a menu model to add when constructing</span>
-    <span class="doccomment">/// the context menu for `label`.</span>
+    <span class="doccomment">/// the context menu for @label.</span>
     <span class="doccomment">/// ## `model`</span>
     <span class="doccomment">/// a `GMenuModel`</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_extra_menu&quot;</span>)]</span>
@@ -2973,9 +3074,9 @@
     <span class="doccomment">/// each other.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`Justification::Left`][crate::Justification::Left] is the default value when the widget is first created</span>
-    <span class="doccomment">/// with [``new()``][`Self::new()`]. If you instead want to set the alignment of</span>
-    <span class="doccomment">/// the label as a whole, use [``WidgetExt::set_halign()``][crate::prelude::`WidgetExt::set_halign()`] instead.</span>
-    <span class="doccomment">/// [``set_justify()``][`Self::set_justify()`] has no effect on labels containing</span>
+    <span class="doccomment">/// with [`new()`][Self::new()]. If you instead want to set the alignment of</span>
+    <span class="doccomment">/// the label as a whole, use [`WidgetExt::set_halign()`][crate::prelude::WidgetExt::set_halign()] instead.</span>
+    <span class="doccomment">/// [`set_justify()`][Self::set_justify()] has no effect on labels containing</span>
     <span class="doccomment">/// only a single line.</span>
     <span class="doccomment">/// ## `jtype`</span>
     <span class="doccomment">/// a [`Justification`][crate::Justification]</span>
@@ -3017,10 +3118,10 @@
     <span class="doccomment">/// Sets the labels text and attributes from markup.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The string must be marked up with Pango markup</span>
-    <span class="doccomment">/// (see ``parse_markup()``).</span>
+    <span class="doccomment">/// (see `parse_markup()`).</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If the `str` is external data, you may need to escape it</span>
-    <span class="doccomment">/// with `g_markup_escape_text()` or `g_markup_printf_escaped()`:</span>
+    <span class="doccomment">/// If the @str is external data, you may need to escape it</span>
+    <span class="doccomment">/// with g_markup_escape_text() or g_markup_printf_escaped():</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// **⚠️ The following code is in c ⚠️**</span>
     <span class="doccomment">///</span>
@@ -3042,7 +3143,7 @@
     <span class="doccomment">/// property you should also ensure that you set the</span>
     <span class="doccomment">/// `property::Label::use-markup` property accordingly.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See also: [``set_text()``][`Self::set_text()`]</span>
+    <span class="doccomment">/// See also: [`set_text()`][Self::set_text()]</span>
     <span class="doccomment">/// ## `str`</span>
     <span class="doccomment">/// a markup string</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_markup&quot;</span>)]</span>
@@ -3054,13 +3155,13 @@
 
     <span class="doccomment">/// Sets the labels text, attributes and mnemonic from markup.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Parses `str` which is marked up with Pango markup (see ``parse_markup()``),</span>
+    <span class="doccomment">/// Parses @str which is marked up with Pango markup (see `parse_markup()`),</span>
     <span class="doccomment">/// setting the label’s text and attribute list based on the parse results.</span>
-    <span class="doccomment">/// If characters in `str` are preceded by an underscore, they are underlined</span>
+    <span class="doccomment">/// If characters in @str are preceded by an underscore, they are underlined</span>
     <span class="doccomment">/// indicating that they represent a keyboard accelerator called a mnemonic.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The mnemonic key can be used to activate another widget, chosen</span>
-    <span class="doccomment">/// automatically, or explicitly using [``set_mnemonic_widget()``][`Self::set_mnemonic_widget()`].</span>
+    <span class="doccomment">/// automatically, or explicitly using [`set_mnemonic_widget()`][Self::set_mnemonic_widget()].</span>
     <span class="doccomment">/// ## `str`</span>
     <span class="doccomment">/// a markup string</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_markup_with_mnemonic&quot;</span>)]</span>
@@ -3070,7 +3171,7 @@
         }
     }
 
-    <span class="doccomment">/// Sets the desired maximum width in characters of `label` to `n_chars`.</span>
+    <span class="doccomment">/// Sets the desired maximum width in characters of @label to @n_chars.</span>
     <span class="doccomment">/// ## `n_chars`</span>
     <span class="doccomment">/// the new desired maximum width, in characters.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_max_width_chars&quot;</span>)]</span>
@@ -3083,9 +3184,9 @@
     <span class="doccomment">/// Associate the label with its mnemonic target.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// If the label has been set so that it has a mnemonic key (using</span>
-    <span class="doccomment">/// i.e. [``set_markup_with_mnemonic()``][`Self::set_markup_with_mnemonic()`],</span>
-    <span class="doccomment">/// [``set_text_with_mnemonic()``][`Self::set_text_with_mnemonic()`],</span>
-    <span class="doccomment">/// [``with_mnemonic()``][`Self::with_mnemonic()`]</span>
+    <span class="doccomment">/// i.e. [`set_markup_with_mnemonic()`][Self::set_markup_with_mnemonic()],</span>
+    <span class="doccomment">/// [`set_text_with_mnemonic()`][Self::set_text_with_mnemonic()],</span>
+    <span class="doccomment">/// [`with_mnemonic()`][Self::with_mnemonic()]</span>
     <span class="doccomment">/// or the `property::Label::use_underline` property) the label can be</span>
     <span class="doccomment">/// associated with a widget that is the target of the mnemonic. When the</span>
     <span class="doccomment">/// label is inside a widget (like a [`Button`][crate::Button] or a</span>
@@ -3106,6 +3207,21 @@
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">widget</span>.<span class="ident">map</span>(<span class="op">|</span><span class="ident">p</span><span class="op">|</span> <span class="ident">p</span>.<span class="ident">as_ref</span>()).<span class="ident">to_glib_none</span>().<span class="number">0</span>,
             );
+        }
+    }
+
+    <span class="doccomment">/// Select the line wrapping for the natural size request.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// This only affects the natural size requested, for the actual wrapping used,</span>
+    <span class="doccomment">/// see the `property::Label::wrap-mode` property.</span>
+    <span class="doccomment">/// ## `wrap_mode`</span>
+    <span class="doccomment">/// the line wrapping mode</span>
+    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
+    <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>, <span class="ident">doc</span>(<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>)))]</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_natural_wrap_mode&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">set_natural_wrap_mode</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">wrap_mode</span>: <span class="ident">NaturalWrapMode</span>) {
+        <span class="kw">unsafe</span> {
+            <span class="ident">ffi::gtk_label_set_natural_wrap_mode</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>, <span class="ident">wrap_mode</span>.<span class="ident">into_glib</span>());
         }
     }
 
@@ -3146,7 +3262,7 @@
     <span class="doccomment">/// This function will set the `property::Label::use-markup` property</span>
     <span class="doccomment">/// to [`false`] as a side effect.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See also: [``set_markup()``][`Self::set_markup()`]</span>
+    <span class="doccomment">/// See also: [`set_markup()`][Self::set_markup()]</span>
     <span class="doccomment">/// ## `str`</span>
     <span class="doccomment">/// The text you want to set</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_text&quot;</span>)]</span>
@@ -3156,12 +3272,12 @@
         }
     }
 
-    <span class="doccomment">/// Sets the label’s text from the string `str`.</span>
+    <span class="doccomment">/// Sets the label’s text from the string @str.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If characters in `str` are preceded by an underscore, they are underlined</span>
+    <span class="doccomment">/// If characters in @str are preceded by an underscore, they are underlined</span>
     <span class="doccomment">/// indicating that they represent a keyboard accelerator called a mnemonic.</span>
     <span class="doccomment">/// The mnemonic key can be used to activate another widget, chosen</span>
-    <span class="doccomment">/// automatically, or explicitly using [``set_mnemonic_widget()``][`Self::set_mnemonic_widget()`].</span>
+    <span class="doccomment">/// automatically, or explicitly using [`set_mnemonic_widget()`][Self::set_mnemonic_widget()].</span>
     <span class="doccomment">/// ## `str`</span>
     <span class="doccomment">/// a string</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_text_with_mnemonic&quot;</span>)]</span>
@@ -3173,7 +3289,7 @@
 
     <span class="doccomment">/// Sets whether the text of the label contains markup.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See [``set_markup()``][`Self::set_markup()`].</span>
+    <span class="doccomment">/// See [`set_markup()`][Self::set_markup()].</span>
     <span class="doccomment">/// ## `setting`</span>
     <span class="doccomment">/// [`true`] if the label’s text should be parsed for markup.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_use_markup&quot;</span>)]</span>
@@ -3193,7 +3309,7 @@
         }
     }
 
-    <span class="doccomment">/// Sets the desired width in characters of `label` to `n_chars`.</span>
+    <span class="doccomment">/// Sets the desired width in characters of @label to @n_chars.</span>
     <span class="doccomment">/// ## `n_chars`</span>
     <span class="doccomment">/// the new desired width, in characters.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_width_chars&quot;</span>)]</span>
@@ -3213,7 +3329,7 @@
     <span class="doccomment">/// wrap at its parent container’s width, because GTK widgets</span>
     <span class="doccomment">/// conceptually can’t make their requisition depend on the parent</span>
     <span class="doccomment">/// container’s size. For a label that wraps at a specific position,</span>
-    <span class="doccomment">/// set the label’s width using [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`].</span>
+    <span class="doccomment">/// set the label’s width using [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()].</span>
     <span class="doccomment">/// ## `wrap`</span>
     <span class="doccomment">/// the setting</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_wrap&quot;</span>)]</span>
@@ -3226,8 +3342,11 @@
     <span class="doccomment">/// Controls how line wrapping is done.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This only affects the label if line wrapping is on. (See</span>
-    <span class="doccomment">/// [``set_wrap()``][`Self::set_wrap()`]) The default is [`pango::WrapMode::Word`][crate::pango::WrapMode::Word]</span>
+    <span class="doccomment">/// [`set_wrap()`][Self::set_wrap()]) The default is [`pango::WrapMode::Word`][crate::pango::WrapMode::Word]</span>
     <span class="doccomment">/// which means wrap on word boundaries.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// For sizing behavior, also consider the `property::Label::natural-wrap-mode`</span>
+    <span class="doccomment">/// property.</span>
     <span class="doccomment">/// ## `wrap_mode`</span>
     <span class="doccomment">/// the line wrapping mode</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_label_set_wrap_mode&quot;</span>)]</span>
@@ -3265,26 +3384,26 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// The ::activate-current-link is a [keybinding signal](class.SignalAction.html).</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Applications may also emit the signal with `g_signal_emit_by_name()`</span>
+    <span class="doccomment">/// Applications may also emit the signal with g_signal_emit_by_name()</span>
     <span class="doccomment">/// if they need to control activation of URIs programmatically.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal are all forms of the Enter key.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;activate-current-link&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_activate_current_link</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">activate_current_link_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;activate-current-link\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;activate-current-link\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">activate_current_link_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">activate_current_link_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3292,17 +3411,13 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_activate_current_link</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;activate-current-link&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;activate-current-link&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="doccomment">/// Gets emitted to activate a URI.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Applications may connect to it to override the default behaviour,</span>
-    <span class="doccomment">/// which is to call [`show_uri()`][crate::show_uri()].</span>
+    <span class="doccomment">/// which is to call gtk_show_uri().</span>
     <span class="doccomment">/// ## `uri`</span>
     <span class="doccomment">/// the URI that is activated</span>
     <span class="doccomment">///</span>
@@ -3317,11 +3432,11 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">activate_link_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>, <span class="kw-2">&amp;</span><span class="ident">str</span>) -&gt; <span class="ident">glib::signal::Inhibit</span> <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
-            <span class="ident">uri</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">libc::c_char</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">uri</span>: <span class="kw-2">*mut</span> <span class="ident">libc::c_char</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) -&gt; <span class="ident">glib::ffi::gboolean</span> {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(
                 <span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>),
                 <span class="kw-2">&amp;</span><span class="ident">glib::GString::from_glib_borrow</span>(<span class="ident">uri</span>),
@@ -3331,10 +3446,10 @@
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;activate-link\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;activate-link\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">activate_link_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">activate_link_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3349,19 +3464,19 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;copy-clipboard&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_copy_clipboard</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">copy_clipboard_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;copy-clipboard\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;copy-clipboard\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">copy_clipboard_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">copy_clipboard_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3369,21 +3484,17 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_copy_clipboard</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) {
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;copy-clipboard&quot;</span>, <span class="kw-2">&amp;</span>[])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;copy-clipboard&quot;</span>, <span class="kw-2">&amp;</span>[]);
     }
 
     <span class="doccomment">/// Gets emitted when the user initiates a cursor movement.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The ::move-cursor signal is a [keybinding signal](class.SignalAction.html).</span>
-    <span class="doccomment">/// If the cursor is not visible in `entry`, this signal causes the viewport to</span>
+    <span class="doccomment">/// If the cursor is not visible in @entry, this signal causes the viewport to</span>
     <span class="doccomment">/// be moved instead.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Applications should not connect to it, but may emit it with</span>
-    <span class="doccomment">/// `g_signal_emit_by_name()` if they need to control the cursor</span>
+    <span class="doccomment">/// g_signal_emit_by_name() if they need to control the cursor</span>
     <span class="doccomment">/// programmatically.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The default bindings for this signal come in two variants,</span>
@@ -3396,7 +3507,7 @@
     <span class="doccomment">/// ## `step`</span>
     <span class="doccomment">/// the granularity of the move, as a [`MovementStep`][crate::MovementStep]</span>
     <span class="doccomment">/// ## `count`</span>
-    <span class="doccomment">/// the number of `step` units to move</span>
+    <span class="doccomment">/// the number of @step units to move</span>
     <span class="doccomment">/// ## `extend_selection`</span>
     <span class="doccomment">/// [`true`] if the move should extend the selection</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;move-cursor&quot;</span>)]</span>
@@ -3407,13 +3518,13 @@
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">move_cursor_trampoline</span><span class="op">&lt;</span>
             <span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>, <span class="ident">MovementStep</span>, <span class="ident">i32</span>, <span class="ident">bool</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span>,
         <span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">step</span>: <span class="ident">ffi::GtkMovementStep</span>,
             <span class="ident">count</span>: <span class="ident">libc::c_int</span>,
             <span class="ident">extend_selection</span>: <span class="ident">glib::ffi::gboolean</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(
                 <span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>),
                 <span class="ident">from_glib</span>(<span class="ident">step</span>),
@@ -3424,10 +3535,10 @@
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;move-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;move-cursor\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">move_cursor_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">move_cursor_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3435,30 +3546,26 @@
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">emit_move_cursor</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">step</span>: <span class="ident">MovementStep</span>, <span class="ident">count</span>: <span class="ident">i32</span>, <span class="ident">extend_selection</span>: <span class="ident">bool</span>) {
-        <span class="kw">let</span> <span class="kw">_</span> <span class="op">=</span> <span class="kw">unsafe</span> {
-            <span class="ident">glib::Object::from_glib_borrow</span>(<span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>)
-                .<span class="ident">emit_by_name</span>(<span class="string">&quot;move-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">step</span>, <span class="kw-2">&amp;</span><span class="ident">count</span>, <span class="kw-2">&amp;</span><span class="ident">extend_selection</span>])
-                .<span class="ident">unwrap</span>()
-        };
+        <span class="self">self</span>.<span class="ident">emit_by_name</span>::<span class="op">&lt;</span>()<span class="op">&gt;</span>(<span class="string">&quot;move-cursor&quot;</span>, <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="ident">step</span>, <span class="kw-2">&amp;</span><span class="ident">count</span>, <span class="kw-2">&amp;</span><span class="ident">extend_selection</span>]);
     }
 
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;attributes&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_attributes_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_attributes_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::attributes\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::attributes\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_attributes_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_attributes_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3468,20 +3575,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;ellipsize&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_ellipsize_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_ellipsize_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::ellipsize\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::ellipsize\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_ellipsize_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_ellipsize_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3491,20 +3598,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;extra-menu&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_extra_menu_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_extra_menu_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::extra-menu\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::extra-menu\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_extra_menu_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_extra_menu_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3514,20 +3621,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;justify&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_justify_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_justify_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::justify\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::justify\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_justify_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_justify_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3537,20 +3644,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;label&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_label_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_label_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::label\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::label\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_label_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_label_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3560,20 +3667,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;lines&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_lines_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_lines_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::lines\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::lines\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_lines_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_lines_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3583,20 +3690,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;max-width-chars&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_max_width_chars_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_max_width_chars_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::max-width-chars\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::max-width-chars\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_max_width_chars_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_max_width_chars_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3606,20 +3713,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;mnemonic-keyval&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_mnemonic_keyval_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_mnemonic_keyval_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::mnemonic-keyval\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::mnemonic-keyval\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_mnemonic_keyval_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_mnemonic_keyval_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3629,20 +3736,48 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;mnemonic-widget&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_mnemonic_widget_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_mnemonic_widget_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::mnemonic-widget\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::mnemonic-widget\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_mnemonic_widget_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_mnemonic_widget_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
+                )),
+                <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
+            )
+        }
+    }
+
+    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
+    <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>, <span class="ident">doc</span>(<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>)))]</span>
+    <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;natural-wrap-mode&quot;</span>)]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_natural_wrap_mode_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
+        <span class="kw-2">&amp;</span><span class="self">self</span>,
+        <span class="ident">f</span>: <span class="ident">F</span>,
+    ) -&gt; <span class="ident">SignalHandlerId</span> {
+        <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_natural_wrap_mode_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
+            <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
+        ) {
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
+            <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
+        }
+        <span class="kw">unsafe</span> {
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
+            <span class="ident">connect_raw</span>(
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::natural-wrap-mode\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
+                <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
+                    <span class="ident">notify_natural_wrap_mode_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3652,20 +3787,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;selectable&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_selectable_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_selectable_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::selectable\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::selectable\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_selectable_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_selectable_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3675,20 +3810,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;single-line-mode&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_single_line_mode_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_single_line_mode_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::single-line-mode\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::single-line-mode\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_single_line_mode_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_single_line_mode_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3698,20 +3833,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;use-markup&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_use_markup_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_use_markup_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::use-markup\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::use-markup\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_use_markup_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_use_markup_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3721,20 +3856,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;use-underline&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_use_underline_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_use_underline_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::use-underline\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::use-underline\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_use_underline_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_use_underline_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3744,20 +3879,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;width-chars&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_width_chars_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_width_chars_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::width-chars\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::width-chars\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_width_chars_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_width_chars_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3767,20 +3902,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;wrap&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_wrap_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_wrap_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::wrap\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::wrap\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_wrap_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_wrap_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3790,20 +3925,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;wrap-mode&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_wrap_mode_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_wrap_mode_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::wrap-mode\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::wrap-mode\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_wrap_mode_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_wrap_mode_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3813,20 +3948,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;xalign&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_xalign_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_xalign_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::xalign\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::xalign\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_xalign_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_xalign_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3836,20 +3971,20 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;yalign&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">connect_yalign_notify</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="self">Self</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="ident">F</span>) -&gt; <span class="ident">SignalHandlerId</span> {
         <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span> <span class="ident">notify_yalign_trampoline</span><span class="op">&lt;</span><span class="ident">F</span>: <span class="ident">Fn</span>(<span class="kw-2">&amp;</span><span class="ident">Label</span>) <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>(
-            <span class="ident">this</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GtkLabel</span>,
+            <span class="ident">this</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GtkLabel</span>,
             <span class="ident">_param_spec</span>: <span class="ident">glib::ffi::gpointer</span>,
             <span class="ident">f</span>: <span class="ident">glib::ffi::gpointer</span>,
         ) {
-            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">F</span>);
+            <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="ident">f</span>(<span class="kw-2">&amp;</span><span class="ident">from_glib_borrow</span>(<span class="ident">this</span>))
         }
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">f</span>: <span class="ident">Box_</span><span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Box_::new</span>(<span class="ident">f</span>);
             <span class="ident">connect_raw</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>,
-                <span class="string">b&quot;notify::yalign\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
+                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>,
+                <span class="string">b&quot;notify::yalign\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>,
                 <span class="prelude-val">Some</span>(<span class="ident">transmute</span>::<span class="op">&lt;</span><span class="kw">_</span>, <span class="kw">unsafe</span> <span class="kw">extern</span> <span class="string">&quot;C&quot;</span> <span class="kw">fn</span>()<span class="op">&gt;</span>(
-                    <span class="ident">notify_yalign_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> (),
+                    <span class="ident">notify_yalign_trampoline</span>::<span class="op">&lt;</span><span class="ident">F</span><span class="op">&gt;</span> <span class="kw">as</span> <span class="kw-2">*const</span> (),
                 )),
                 <span class="ident">Box_::into_raw</span>(<span class="ident">f</span>),
             )
@@ -3869,6 +4004,7 @@
 <span class="doccomment">/// A [builder-pattern] type to construct [`Label`] objects.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html</span>
+<span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;The builder must be built to be used&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">LabelBuilder</span> {
     <span class="ident">attributes</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">pango::AttrList</span><span class="op">&gt;</span>,
     <span class="ident">ellipsize</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">pango::EllipsizeMode</span><span class="op">&gt;</span>,
@@ -3878,6 +4014,9 @@
     <span class="ident">lines</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">i32</span><span class="op">&gt;</span>,
     <span class="ident">max_width_chars</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">i32</span><span class="op">&gt;</span>,
     <span class="ident">mnemonic_widget</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>,
+    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
+    <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>, <span class="ident">doc</span>(<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>)))]</span>
+    <span class="ident">natural_wrap_mode</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">NaturalWrapMode</span><span class="op">&gt;</span>,
     <span class="ident">selectable</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">bool</span><span class="op">&gt;</span>,
     <span class="ident">single_line_mode</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">bool</span><span class="op">&gt;</span>,
     <span class="ident">use_markup</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">bool</span><span class="op">&gt;</span>,
@@ -3928,6 +4067,7 @@
 
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Build the [`Label`].</span>
+    <span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">build</span>(<span class="self">self</span>) -&gt; <span class="ident">Label</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">properties</span>: <span class="ident">Vec</span><span class="op">&lt;</span>(<span class="kw-2">&amp;</span><span class="ident">str</span>, <span class="kw-2">&amp;</span><span class="kw">dyn</span> <span class="ident">ToValue</span>)<span class="op">&gt;</span> <span class="op">=</span> <span class="macro">vec!</span>[];
         <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="kw-2">ref</span> <span class="ident">attributes</span>) <span class="op">=</span> <span class="self">self</span>.<span class="ident">attributes</span> {
@@ -3953,6 +4093,10 @@
         }
         <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="kw-2">ref</span> <span class="ident">mnemonic_widget</span>) <span class="op">=</span> <span class="self">self</span>.<span class="ident">mnemonic_widget</span> {
             <span class="ident">properties</span>.<span class="ident">push</span>((<span class="string">&quot;mnemonic-widget&quot;</span>, <span class="ident">mnemonic_widget</span>));
+        }
+        <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
+        <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="kw-2">ref</span> <span class="ident">natural_wrap_mode</span>) <span class="op">=</span> <span class="self">self</span>.<span class="ident">natural_wrap_mode</span> {
+            <span class="ident">properties</span>.<span class="ident">push</span>((<span class="string">&quot;natural-wrap-mode&quot;</span>, <span class="ident">natural_wrap_mode</span>));
         }
         <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="kw-2">ref</span> <span class="ident">selectable</span>) <span class="op">=</span> <span class="self">self</span>.<span class="ident">selectable</span> {
             <span class="ident">properties</span>.<span class="ident">push</span>((<span class="string">&quot;selectable&quot;</span>, <span class="ident">selectable</span>));
@@ -4088,8 +4232,8 @@
     <span class="doccomment">/// only enough space to display the ellipsis &quot;...&quot;. In particular, this</span>
     <span class="doccomment">/// means that ellipsizing labels do not work well in notebook tabs, unless</span>
     <span class="doccomment">/// the `property::NotebookPage::tab-expand` child property is set to [`true`].</span>
-    <span class="doccomment">/// Other ways to set a label&#39;s width are [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`]</span>
-    <span class="doccomment">/// and [``Label::set_width_chars()``][crate::`Label::set_width_chars()`].</span>
+    <span class="doccomment">/// Other ways to set a label&#39;s width are [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()]</span>
+    <span class="doccomment">/// and [`Label::set_width_chars()`][crate::Label::set_width_chars()].</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">ellipsize</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">ellipsize</span>: <span class="ident">pango::EllipsizeMode</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">ellipsize</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">ellipsize</span>);
         <span class="self">self</span>
@@ -4112,10 +4256,10 @@
 
     <span class="doccomment">/// The contents of the label.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// If the string contains Pango markup (see ``parse_markup()``),</span>
+    <span class="doccomment">/// If the string contains Pango markup (see `parse_markup()`),</span>
     <span class="doccomment">/// you will have to set the `property::Label::use-markup` property to</span>
     <span class="doccomment">/// [`true`] in order for the label to display the markup attributes. See also</span>
-    <span class="doccomment">/// [``Label::set_markup()``][crate::`Label::set_markup()`] for a convenience function that sets both</span>
+    <span class="doccomment">/// [`Label::set_markup()`][crate::Label::set_markup()] for a convenience function that sets both</span>
     <span class="doccomment">/// this property and the `property::Label::use-markup` property at the</span>
     <span class="doccomment">/// same time.</span>
     <span class="doccomment">///</span>
@@ -4141,7 +4285,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// If this property is set to -1, the width will be calculated automatically.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See the section on [text layout][label-text-layout] for details of how</span>
+    <span class="doccomment">/// See the section on [text layout](class.Label.html#text-layout) for details of how</span>
     <span class="doccomment">/// `property::Label::width-chars` and `property::Label::max-width-chars`</span>
     <span class="doccomment">/// determine the width of ellipsized and wrapped labels.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">max_width_chars</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">max_width_chars</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
@@ -4152,6 +4296,20 @@
     <span class="doccomment">/// The widget to be activated when the labels mnemonic key is pressed.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">mnemonic_widget</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">mnemonic_widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">mnemonic_widget</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">mnemonic_widget</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
+        <span class="self">self</span>
+    }
+
+    <span class="doccomment">/// Select the line wrapping for the natural size request.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// This only affects the natural size requested. For the actual wrapping used,</span>
+    <span class="doccomment">/// see the `property::Label::wrap-mode` property.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// The default is [`NaturalWrapMode::Inherit`][crate::NaturalWrapMode::Inherit], which inherits the behavior of the</span>
+    <span class="doccomment">/// `property::Label::wrap-mode` property.</span>
+    <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
+    <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>, <span class="ident">doc</span>(<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v4_6&quot;</span>)))]</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">natural_wrap_mode</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">natural_wrap_mode</span>: <span class="ident">NaturalWrapMode</span>) -&gt; <span class="self">Self</span> {
+        <span class="self">self</span>.<span class="ident">natural_wrap_mode</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">natural_wrap_mode</span>);
         <span class="self">self</span>
     }
 
@@ -4174,7 +4332,7 @@
 
     <span class="doccomment">/// [`true`] if the text of the label includes Pango markup.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See ``parse_markup()``.</span>
+    <span class="doccomment">/// See `parse_markup()`.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">use_markup</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">use_markup</span>: <span class="ident">bool</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">use_markup</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">use_markup</span>);
         <span class="self">self</span>
@@ -4190,7 +4348,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// If this property is set to -1, the width will be calculated automatically.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// See the section on [text layout][label-text-layout] for details of how</span>
+    <span class="doccomment">/// See the section on [text layout](class.Label.html#text-layout) for details of how</span>
     <span class="doccomment">/// `property::Label::width-chars` and `property::Label::max-width-chars`</span>
     <span class="doccomment">/// determine the width of ellipsized and wrapped labels.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">width_chars</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">width_chars</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
@@ -4209,6 +4367,9 @@
     <span class="doccomment">/// This only affects the formatting if line wrapping is on (see the</span>
     <span class="doccomment">/// `property::Label::wrap` property). The default is [`pango::WrapMode::Word`][crate::pango::WrapMode::Word],</span>
     <span class="doccomment">/// which means wrap on word boundaries.</span>
+    <span class="doccomment">///</span>
+    <span class="doccomment">/// For sizing behavior, also consider the `property::Label::natural-wrap-mode`</span>
+    <span class="doccomment">/// property.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">wrap_mode</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">wrap_mode</span>: <span class="ident">pango::WrapMode</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">wrap_mode</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">wrap_mode</span>);
         <span class="self">self</span>
@@ -4263,7 +4424,7 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// The cursor used by `widget`.</span>
+    <span class="doccomment">/// The cursor used by @widget.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">cursor</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">cursor</span>: <span class="kw-2">&amp;</span><span class="ident">gdk::Cursor</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">cursor</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">cursor</span>.<span class="ident">clone</span>());
         <span class="self">self</span>
@@ -4289,9 +4450,9 @@
         <span class="self">self</span>
     }
 
-    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on `widget`.</span>
+    <span class="doccomment">/// Enables or disables the emission of the ::query-tooltip signal on @widget.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// A value of [`true`] indicates that `widget` can have a tooltip, in this case</span>
+    <span class="doccomment">/// A value of [`true`] indicates that @widget can have a tooltip, in this case</span>
     <span class="doccomment">/// the widget will be queried using `signal::Widget::query-tooltip` to</span>
     <span class="doccomment">/// determine whether it will provide a tooltip or not.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">has_tooltip</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">has_tooltip</span>: <span class="ident">bool</span>) -&gt; <span class="self">Self</span> {
@@ -4333,7 +4494,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_bottom</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_bottom</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_bottom</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_bottom</span>);
         <span class="self">self</span>
@@ -4346,7 +4507,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_end</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_end</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_end</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_end</span>);
         <span class="self">self</span>
@@ -4359,7 +4520,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_start</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_start</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_start</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_start</span>);
         <span class="self">self</span>
@@ -4369,7 +4530,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// This property adds margin outside of the widget&#39;s normal size</span>
     <span class="doccomment">/// request, the margin will be added in addition to the size from</span>
-    <span class="doccomment">/// [``WidgetExt::set_size_request()``][crate::prelude::`WidgetExt::set_size_request()`] for example.</span>
+    <span class="doccomment">/// [`WidgetExt::set_size_request()`][crate::prelude::WidgetExt::set_size_request()] for example.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">margin_top</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">margin_top</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">margin_top</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">margin_top</span>);
         <span class="self">self</span>
@@ -4411,7 +4572,7 @@
     <span class="doccomment">/// Sets the text of tooltip to be the given string, which is marked up</span>
     <span class="doccomment">/// with Pango markup.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_markup()``][crate::`Tooltip::set_markup()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_markup()`][crate::Tooltip::set_markup()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -4428,7 +4589,7 @@
 
     <span class="doccomment">/// Sets the text of tooltip to be the given string.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Also see [``Tooltip::set_text()``][crate::`Tooltip::set_text()`].</span>
+    <span class="doccomment">/// Also see [`Tooltip::set_text()`][crate::Tooltip::set_text()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This is a convenience property which will take care of getting the</span>
     <span class="doccomment">/// tooltip shown if the given string is not [`None`]:</span>
@@ -4485,11 +4646,10 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">Label</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;Label&quot;</span>)
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

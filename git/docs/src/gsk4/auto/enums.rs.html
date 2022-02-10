@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gsk4&#x2F;src&#x2F;auto&#x2F;enums.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>enums.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gsk4/src/auto/enums.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>enums.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gsk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gsk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gsk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gsk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -1086,7 +1091,7 @@
 <span class="doccomment">/// The implementation of each blend mode is deferred to the</span>
 <span class="doccomment">/// rendering pipeline.</span>
 <span class="doccomment">///</span>
-<span class="doccomment">/// See &lt;https://www.w3.org/TR/compositing-1/`blending`&gt; for more information</span>
+<span class="doccomment">/// See &lt;https://www.w3.org/TR/compositing-1/#blending&gt; for more information</span>
 <span class="doccomment">/// on blending and blend modes.</span>
 <span class="attribute">#[<span class="ident">derive</span>(<span class="ident">Debug</span>, <span class="ident">Eq</span>, <span class="ident">PartialEq</span>, <span class="ident">Ord</span>, <span class="ident">PartialOrd</span>, <span class="ident">Hash</span>, <span class="ident">Clone</span>, <span class="ident">Copy</span>)]</span>
 <span class="attribute">#[<span class="ident">non_exhaustive</span>]</span>
@@ -1096,15 +1101,15 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_BLEND_MODE_DEFAULT&quot;</span>)]</span>
     <span class="ident">Default</span>,
     <span class="doccomment">/// The source color is multiplied by the destination</span>
-    <span class="doccomment">///  and replaces the destination</span>
+    <span class="doccomment">///   and replaces the destination</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_BLEND_MODE_MULTIPLY&quot;</span>)]</span>
     <span class="ident">Multiply</span>,
     <span class="doccomment">/// Multiplies the complements of the destination and source</span>
-    <span class="doccomment">///  color values, then complements the result.</span>
+    <span class="doccomment">///   color values, then complements the result.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_BLEND_MODE_SCREEN&quot;</span>)]</span>
     <span class="ident">Screen</span>,
     <span class="doccomment">/// Multiplies or screens the colors, depending on the</span>
-    <span class="doccomment">///  destination color value. This is the inverse of hard-list</span>
+    <span class="doccomment">///   destination color value. This is the inverse of hard-list</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_BLEND_MODE_OVERLAY&quot;</span>)]</span>
     <span class="ident">Overlay</span>,
     <span class="doccomment">/// Selects the darker of the destination and source colors</span>
@@ -1148,7 +1153,7 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">BlendMode</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="macro">write!</span>(
             <span class="ident">f</span>,
             <span class="string">&quot;BlendMode::{}&quot;</span>,
@@ -1283,7 +1288,7 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">Corner</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="macro">write!</span>(
             <span class="ident">f</span>,
             <span class="string">&quot;Corner::{}&quot;</span>,
@@ -1398,7 +1403,7 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">GLUniformType</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="macro">write!</span>(
             <span class="ident">f</span>,
             <span class="string">&quot;GLUniformType::{}&quot;</span>,
@@ -1498,7 +1503,7 @@
     <span class="doccomment">/// A node containing a stack of children</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_CONTAINER_NODE&quot;</span>)]</span>
     <span class="ident">ContainerNode</span>,
-    <span class="doccomment">/// A node drawing a `cairo_surface_t`</span>
+    <span class="doccomment">/// A node drawing a [`cairo::Surface`][crate::cairo::Surface]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_CAIRO_NODE&quot;</span>)]</span>
     <span class="ident">CairoNode</span>,
     <span class="doccomment">/// A node drawing a single color rectangle</span>
@@ -1575,7 +1580,7 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">RenderNodeType</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="macro">write!</span>(
             <span class="ident">f</span>,
             <span class="string">&quot;RenderNodeType::{}&quot;</span>,
@@ -1733,8 +1738,8 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_SCALING_FILTER_NEAREST&quot;</span>)]</span>
     <span class="ident">Nearest</span>,
     <span class="doccomment">/// linear interpolation along each axis,</span>
-    <span class="doccomment">///  plus mipmap generation, with linear interpolation along the mipmap</span>
-    <span class="doccomment">///  levels</span>
+    <span class="doccomment">///   plus mipmap generation, with linear interpolation along the mipmap</span>
+    <span class="doccomment">///   levels</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_SCALING_FILTER_TRILINEAR&quot;</span>)]</span>
     <span class="ident">Trilinear</span>,
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -1742,7 +1747,7 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">ScalingFilter</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="macro">write!</span>(
             <span class="ident">f</span>,
             <span class="string">&quot;ScalingFilter::{}&quot;</span>,
@@ -1825,11 +1830,11 @@
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_SERIALIZATION_UNSUPPORTED_FORMAT&quot;</span>)]</span>
     <span class="ident">UnsupportedFormat</span>,
     <span class="doccomment">/// The version of the data is not</span>
-    <span class="doccomment">///  understood</span>
+    <span class="doccomment">///   understood</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_SERIALIZATION_UNSUPPORTED_VERSION&quot;</span>)]</span>
     <span class="ident">UnsupportedVersion</span>,
     <span class="doccomment">/// The given data may not exist in</span>
-    <span class="doccomment">///  a proper serialization</span>
+    <span class="doccomment">///   a proper serialization</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_SERIALIZATION_INVALID_DATA&quot;</span>)]</span>
     <span class="ident">InvalidData</span>,
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">hidden</span>)]</span>
@@ -1837,7 +1842,7 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">SerializationError</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="macro">write!</span>(
             <span class="ident">f</span>,
             <span class="string">&quot;SerializationError::{}&quot;</span>,
@@ -1948,25 +1953,25 @@
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GskTransformCategory&quot;</span>)]</span>
 <span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">TransformCategory</span> {
     <span class="doccomment">/// The category of the matrix has not been</span>
-    <span class="doccomment">///  determined.</span>
+    <span class="doccomment">///   determined.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_TRANSFORM_CATEGORY_UNKNOWN&quot;</span>)]</span>
     <span class="ident">Unknown</span>,
     <span class="doccomment">/// Analyzing the matrix concluded that it does</span>
-    <span class="doccomment">///  not fit in any other category.</span>
+    <span class="doccomment">///   not fit in any other category.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_TRANSFORM_CATEGORY_ANY&quot;</span>)]</span>
     <span class="ident">Any</span>,
     <span class="doccomment">/// The matrix is a 3D matrix. This means that</span>
-    <span class="doccomment">///  the w column (the last column) has the values (0, 0, 0, 1).</span>
+    <span class="doccomment">///   the w column (the last column) has the values (0, 0, 0, 1).</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_TRANSFORM_CATEGORY_3D&quot;</span>)]</span>
     <span class="ident">_3d</span>,
     <span class="doccomment">/// The matrix is a 2D matrix. This is equivalent</span>
-    <span class="doccomment">///  to [`graphene::Matrix::is_2d()`][crate::graphene::Matrix::is_2d()] returning [`true`]. In particular, this</span>
-    <span class="doccomment">///  means that Cairo can deal with the matrix.</span>
+    <span class="doccomment">///   to graphene_matrix_is_2d() returning [`true`]. In particular, this</span>
+    <span class="doccomment">///   means that Cairo can deal with the matrix.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_TRANSFORM_CATEGORY_2D&quot;</span>)]</span>
     <span class="ident">_2d</span>,
     <span class="doccomment">/// The matrix is a combination of 2D scale</span>
-    <span class="doccomment">///  and 2D translation operations. In particular, this means that any</span>
-    <span class="doccomment">///  rectangle can be transformed exactly using this matrix.</span>
+    <span class="doccomment">///   and 2D translation operations. In particular, this means that any</span>
+    <span class="doccomment">///   rectangle can be transformed exactly using this matrix.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GSK_TRANSFORM_CATEGORY_2D_AFFINE&quot;</span>)]</span>
     <span class="ident">_2dAffine</span>,
     <span class="doccomment">/// The matrix is a 2D translation.</span>
@@ -1980,7 +1985,7 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">TransformCategory</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="macro">write!</span>(
             <span class="ident">f</span>,
             <span class="string">&quot;TransformCategory::{}&quot;</span>,
@@ -2066,6 +2071,5 @@
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gsk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gsk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>

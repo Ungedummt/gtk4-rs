@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4&#x2F;src&#x2F;auto&#x2F;pad_controller.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>pad_controller.rs - source</title><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/pad_controller.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>pad_controller.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../../normalize.css"><link rel="stylesheet" type="text/css" href="../../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../../storage.js"></script><script src="../../../crates.js"></script><script defer src="../../../main.js"></script><script defer src="../../../source-script.js"></script><script defer src="../../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -71,7 +72,11 @@
 </script>
 
 
-<nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../../gtk4/index.html'><div class='logo-container rust-logo'><img src='../../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../../gtk4/index.html"><div class="logo-container"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../../gtk4/index.html"><img class="rust-logo" src="../../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -328,22 +333,6 @@
 <span id="255">255</span>
 <span id="256">256</span>
 <span id="257">257</span>
-<span id="258">258</span>
-<span id="259">259</span>
-<span id="260">260</span>
-<span id="261">261</span>
-<span id="262">262</span>
-<span id="263">263</span>
-<span id="264">264</span>
-<span id="265">265</span>
-<span id="266">266</span>
-<span id="267">267</span>
-<span id="268">268</span>
-<span id="269">269</span>
-<span id="270">270</span>
-<span id="271">271</span>
-<span id="272">272</span>
-<span id="273">273</span>
 </pre><pre class="rust"><code><span class="comment">// This file was generated by gir (https://github.com/gtk-rs/gir)</span>
 <span class="comment">// from gir-files (https://github.com/gtk-rs/gir-files.git)</span>
 <span class="comment">// DO NOT EDIT</span>
@@ -369,7 +358,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// These buttons and sensors have no implicit meaning, and by default they</span>
     <span class="doccomment">/// perform no action. [`PadController`][crate::PadController] is provided to map those to</span>
-    <span class="doccomment">/// `GAction` objects, thus letting the application give them a more</span>
+    <span class="doccomment">/// [`gio::Action`][crate::gio::Action] objects, thus letting the application give them a more</span>
     <span class="doccomment">/// semantic meaning.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Buttons and sensors are not constrained to triggering a single action,</span>
@@ -379,13 +368,13 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// Pad devices often divide buttons and sensors into groups. All elements</span>
     <span class="doccomment">/// in a group share the same current mode, but different groups may have</span>
-    <span class="doccomment">/// different modes. See `Gdk::`DevicePad::get_n_groups()`` and</span>
-    <span class="doccomment">/// `Gdk::`DevicePad::get_group_n_modes()``.</span>
+    <span class="doccomment">/// different modes. See `Gdk::DevicePad::get_n_groups()` and</span>
+    <span class="doccomment">/// `Gdk::DevicePad::get_group_n_modes()`.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Each of the actions that a given button/strip/ring performs for a given</span>
-    <span class="doccomment">/// mode is defined by a [`PadActionEntry`][crate::PadActionEntry]. It contains an action</span>
-    <span class="doccomment">/// name that will be looked up in the given `GActionGroup` and activated</span>
-    <span class="doccomment">/// whenever the specified input element and mode are triggered.</span>
+    <span class="doccomment">/// Each of the actions that a given button/strip/ring performs for a given mode</span>
+    <span class="doccomment">/// is defined by a [`PadActionEntry`][crate::PadActionEntry]. It contains an action name that</span>
+    <span class="doccomment">/// will be looked up in the given [`gio::ActionGroup`][crate::gio::ActionGroup] and activated whenever</span>
+    <span class="doccomment">/// the specified input element and mode are triggered.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// A simple example of [`PadController`][crate::PadController] usage: Assigning button 1 in all</span>
     <span class="doccomment">/// modes and pad devices to an &quot;invert-selection&quot; action:</span>
@@ -423,17 +412,17 @@
 }
 
 <span class="kw">impl</span> <span class="ident">PadController</span> {
-    <span class="doccomment">/// Creates a new [`PadController`][crate::PadController] that will associate events from `pad` to</span>
+    <span class="doccomment">/// Creates a new [`PadController`][crate::PadController] that will associate events from @pad to</span>
     <span class="doccomment">/// actions.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// A [`None`] pad may be provided so the controller manages all pad devices</span>
     <span class="doccomment">/// generically, it is discouraged to mix [`PadController`][crate::PadController] objects with</span>
-    <span class="doccomment">/// [`None`] and non-[`None`] `pad` argument on the same toplevel window, as execution</span>
+    <span class="doccomment">/// [`None`] and non-[`None`] @pad argument on the same toplevel window, as execution</span>
     <span class="doccomment">/// order is not guaranteed.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// The [`PadController`][crate::PadController] is created with no mapped actions. In order to</span>
-    <span class="doccomment">/// map pad events to actions, use [``set_action_entries()``][`Self::set_action_entries()`]</span>
-    <span class="doccomment">/// or [``set_action()``][`Self::set_action()`].</span>
+    <span class="doccomment">/// map pad events to actions, use [`set_action_entries()`][Self::set_action_entries()]</span>
+    <span class="doccomment">/// or [`set_action()`][Self::set_action()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Be aware that pad events will only be delivered to [`Window`][crate::Window]s, so adding</span>
     <span class="doccomment">/// a pad controller to any other type of widget will not have an effect.</span>
@@ -459,18 +448,18 @@
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Creates a new builder-pattern struct instance to construct [`PadController`] objects.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// This method returns an instance of [`PadControllerBuilder`] which can be used to create [`PadController`] objects.</span>
+    <span class="doccomment">/// This method returns an instance of [`PadControllerBuilder`](crate::builders::PadControllerBuilder) which can be used to create [`PadController`] objects.</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">builder</span>() -&gt; <span class="ident">PadControllerBuilder</span> {
         <span class="ident">PadControllerBuilder::default</span>()
     }
 
-    <span class="doccomment">/// Adds an individual action to `self`.</span>
+    <span class="doccomment">/// Adds an individual action to @self.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// This action will only be activated if the given button/ring/strip number</span>
-    <span class="doccomment">/// in `index` is interacted while the current mode is `mode`. -1 may be used</span>
+    <span class="doccomment">/// in @index is interacted while the current mode is @mode. -1 may be used</span>
     <span class="doccomment">/// for simple cases, so the action is triggered on all modes.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// The given `label` should be considered user-visible, so internationalization</span>
+    <span class="doccomment">/// The given @label should be considered user-visible, so internationalization</span>
     <span class="doccomment">/// rules apply. Some windowing systems may be able to use those for user</span>
     <span class="doccomment">/// feedback.</span>
     <span class="doccomment">/// ## `type_`</span>
@@ -481,7 +470,7 @@
     <span class="doccomment">/// the mode that will trigger this action, or -1 for all modes.</span>
     <span class="doccomment">/// ## `label`</span>
     <span class="doccomment">/// Human readable description of this action, this string should</span>
-    <span class="doccomment">///  be deemed user-visible.</span>
+    <span class="doccomment">///   be deemed user-visible.</span>
     <span class="doccomment">/// ## `action_name`</span>
     <span class="doccomment">/// action name that will be activated in the `GActionGroup`</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_pad_controller_set_action&quot;</span>)]</span>
@@ -507,29 +496,11 @@
 
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;action-group&quot;</span>)]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">action_group</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::ActionGroup</span><span class="op">&gt;</span> {
-        <span class="kw">unsafe</span> {
-            <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">value</span> <span class="op">=</span> <span class="ident">glib::Value::from_type</span>(<span class="op">&lt;</span><span class="ident">gio::ActionGroup</span> <span class="kw">as</span> <span class="ident">StaticType</span><span class="op">&gt;</span><span class="ident">::static_type</span>());
-            <span class="ident">glib::gobject_ffi::g_object_get_property</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>,
-                <span class="string">b&quot;action-group\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
-                <span class="ident">value</span>.<span class="ident">to_glib_none_mut</span>().<span class="number">0</span>,
-            );
-            <span class="ident">value</span>
-                .<span class="ident">get</span>()
-                .<span class="ident">expect</span>(<span class="string">&quot;Return Value for property `action-group` getter&quot;</span>)
-        }
+        <span class="ident">glib::ObjectExt::property</span>(<span class="self">self</span>, <span class="string">&quot;action-group&quot;</span>)
     }
 
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">pad</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gdk::Device</span><span class="op">&gt;</span> {
-        <span class="kw">unsafe</span> {
-            <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">value</span> <span class="op">=</span> <span class="ident">glib::Value::from_type</span>(<span class="op">&lt;</span><span class="ident">gdk::Device</span> <span class="kw">as</span> <span class="ident">StaticType</span><span class="op">&gt;</span><span class="ident">::static_type</span>());
-            <span class="ident">glib::gobject_ffi::g_object_get_property</span>(
-                <span class="self">self</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">glib::gobject_ffi::GObject</span>,
-                <span class="string">b&quot;pad\0&quot;</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>,
-                <span class="ident">value</span>.<span class="ident">to_glib_none_mut</span>().<span class="number">0</span>,
-            );
-            <span class="ident">value</span>.<span class="ident">get</span>().<span class="ident">expect</span>(<span class="string">&quot;Return Value for property `pad` getter&quot;</span>)
-        }
+        <span class="ident">glib::ObjectExt::property</span>(<span class="self">self</span>, <span class="string">&quot;pad&quot;</span>)
     }
 }
 
@@ -545,6 +516,7 @@
 <span class="doccomment">/// A [builder-pattern] type to construct [`PadController`] objects.</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// [builder-pattern]: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html</span>
+<span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;The builder must be built to be used&quot;</span>]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">PadControllerBuilder</span> {
     <span class="ident">action_group</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gio::ActionGroup</span><span class="op">&gt;</span>,
     <span class="ident">pad</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">gdk::Device</span><span class="op">&gt;</span>,
@@ -562,6 +534,7 @@
 
     <span class="comment">// rustdoc-stripper-ignore-next</span>
     <span class="doccomment">/// Build the [`PadController`].</span>
+    <span class="attribute">#[<span class="ident">must_use</span> <span class="op">=</span> <span class="string">&quot;Building the object from the builder is usually expensive and is not expected to have side effects&quot;</span>]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">build</span>(<span class="self">self</span>) -&gt; <span class="ident">PadController</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">properties</span>: <span class="ident">Vec</span><span class="op">&lt;</span>(<span class="kw-2">&amp;</span><span class="ident">str</span>, <span class="kw-2">&amp;</span><span class="kw">dyn</span> <span class="ident">ToValue</span>)<span class="op">&gt;</span> <span class="op">=</span> <span class="macro">vec!</span>[];
         <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="kw-2">ref</span> <span class="ident">action_group</span>) <span class="op">=</span> <span class="self">self</span>.<span class="ident">action_group</span> {
@@ -613,11 +586,10 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">PadController</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;PadController&quot;</span>)
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-search-index-js="../../../search-index.js" data-search-js="../../../search.js"></div>
-    <script src="../../../main.js"></script><script src="../../../source-script.js"></script><script src="../../../source-files.js"></script>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk4" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (e7aca8959 2022-02-09)" ></div>
 </body></html>
